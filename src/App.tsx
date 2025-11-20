@@ -1,13 +1,16 @@
-import { Background } from "@components/ui";
+import { Footer, Navbar } from "@components/ui";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages";
 
 function App() {
   return (
-    <>
-      <Background />
-      <nav className="absolute top-0">
-        <li>Home</li>
-      </nav>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
