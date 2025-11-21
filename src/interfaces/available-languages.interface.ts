@@ -1,7 +1,8 @@
-import type { LanguagesEnum } from "@/enums";
+import type { LanguagesCodeEnum, LanguagesEnum } from "@/enums";
 
 export interface AvailableLanguagesInterface {
-  value: LanguagesEnum;
+  value: LanguagesCodeEnum;
+  label: LanguagesEnum;
   name: string;
   flag: string;
 }

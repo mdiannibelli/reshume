@@ -7,9 +7,11 @@ import { Link } from "react-router-dom";
 export const LampContainer = ({
     children,
     className,
+    btnName
   }: {
     children: React.ReactNode;
     className?: string;
+    btnName: string;
   }) => {
     return (
       <div
@@ -76,7 +78,7 @@ export const LampContainer = ({
           className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-12 hover:translate-y-[-2px] transition-all duration-300">
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FECACA_0%,#DC2626_50%,#FECACA_100%)]" />
         <Link to="/generate-resume" className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-red-500 md:px-6 px-4 py-1 text-lg md:text-xl font-medium text-white backdrop-blur-3xl">
-          Generate resume
+          {btnName}
         </Link>
         </motion.button>
             </div>

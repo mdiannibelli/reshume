@@ -1,0 +1,21 @@
+{
+    "HERO": {
+        "SUBTITLE": "generate your resume with",
+        "TITLE": "Harvard Resume Generator",
+        "CTA": "Generate Resume"
+    },
+    "NAVBAR": {
+        "HOME": "Home",
+        "ABOUT": "About",
+        "CONTACT": "Contact",
+        "LOGIN": "Login",
+        "GENERATE_RESUME": "Generate resume"
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2025 Harvard Resume Generator. All rights reserved.",
+        "LINKS": {
+            "CONTRIBUTE": "Contribute",
+            "DONATE": "Donate"
+        }
+    }
+}

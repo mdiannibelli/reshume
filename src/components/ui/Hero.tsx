@@ -1,10 +1,12 @@
 import { LampContainer } from "@/shared/components";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 
 export function Hero() {
+  const { t } = useTranslation();
     return (
-      <LampContainer>
+      <LampContainer btnName={t("HERO.CTA")}>
         <motion.span
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +17,7 @@ export function Hero() {
           }}
           className="bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center text-3xl font-light tracking-tight text-transparent md:text-4xl"
         >
-          generate your resume with
+        {t("HERO.SUBTITLE")}
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
@@ -27,7 +29,7 @@ export function Hero() {
           }}
           className="bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-6xl lg:text-7xl"
         >
-          Harvard Resume Generator
+          {t("HERO.TITLE")}
         </motion.h1>
       </LampContainer>
     );

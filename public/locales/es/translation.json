@@ -1,0 +1,21 @@
+{
+    "HERO": {
+        "SUBTITLE": "generá tu currículum con",
+        "TITLE": "Generador de Currículum Harvard",
+        "CTA": "Generar Currículum"
+    },
+    "NAVBAR": {
+        "HOME": "Inicio",
+        "ABOUT": "Acerca de",
+        "CONTACT": "Contacto",
+        "LOGIN": "Iniciar sesión",
+        "GENERATE_RESUME": "Generar currículum"
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2025 Generador de Currículum Harvard. Todos los derechos reservados.",
+        "LINKS": {
+            "CONTRIBUTE": "Contribuir",
+            "DONATE": "Donar"
+        }
+    }
+}
