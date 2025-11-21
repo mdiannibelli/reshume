@@ -1,4 +1,5 @@
 import { motion, type Transition } from "motion/react";
+import { FaChevronDown } from "react-icons/fa6";
 
 export const MenuItem = ({
     setActive,
@@ -8,7 +9,7 @@ export const MenuItem = ({
 }: {
     setActive: (item: string) => void;
     active: string | null;
-    item: string;
+    item: string | React.ReactNode;
     children?: React.ReactNode;
 }) => {
     const transition: Transition = {
@@ -20,12 +21,13 @@ export const MenuItem = ({
       restSpeed: 0.001,
     };
     return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(typeof item === 'string' ? item : '')} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer hover:opacity-[0.9] text-white hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
+        className="cursor-pointer hover:opacity-[0.9] text-white hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300 flex items-center gap-x-2"
       >
         {item}
+        <FaChevronDown className="w-4 h-4" />
       </motion.p>
       {active !== null && (
         <motion.div
@@ -34,7 +36,7 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%+0.5rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%-0.75rem)] left-10 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
                 layoutId="active"
@@ -76,7 +78,7 @@ export const HoveredLink = ({ children, ...rest }: React.AnchorHTMLAttributes<HT
   return (
     <a
       {...rest}
-      className="text-neutral-200 hover:text-white"
+      className="text-neutral-200 hover:text-white cursor-pointer"
     >
       {children}
     </a>
