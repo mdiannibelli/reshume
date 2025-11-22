@@ -21,7 +21,12 @@ export const LampContainer = ({
         )}
       >
         <BackgroundBeams />
-        <div className="relative flex w-full scale-y-125 translate-y-65 md:translate-y-62 items-center justify-center isolate z-10 ">
+
+        <div className="relative z-50 flex -translate-y-20 flex-col items-center px-4 md:px-6">
+          {children}
+        </div>
+
+        <div className="relative flex w-full scale-y-125 items-center justify-center isolate z-10 ">
           <motion.div
             initial={{ opacity: 0, width: "5rem" }}
             whileInView={{ opacity: 1, width: "10rem" }}
@@ -66,7 +71,7 @@ export const LampContainer = ({
           ></motion.div>
           
         </div>
-        <div className="relative z-50 translate-y-45 md:translate-y-45">
+        <div className="relative z-50 -translate-y-20">
 
         <motion.button initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -83,9 +88,7 @@ export const LampContainer = ({
         </motion.button>
             </div>
    
-        <div className="relative z-50 flex -translate-y-20 flex-col items-center px-5">
-          {children}
-        </div>
+        
       </div>
     );
   };
