@@ -27,7 +27,7 @@ export function Hero() {
             duration: 1.2,
             ease: "easeInOut",
           }}
-          className="bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-6xl lg:text-7xl"
+          className="bg-gradient-to-br from-slate-300 to-white py-4 bg-clip-text text-center font-medium tracking-tight text-transparent text-5xl xl:text-7xl"
         >
           {t("HERO.TITLE")}
         </motion.h1>

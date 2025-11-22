@@ -9,7 +9,9 @@
         "ABOUT": "About",
         "CONTACT": "Contact",
         "LOGIN": "Login",
-        "GENERATE_RESUME": "Generate resume"
+        "LOGIN_2": "Login with your account",
+        "GENERATE_RESUME": "Generate resume",
+        "OR": "or"
     },
     "FOOTER": {
         "COPYRIGHT": "© 2025 Harvard Resume Generator. All rights reserved.",

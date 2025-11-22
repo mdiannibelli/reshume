@@ -19,7 +19,7 @@ export function LanguageSelector() {
   };
 
   return (
-    <Menu setActive={setActive}>
+    <Menu setActive={setActive} className="lg:px-8">
       <MenuItem setActive={setActive} active={active} item={currentLanguage}>
         <div className="flex flex-col gap-y-2">
         {

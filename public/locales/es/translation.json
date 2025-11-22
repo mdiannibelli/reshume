@@ -9,7 +9,9 @@
         "ABOUT": "Acerca de",
         "CONTACT": "Contacto",
         "LOGIN": "Iniciar sesión",
-        "GENERATE_RESUME": "Generar currículum"
+        "LOGIN_2": "Iniciá sesión con tu cuenta",
+        "GENERATE_RESUME": "Generar currículum",
+        "OR": "o"
     },
     "FOOTER": {
         "COPYRIGHT": "© 2025 Generador de Currículum Harvard. Todos los derechos reservados.",
