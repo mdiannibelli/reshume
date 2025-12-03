@@ -1,5 +1,10 @@
-import { Hero } from "@/components/ui";
+import { Hero } from "@/components";
+import { SectionWrapper } from "@/layouts";
 
 export function Home() {
-    return <Hero/>;
+    return (
+        <SectionWrapper>
+            <Hero/>
+        </SectionWrapper>
+    );
 }

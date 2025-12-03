@@ -1,25 +1,17 @@
 import React from "react";
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
 import { BackgroundBeams } from "./beams";
 import { Link } from "react-router-dom";
 
 export const LampContainer = ({
     children,
-    className,
     btnName
   }: {
     children: React.ReactNode;
-    className?: string;
     btnName: string;
   }) => {
     return (
-      <div
-        className={cn(
-          "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black w-full rounded-md z-0",
-          className
-        )}
-      >
+      <>
         <BackgroundBeams />
 
         <div className="relative z-50 flex -translate-y-20 flex-col items-center px-4 md:px-6">
@@ -89,6 +81,6 @@ export const LampContainer = ({
             </div>
    
         
-      </div>
+      </>
     );
   };
