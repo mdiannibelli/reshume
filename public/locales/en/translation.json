@@ -1,23 +1,74 @@
 {
-    "HERO": {
-        "SUBTITLE": "generate your resume with",
-        "TITLE": "Harvard Resume Generator",
-        "CTA": "Generate Resume"
-    },
-    "NAVBAR": {
-        "HOME": "Home",
-        "ABOUT": "About",
-        "CONTACT": "Contact",
-        "LOGIN": "Login",
-        "LOGIN_2": "Login with your account",
-        "GENERATE_RESUME": "Generate resume",
-        "OR": "or"
-    },
-    "FOOTER": {
-        "COPYRIGHT": "© 2025 Harvard Resume Generator. All rights reserved.",
-        "LINKS": {
-            "CONTRIBUTE": "Contribute",
-            "DONATE": "Donate"
-        }
+  "HERO": {
+    "SUBTITLE": "generate your resume with",
+    "TITLE": "Harvard Resume Generator",
+    "CTA": "Generate Resume"
+  },
+  "NAVBAR": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACT": "Contact",
+    "LOGIN": "Login",
+    "LOGIN_2": "Login with your account",
+    "GENERATE_RESUME": "Generate resume",
+    "OR": "or"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2025 Harvard Resume Generator. All rights reserved.",
+    "LINKS": {
+      "CONTRIBUTE": "Contribute",
+      "DONATE": "Donate"
     }
+  },
+  "GENERATE_RESUME": {
+    "FORM_STEPS": {
+      "PERSONAL_INFO": {
+        "TITLE": "Personal Info",
+        "FIELDS": {
+          "NAME": "Name",
+          "NAME_PLACEHOLDER": "John",
+          "LAST_NAME": "Last name",
+          "LAST_NAME_PLACEHOLDER": "Doe",
+          "EMAIL": "Email",
+          "EMAIL_PLACEHOLDER": "john.doe@example.com",
+          "PROFESSIONAL_TITLE": "Professional title",
+          "PROFESSIONAL_TITLE_PLACEHOLDER": "Software Engineer",
+          "PHONE": "Phone",
+          "PHONE_PLACEHOLDER": "+1 234 567 8900",
+          "COUNTRY": "Country",
+          "COUNTRY_PLACEHOLDER": "United States",
+          "CITY": "City",
+          "CITY_PLACEHOLDER": "New York",
+          "WEBSITE": "Website",
+          "WEBSITE_PLACEHOLDER": "https://john.doe.com",
+          "LINKEDIN": "LinkedIn",
+          "LINKEDIN_PLACEHOLDER": "https://linkedin.com/in/john-doe",
+          "GITHUB": "GitHub",
+          "GITHUB_PLACEHOLDER": "https://github.com/john-doe",
+          "BEHANCE": "Behance",
+          "BEHANCE_PLACEHOLDER": "https://behance.net/john-doe",
+          "PROFESSIONAL_SUMMARY": "Professional summary",
+          "PROFESSIONAL_SUMMARY_PLACEHOLDER": "Describe your professional experience, skills and career goals..."
+        },
+        "ERRORS": {
+          "REQUIRED": "{{field}} is required",
+          "INVALID": "{{field}} is invalid",
+          "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
+          "INVALID_URL": "Invalid URL"
+        }
+      },
+      "EDUCATION": {
+        "TITLE": "Education"
+      },
+      "EXPERIENCE": {
+        "TITLE": "Experience"
+      },
+      "SKILLS": {
+        "TITLE": "Skills"
+      }
+    },
+    "PREVIOUS": "Previous",
+    "NEXT": "Next",
+    "GENERATE": "Generate Resume"
+  }
 }

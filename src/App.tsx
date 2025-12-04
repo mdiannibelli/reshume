@@ -5,12 +5,16 @@ import { Home, GenerateResume } from "@/pages";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/generate-resume" element={<GenerateResume />} />
-      </Routes>
-      <Footer />
+      <div className="relative min-h-screen">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/generate-resume" element={<GenerateResume />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

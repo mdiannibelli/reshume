@@ -1,12 +1,16 @@
 import { useFormContext } from "react-hook-form";
-import type { ResumeData } from "@/types/resume.types";
+import type { ResumeData } from "@/interfaces";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import { getErrorMessage } from "@/utils";
 
 export function PersonalInfoStep() {
   const {
     register,
     formState: { errors },
   } = useFormContext<ResumeData>();
+
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -16,186 +20,268 @@ export function PersonalInfoStep() {
       className="space-y-6"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Nombre */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Nombre <span className="text-red-500">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-3">
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.NAME")}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            {...register("personalInfo.nombre", { required: "El nombre es requerido" })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="Juan"
+            {...register("personalInfo.name")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.NAME_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.nombre && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.nombre.message}</p>
+          {errors.personalInfo?.name && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.name,
+                fieldKey: "NAME",
+                minLength: 3,
+              })}
+            </p>
           )}
         </div>
-
-        {/* Apellido */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Apellido <span className="text-red-500">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-3">
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LAST_NAME")}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            {...register("personalInfo.apellido", { required: "El apellido es requerido" })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="Pérez"
+            {...register("personalInfo.lastName")}
+            className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LAST_NAME_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.apellido && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.apellido.message}</p>
+          {errors.personalInfo?.lastName && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.lastName,
+                fieldKey: "LAST_NAME",
+                minLength: 3,
+              })}
+            </p>
           )}
         </div>
-
-        {/* Título Profesional */}
         <div className="md:col-span-2">
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Título Profesional <span className="text-red-500">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-3">
+            {t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_TITLE"
+            )}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            {...register("personalInfo.tituloProfesional", { required: "El título profesional es requerido" })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="Desarrollador Full Stack"
+            {...register("personalInfo.professionalTitle")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_TITLE_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.tituloProfesional && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.tituloProfesional.message}</p>
+          {errors.personalInfo?.professionalTitle && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.professionalTitle,
+                fieldKey: "PROFESSIONAL_TITLE",
+                minLength: 3,
+              })}
+            </p>
           )}
         </div>
-
-        {/* Correo */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            Correo Electrónico <span className="text-red-500">*</span>
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.EMAIL")}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
-            {...register("personalInfo.correo", {
-              required: "El correo es requerido",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Correo electrónico inválido",
-              },
-            })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="juan.perez@email.com"
+            {...register("personalInfo.email")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.EMAIL_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.correo && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.correo.message}</p>
+          {errors.personalInfo?.email && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.email,
+                fieldKey: "EMAIL",
+              })}
+            </p>
           )}
         </div>
-
-        {/* Teléfono */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            Teléfono <span className="text-red-500">*</span>
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PHONE")}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="tel"
-            {...register("personalInfo.telefono", { required: "El teléfono es requerido" })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="+1 234 567 8900"
+            {...register("personalInfo.phone")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PHONE_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.telefono && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.telefono.message}</p>
+          {errors.personalInfo?.phone && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.phone,
+                fieldKey: "PHONE",
+                minLength: 9,
+              })}
+            </p>
           )}
         </div>
-
-        {/* País */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            País <span className="text-red-500">*</span>
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.COUNTRY")}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            {...register("personalInfo.pais", { required: "El país es requerido" })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="Estados Unidos"
+            {...register("personalInfo.country")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.COUNTRY_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.pais && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.pais.message}</p>
+          {errors.personalInfo?.country && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.country,
+                fieldKey: "COUNTRY",
+                minLength: 3,
+              })}
+            </p>
           )}
         </div>
-
-        {/* Ciudad */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            Ciudad <span className="text-red-500">*</span>
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.CITY")}{" "}
+            <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            {...register("personalInfo.ciudad", { required: "La ciudad es requerida" })}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="Boston"
+            {...register("personalInfo.city")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.CITY_PLACEHOLDER"
+            )}
           />
-          {errors.personalInfo?.ciudad && (
-            <p className="mt-1 text-sm text-red-500">{errors.personalInfo.ciudad.message}</p>
+          {errors.personalInfo?.city && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.city,
+                fieldKey: "CITY",
+                minLength: 3,
+              })}
+            </p>
           )}
         </div>
-
-        {/* Sitio Web */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            Sitio Web
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.WEBSITE")}{" "}
           </label>
           <input
             type="url"
-            {...register("personalInfo.sitioWeb")}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="https://juanperez.com"
+            {...register("personalInfo.website")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.WEBSITE_PLACEHOLDER"
+            )}
           />
+          {errors.personalInfo?.website && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.website,
+                fieldKey: "WEBSITE",
+              })}
+            </p>
+          )}
         </div>
-
-        {/* LinkedIn */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            LinkedIn
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LINKEDIN")}{" "}
           </label>
           <input
             type="url"
             {...register("personalInfo.linkedin")}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="https://linkedin.com/in/juanperez"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LINKEDIN_PLACEHOLDER"
+            )}
           />
+          {errors.personalInfo?.linkedin && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.linkedin,
+                fieldKey: "LINKEDIN",
+              })}
+            </p>
+          )}
         </div>
-
-        {/* GitHub */}
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-2">
-            GitHub
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.GITHUB")}{" "}
           </label>
           <input
             type="url"
             {...register("personalInfo.github")}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            placeholder="https://github.com/juanperez"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.GITHUB_PLACEHOLDER"
+            )}
           />
+          {errors.personalInfo?.github && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.github,
+                fieldKey: "GITHUB",
+              })}
+            </p>
+          )}
         </div>
       </div>
-
-      {/* Resumen Profesional */}
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
-          Resumen Profesional <span className="text-red-500">*</span>
+          {t(
+            "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_SUMMARY"
+          )}{" "}
+          <span className="text-red-500">*</span>
         </label>
         <textarea
-          {...register("personalInfo.resumenProfesional", {
-            required: "El resumen profesional es requerido",
-            minLength: {
-              value: 50,
-              message: "El resumen debe tener al menos 50 caracteres",
-            },
-          })}
+          {...register("personalInfo.professionalSummary")}
           rows={6}
-          className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-          placeholder="Describe tu experiencia profesional, habilidades principales y objetivos de carrera..."
+          className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all resize-none"
+          placeholder={t(
+            "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_SUMMARY_PLACEHOLDER"
+          )}
         />
-        {errors.personalInfo?.resumenProfesional && (
-          <p className="mt-1 text-sm text-red-500">{errors.personalInfo.resumenProfesional.message}</p>
+        {errors.personalInfo?.professionalSummary && (
+          <p className="mt-3 ml-1 text-sm text-red-500">
+            {getErrorMessage({
+              t,
+              error: errors.personalInfo.professionalSummary,
+              fieldKey: "PROFESSIONAL_SUMMARY",
+              minLength: 50,
+            })}
+          </p>
         )}
       </div>
     </motion.div>
   );
 }
-

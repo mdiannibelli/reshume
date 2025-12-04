@@ -1,52 +1,75 @@
 import z from "zod";
-
+import { minLengthField } from "@/helpers";
 export const resumeSchema = z.object({
   personalInfo: z.object({
-    nombre: z.string().min(1, "El nombre es requerido"),
-    apellido: z.string().min(1, "El apellido es requerido"),
-    tituloProfesional: z.string().min(1, "El título profesional es requerido"),
-    correo: z.string().email("Correo electrónico inválido"),
-    telefono: z.string().min(1, "El teléfono es requerido"),
-    pais: z.string().min(1, "El país es requerido"),
-    ciudad: z.string().min(1, "La ciudad es requerida"),
-    sitioWeb: z.string().url("URL inválida").optional().or(z.literal("")),
-    linkedin: z.string().url("URL inválida").optional().or(z.literal("")),
-    github: z.string().url("URL inválida").optional().or(z.literal("")),
-    resumenProfesional: z
+    name: minLengthField(3),
+    lastName: minLengthField(3),
+    professionalTitle: minLengthField(3),
+    email: z
       .string()
-      .min(50, "El resumen debe tener al menos 50 caracteres"),
+      .email("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.INVALID"),
+    phone: minLengthField(9),
+    country: minLengthField(3),
+    city: minLengthField(3),
+    website: z
+      .string()
+      .url("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.INVALID_URL")
+      .optional()
+      .or(z.literal("")),
+    linkedin: z
+      .string()
+      .url("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.INVALID_URL")
+      .optional()
+      .or(z.literal("")),
+    github: z
+      .string()
+      .url("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.INVALID_URL")
+      .optional()
+      .or(z.literal("")),
+    behance: z
+      .string()
+      .url("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.INVALID_URL")
+      .optional()
+      .or(z.literal("")),
+    professionalSummary: minLengthField(50),
   }),
-  educacion: z.array(
+  education: z.array(
     z.object({
       id: z.string(),
-      institucion: z.string().min(1, "La institución es requerida"),
-      titulo: z.string().min(1, "El título es requerido"),
-      fechaInicio: z.string().min(1, "La fecha de inicio es requerida"),
-      fechaFin: z.string().optional(),
-      enCurso: z.boolean(),
-      descripcion: z.string().optional(),
+      institution: z
+        .string()
+        .min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      title: z.string().min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      startDate: z
+        .string()
+        .min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      endDate: z.string().optional(),
+      inProgress: z.boolean(),
+      description: z.string().optional(),
     })
   ),
-  experiencia: z.array(
+  experience: z.array(
     z.object({
       id: z.string(),
-      empresa: z.string().min(1, "La empresa es requerida"),
-      puesto: z.string().min(1, "El puesto es requerido"),
-      fechaInicio: z.string().min(1, "La fecha de inicio es requerida"),
-      fechaFin: z.string().optional(),
-      enCurso: z.boolean(),
-      descripcion: z
+      company: z.string().min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      position: z.string().min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      startDate: z
+        .string()
+        .min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      endDate: z.string().optional(),
+      inProgress: z.boolean(),
+      description: z
         .string()
         .min(20, "La descripción debe tener al menos 20 caracteres"),
-      logros: z.array(z.string()).optional(),
+      achievements: z.array(z.string()).optional(),
     })
   ),
-  habilidades: z.array(
+  skills: z.array(
     z.object({
       id: z.string(),
-      nombre: z.string().min(1, "El nombre de la habilidad es requerido"),
-      nivel: z.enum(["basico", "intermedio", "avanzado", "experto"]),
-      categoria: z.string().min(1, "La categoría es requerida"),
+      name: z.string().min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
+      level: z.enum(["basic", "intermediate", "advanced", "expert"]),
+      category: z.string().min(1, "GENERATE_RESUME.FORM_STEPS.ERRORS.REQUIRED"),
     })
   ),
 });

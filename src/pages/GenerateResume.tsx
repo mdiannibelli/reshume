@@ -3,7 +3,7 @@ import { ResumeGenerator } from "@/components";
 
 export function GenerateResume() {
   return (
-    <SectionWrapper>
+    <SectionWrapper className="py-32">
       <ResumeGenerator />
     </SectionWrapper>
   );

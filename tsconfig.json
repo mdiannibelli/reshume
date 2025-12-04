@@ -19,7 +19,8 @@
       "@enums/*": ["./src/enums/*"],
       "@constants/*": ["./src/constants/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@models/*": ["./src/models/*"]
+      "@models/*": ["./src/models/*"],
+      "@helpers/*": ["./src/helpers/*"]
     }
   }
 }

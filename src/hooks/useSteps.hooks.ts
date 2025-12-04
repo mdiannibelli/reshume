@@ -1,9 +1,9 @@
 import { FORM_STEPS } from "@/constants";
 import { resumeSchema } from "@/models";
-import type { ResumeData } from "@/types/resume.types";
+import type { ResumeData } from "@/interfaces";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, type Path } from "react-hook-form";
 
 export function useSteps() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -13,21 +13,21 @@ export function useSteps() {
     resolver: zodResolver(resumeSchema),
     defaultValues: {
       personalInfo: {
-        nombre: "",
-        apellido: "",
-        tituloProfesional: "",
-        correo: "",
-        telefono: "",
-        pais: "",
-        ciudad: "",
-        sitioWeb: "",
+        name: "",
+        lastName: "",
+        professionalTitle: "",
+        email: "",
+        phone: "",
+        country: "",
+        city: "",
+        website: "",
         linkedin: "",
         github: "",
-        resumenProfesional: "",
+        professionalSummary: "",
       },
-      educacion: [],
-      experiencia: [],
-      habilidades: [],
+      education: [],
+      experience: [],
+      skills: [],
     },
     mode: "onChange",
   });
@@ -39,26 +39,24 @@ export function useSteps() {
   };
 
   const nextStep = async () => {
-    let fieldsToValidate: (keyof ResumeData)[] = [];
+    let fieldsToValidate: Path<ResumeData>[] = [];
 
     switch (currentStep) {
       case 1:
         fieldsToValidate = ["personalInfo"];
         break;
       case 2:
-        fieldsToValidate = ["educacion"];
+        fieldsToValidate = ["education"];
         break;
       case 3:
-        fieldsToValidate = ["experiencia"];
+        fieldsToValidate = ["experience"];
         break;
       case 4:
-        fieldsToValidate = ["habilidades"];
+        fieldsToValidate = ["skills"];
         break;
     }
 
-    const isValid = await formValues.trigger(
-      fieldsToValidate as (keyof ResumeData)[]
-    );
+    const isValid = await formValues.trigger(fieldsToValidate);
 
     if (isValid && currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);

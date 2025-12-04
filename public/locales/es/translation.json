@@ -1,23 +1,74 @@
 {
-    "HERO": {
-        "SUBTITLE": "generá tu currículum con",
-        "TITLE": "Generador de Currículum Harvard",
-        "CTA": "Generar Currículum"
-    },
-    "NAVBAR": {
-        "HOME": "Inicio",
-        "ABOUT": "Acerca de",
-        "CONTACT": "Contacto",
-        "LOGIN": "Iniciar sesión",
-        "LOGIN_2": "Iniciá sesión con tu cuenta",
-        "GENERATE_RESUME": "Generar currículum",
-        "OR": "o"
-    },
-    "FOOTER": {
-        "COPYRIGHT": "© 2025 Generador de Currículum Harvard. Todos los derechos reservados.",
-        "LINKS": {
-            "CONTRIBUTE": "Contribuir",
-            "DONATE": "Donar"
-        }
+  "HERO": {
+    "SUBTITLE": "generá tu currículum con",
+    "TITLE": "Generador de Currículum Harvard",
+    "CTA": "Generar Currículum"
+  },
+  "NAVBAR": {
+    "HOME": "Inicio",
+    "ABOUT": "Acerca de",
+    "CONTACT": "Contacto",
+    "LOGIN": "Iniciar sesión",
+    "LOGIN_2": "Iniciá sesión con tu cuenta",
+    "GENERATE_RESUME": "Generar currículum",
+    "OR": "o"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© 2025 Generador de Currículum Harvard. Todos los derechos reservados.",
+    "LINKS": {
+      "CONTRIBUTE": "Contribuir",
+      "DONATE": "Donar"
     }
+  },
+  "GENERATE_RESUME": {
+    "FORM_STEPS": {
+      "PERSONAL_INFO": {
+        "TITLE": "Información Personal",
+        "FIELDS": {
+          "NAME": "Nombre",
+          "NAME_PLACEHOLDER": "Juan",
+          "LAST_NAME": "Apellido",
+          "LAST_NAME_PLACEHOLDER": "Álvarez",
+          "PROFESSIONAL_TITLE": "Título profesional",
+          "PROFESSIONAL_TITLE_PLACEHOLDER": "Desarrollador Full Stack",
+          "EMAIL": "Correo electrónico",
+          "EMAIL_PLACEHOLDER": "juan.alvarez@email.com",
+          "PHONE": "Teléfono",
+          "PHONE_PLACEHOLDER": "+34 666 666 666",
+          "COUNTRY": "País",
+          "COUNTRY_PLACEHOLDER": "España",
+          "CITY": "Ciudad",
+          "CITY_PLACEHOLDER": "Madrid",
+          "WEBSITE": "Sitio web",
+          "WEBSITE_PLACEHOLDER": "https://juanalvarez.com",
+          "LINKEDIN": "LinkedIn",
+          "LINKEDIN_PLACEHOLDER": "https://linkedin.com/in/juanalvarez",
+          "GITHUB": "GitHub",
+          "GITHUB_PLACEHOLDER": "https://github.com/juanalvarez",
+          "BEHANCE": "Behance",
+          "BEHANCE_PLACEHOLDER": "https://behance.net/juanalvarez",
+          "PROFESSIONAL_SUMMARY": "Resumen profesional",
+          "PROFESSIONAL_SUMMARY_PLACEHOLDER": "Describe tu experiencia profesional, habilidades y objetivos..."
+        },
+        "ERRORS": {
+          "REQUIRED": "{{field}} es requerido",
+          "INVALID": "{{field}} es inválido",
+          "MIN_LENGTH": "{{field}} debe tener al menos {{length}} caracteres",
+          "INVALID_URL": "URL inválida"
+        }
+      },
+      "EDUCATION": {
+        "TITLE": "Educación"
+      },
+      "EXPERIENCE": {
+        "TITLE": "Experiencia"
+      },
+      "SKILLS": {
+        "TITLE": "Habilidades"
+      }
+    },
+    "PREVIOUS": "Anterior",
+    "NEXT": "Siguiente",
+    "GENERATE": "Generar Currículum"
+  }
 }
