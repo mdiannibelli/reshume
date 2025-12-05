@@ -5,12 +5,12 @@ export function minLengthField(minLength: number) {
     if (val.length === 0) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.REQUIRED",
+        message: "GENERATE_RESUME.ERRORS.REQUIRED",
       });
     } else if (val.length < minLength) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.ERRORS.MIN_LENGTH",
+        message: "GENERATE_RESUME.ERRORS.MIN_LENGTH",
       });
     }
   });

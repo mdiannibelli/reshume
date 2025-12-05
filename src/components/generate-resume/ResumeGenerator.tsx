@@ -59,7 +59,7 @@ export function ResumeGenerator() {
               type="button"
               onClick={prevStep}
               disabled={currentStep === 1}
-              className="px-6 py-3 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+              className="px-6 py-3 bg-white/5 cursor-pointer text-white rounded-lg hover:bg-white/10 transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium"
             >
               {t("GENERATE_RESUME.PREVIOUS")}
             </button>

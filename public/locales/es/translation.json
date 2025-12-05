@@ -49,16 +49,29 @@
           "BEHANCE_PLACEHOLDER": "https://behance.net/juanalvarez",
           "PROFESSIONAL_SUMMARY": "Resumen profesional",
           "PROFESSIONAL_SUMMARY_PLACEHOLDER": "Describe tu experiencia profesional, habilidades y objetivos..."
-        },
-        "ERRORS": {
-          "REQUIRED": "{{field}} es requerido",
-          "INVALID": "{{field}} es inválido",
-          "MIN_LENGTH": "{{field}} debe tener al menos {{length}} caracteres",
-          "INVALID_URL": "URL inválida"
         }
       },
       "EDUCATION": {
-        "TITLE": "Educación"
+        "TITLE": "Educación",
+        "BUTTONS": {
+          "ADD": "+ Agregar educación",
+          "DELETE": "Eliminar",
+          "SAVE": "Guardar"
+        },
+        "NO_EDUCATION_ADDED": "No hay educación agregada. Haz clic en 'Agregar Educación' para comenzar.",
+        "FIELDS": {
+          "INSTITUTION": "Institución",
+          "INSTITUTION_PLACEHOLDER": "Universidad de Madrid",
+          "TITLE": "Título",
+          "TITLE_PLACEHOLDER": "Ingeniería Informática",
+          "START_DATE": "Fecha de inicio",
+          "START_DATE_PLACEHOLDER": "2020-09",
+          "END_DATE": "Fecha de fin",
+          "END_DATE_PLACEHOLDER": "2024-06",
+          "IN_PROGRESS": "En progreso",
+          "DESCRIPTION": "Descripción",
+          "DESCRIPTION_PLACEHOLDER": "Describe tu educación..."
+        }
       },
       "EXPERIENCE": {
         "TITLE": "Experiencia"
@@ -66,6 +79,12 @@
       "SKILLS": {
         "TITLE": "Habilidades"
       }
+    },
+    "ERRORS": {
+      "REQUIRED": "{{field}} is required",
+      "INVALID": "{{field}} is invalid",
+      "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
+      "INVALID_URL": "Invalid URL"
     },
     "PREVIOUS": "Anterior",
     "NEXT": "Siguiente",

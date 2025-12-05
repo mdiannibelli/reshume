@@ -1,3 +1,5 @@
+import type { SkillLevel } from "@/types";
+
 export interface PersonalInfo {
   name: string;
   lastName: string;
@@ -37,7 +39,7 @@ export interface Experience {
 export interface Skill {
   id: string;
   name: string;
-  level: "basic" | "intermediate" | "advanced" | "expert";
+  level: SkillLevel;
   category: string;
 }
 

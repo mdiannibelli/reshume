@@ -49,16 +49,29 @@
           "BEHANCE_PLACEHOLDER": "https://behance.net/john-doe",
           "PROFESSIONAL_SUMMARY": "Professional summary",
           "PROFESSIONAL_SUMMARY_PLACEHOLDER": "Describe your professional experience, skills and career goals..."
-        },
-        "ERRORS": {
-          "REQUIRED": "{{field}} is required",
-          "INVALID": "{{field}} is invalid",
-          "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
-          "INVALID_URL": "Invalid URL"
         }
       },
       "EDUCATION": {
-        "TITLE": "Education"
+        "TITLE": "Education",
+        "BUTTONS": {
+          "ADD": "+ Add education",
+          "DELETE": "Delete",
+          "SAVE": "Save"
+        },
+        "NO_EDUCATION_ADDED": "No education added. Click 'Add Education' to start.",
+        "FIELDS": {
+          "INSTITUTION": "Institution",
+          "INSTITUTION_PLACEHOLDER": "Harvard University",
+          "TITLE": "Title",
+          "TITLE_PLACEHOLDER": "Computer Science",
+          "START_DATE": "Start date",
+          "START_DATE_PLACEHOLDER": "2020-09",
+          "END_DATE": "End date",
+          "END_DATE_PLACEHOLDER": "2024-06",
+          "IN_PROGRESS": "In progress",
+          "DESCRIPTION": "Description",
+          "DESCRIPTION_PLACEHOLDER": "Describe your education..."
+        }
       },
       "EXPERIENCE": {
         "TITLE": "Experience"
@@ -66,6 +79,12 @@
       "SKILLS": {
         "TITLE": "Skills"
       }
+    },
+    "ERRORS": {
+      "REQUIRED": "{{field}} is required",
+      "INVALID": "{{field}} is invalid",
+      "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
+      "INVALID_URL": "Invalid URL"
     },
     "PREVIOUS": "Previous",
     "NEXT": "Next",

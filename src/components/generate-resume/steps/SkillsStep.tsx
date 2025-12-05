@@ -101,7 +101,7 @@ export function SkillsStep() {
                     {...register(`habilidades.${index}.nombre`, {
                       required: "El nombre de la habilidad es requerido",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                     placeholder="JavaScript"
                   />
                   {errors.habilidades?.[index]?.nombre && (
@@ -122,7 +122,7 @@ export function SkillsStep() {
                     {...register(`habilidades.${index}.categoria`, {
                       required: "La categoría es requerida",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                     placeholder="Lenguajes de Programación"
                   />
                   <datalist id={`categorias-${index}`}>

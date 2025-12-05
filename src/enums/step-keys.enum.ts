@@ -1,0 +1,6 @@
+export enum StepKeysEnum {
+  PERSONAL_INFO = "PERSONAL_INFO",
+  EDUCATION = "EDUCATION",
+  EXPERIENCE = "EXPERIENCE",
+  SKILLS = "SKILLS",
+}

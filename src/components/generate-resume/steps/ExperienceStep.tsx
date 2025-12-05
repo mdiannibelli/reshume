@@ -86,7 +86,7 @@ export function ExperienceStep() {
                     {...register(`experiencia.${index}.empresa`, {
                       required: "La empresa es requerida",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                     placeholder="Google Inc."
                   />
                   {errors.experiencia?.[index]?.empresa && (
@@ -106,7 +106,7 @@ export function ExperienceStep() {
                     {...register(`experiencia.${index}.puesto`, {
                       required: "El puesto es requerido",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                     placeholder="Desarrollador Senior"
                   />
                   {errors.experiencia?.[index]?.puesto && (
@@ -126,7 +126,7 @@ export function ExperienceStep() {
                     {...register(`experiencia.${index}.fechaInicio`, {
                       required: "La fecha de inicio es requerida",
                     })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                   />
                   {errors.experiencia?.[index]?.fechaInicio && (
                     <p className="mt-1 text-sm text-red-500">
@@ -144,7 +144,7 @@ export function ExperienceStep() {
                     type="month"
                     {...register(`experiencia.${index}.fechaFin`)}
                     disabled={field.enCurso}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export function ExperienceStep() {
                       },
                     })}
                     rows={4}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all resize-none"
                     placeholder="Describe tus responsabilidades y logros en este puesto..."
                   />
                   {errors.experiencia?.[index]?.descripcion && (

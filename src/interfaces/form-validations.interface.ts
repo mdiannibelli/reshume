@@ -5,4 +5,5 @@ export interface GetFormError {
   error: { message?: string };
   fieldKey: string;
   minLength?: number;
+  stepKey: string;
 }

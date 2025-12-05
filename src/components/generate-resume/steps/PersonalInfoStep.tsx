@@ -3,6 +3,7 @@ import type { ResumeData } from "@/interfaces";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { getErrorMessage } from "@/utils";
+import { StepKeysEnum } from "@/enums";
 
 export function PersonalInfoStep() {
   const {
@@ -28,7 +29,7 @@ export function PersonalInfoStep() {
           <input
             type="text"
             {...register("personalInfo.name")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.NAME_PLACEHOLDER"
             )}
@@ -40,6 +41,7 @@ export function PersonalInfoStep() {
                 error: errors.personalInfo.name,
                 fieldKey: "NAME",
                 minLength: 3,
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -52,7 +54,7 @@ export function PersonalInfoStep() {
           <input
             type="text"
             {...register("personalInfo.lastName")}
-            className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LAST_NAME_PLACEHOLDER"
             )}
@@ -64,6 +66,7 @@ export function PersonalInfoStep() {
                 error: errors.personalInfo.lastName,
                 fieldKey: "LAST_NAME",
                 minLength: 3,
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -78,7 +81,7 @@ export function PersonalInfoStep() {
           <input
             type="text"
             {...register("personalInfo.professionalTitle")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_TITLE_PLACEHOLDER"
             )}
@@ -90,6 +93,7 @@ export function PersonalInfoStep() {
                 error: errors.personalInfo.professionalTitle,
                 fieldKey: "PROFESSIONAL_TITLE",
                 minLength: 3,
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -102,7 +106,7 @@ export function PersonalInfoStep() {
           <input
             type="email"
             {...register("personalInfo.email")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.EMAIL_PLACEHOLDER"
             )}
@@ -113,6 +117,7 @@ export function PersonalInfoStep() {
                 t,
                 error: errors.personalInfo.email,
                 fieldKey: "EMAIL",
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -125,7 +130,7 @@ export function PersonalInfoStep() {
           <input
             type="tel"
             {...register("personalInfo.phone")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PHONE_PLACEHOLDER"
             )}
@@ -137,6 +142,7 @@ export function PersonalInfoStep() {
                 error: errors.personalInfo.phone,
                 fieldKey: "PHONE",
                 minLength: 9,
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -149,7 +155,7 @@ export function PersonalInfoStep() {
           <input
             type="text"
             {...register("personalInfo.country")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.COUNTRY_PLACEHOLDER"
             )}
@@ -161,6 +167,7 @@ export function PersonalInfoStep() {
                 error: errors.personalInfo.country,
                 fieldKey: "COUNTRY",
                 minLength: 3,
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -173,7 +180,7 @@ export function PersonalInfoStep() {
           <input
             type="text"
             {...register("personalInfo.city")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.CITY_PLACEHOLDER"
             )}
@@ -185,6 +192,7 @@ export function PersonalInfoStep() {
                 error: errors.personalInfo.city,
                 fieldKey: "CITY",
                 minLength: 3,
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -196,7 +204,7 @@ export function PersonalInfoStep() {
           <input
             type="url"
             {...register("personalInfo.website")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.WEBSITE_PLACEHOLDER"
             )}
@@ -207,6 +215,7 @@ export function PersonalInfoStep() {
                 t,
                 error: errors.personalInfo.website,
                 fieldKey: "WEBSITE",
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -218,7 +227,7 @@ export function PersonalInfoStep() {
           <input
             type="url"
             {...register("personalInfo.linkedin")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LINKEDIN_PLACEHOLDER"
             )}
@@ -229,6 +238,7 @@ export function PersonalInfoStep() {
                 t,
                 error: errors.personalInfo.linkedin,
                 fieldKey: "LINKEDIN",
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -240,7 +250,7 @@ export function PersonalInfoStep() {
           <input
             type="url"
             {...register("personalInfo.github")}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.GITHUB_PLACEHOLDER"
             )}
@@ -251,6 +261,7 @@ export function PersonalInfoStep() {
                 t,
                 error: errors.personalInfo.github,
                 fieldKey: "GITHUB",
+                stepKey: StepKeysEnum.PERSONAL_INFO,
               })}
             </p>
           )}
@@ -266,7 +277,7 @@ export function PersonalInfoStep() {
         <textarea
           {...register("personalInfo.professionalSummary")}
           rows={6}
-          className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all resize-none"
+          className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all resize-none"
           placeholder={t(
             "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_SUMMARY_PLACEHOLDER"
           )}
@@ -278,6 +289,7 @@ export function PersonalInfoStep() {
               error: errors.personalInfo.professionalSummary,
               fieldKey: "PROFESSIONAL_SUMMARY",
               minLength: 50,
+              stepKey: StepKeysEnum.PERSONAL_INFO,
             })}
           </p>
         )}
