@@ -1,13 +1,14 @@
 import type { EducationItem, ResumeData } from "@/interfaces";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useEffect, useState } from "react";
-import { useFormContext, useWatch, type Path } from "react-hook-form";
+import { useEffect } from "react";
+import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 import { getErrorMessage } from "@/utils";
-import { StepKeysEnum } from "@/enums";
+import { AdditionalAreasEnum, StepKeysEnum } from "@/enums";
 import { cn } from "@/lib/utils";
 import { validateEndDate } from "@/helpers";
+import { useStepperItem } from "@/hooks";
 
 export function EducationItem({ field, index, onRemove }: EducationItem) {
     const {
@@ -17,52 +18,16 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
       setValue,
       trigger,
     } = useFormContext<ResumeData>();
-    const [isDropdownOpen, setIsDropdownOpen] = useState(true);
     
     const { t } = useTranslation();
-  
-    const inProgress = useWatch({
-      control,
-      name: `education.${index}.inProgress`,
-    });
-
-    const startDate = useWatch({
-      control,
-      name: `education.${index}.startDate`,
-    });
-
-    const endDate = useWatch({
-      control,
-      name: `education.${index}.endDate`,
-    });
-
+    const { inProgress, startDate, endDate, handleDropdown, handleModal, isDropdownOpen } = useStepperItem({ control, stepKey: AdditionalAreasEnum.EDUCATION, index, trigger });
+    
     useEffect(() => {
       if (inProgress) {
-        setValue(`education.${index}.endDate`, "");
-        trigger(`education.${index}.endDate`);
+        setValue(`${AdditionalAreasEnum.EDUCATION}.${index}.endDate`, "");
+        trigger(`${AdditionalAreasEnum.EDUCATION}.${index}.endDate`);
       }
     }, [inProgress, index, setValue, trigger]);
-
-    const handleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    const handleModal = async () => {
-        const fieldsToValidate = [
-          `education.${index}.institution`,
-          `education.${index}.title`,
-          `education.${index}.startDate`,
-        ] as string[];
-
-        if (!inProgress) {
-            fieldsToValidate.push(`education.${index}.endDate` as const);
-        }
-
-        const isValid = await trigger(fieldsToValidate as Path<ResumeData>[]);
-        if (isValid) {
-          setIsDropdownOpen(false);
-        }
-    };
   
     return (
       <motion.div

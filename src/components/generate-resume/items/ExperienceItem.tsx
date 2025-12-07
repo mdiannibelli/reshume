@@ -1,13 +1,14 @@
 import type { Experience, ResumeData } from "@/interfaces";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useEffect, useState } from "react";
-import { useFormContext, useWatch, type Path } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 import { getErrorMessage } from "@/utils";
-import { StepKeysEnum } from "@/enums";
+import { AdditionalAreasEnum, StepKeysEnum } from "@/enums";
 import { cn } from "@/lib/utils";
 import { validateEndDate } from "@/helpers";
+import { useEffect } from "react";
+import { useStepperItem } from "@/hooks";
 
 export function ExperienceItem({ field, index, onRemove }: { field: Experience; index: number; onRemove: (index: number) => void }) {
     const {
@@ -17,54 +18,17 @@ export function ExperienceItem({ field, index, onRemove }: { field: Experience; 
       setValue,
       trigger,
     } = useFormContext<ResumeData>();
-    const [isDropdownOpen, setIsDropdownOpen] = useState(true);
     
     const { t } = useTranslation();
+    const { inProgress, startDate, endDate, handleDropdown, handleModal, isDropdownOpen } = useStepperItem({ control, stepKey: AdditionalAreasEnum.EXPERIENCE, index, trigger });
   
-    const inProgress = useWatch({
-      control,
-      name: `experience.${index}.inProgress`,
-    });
-
-    const startDate = useWatch({
-      control,
-      name: `experience.${index}.startDate`,
-    });
-
-    const endDate = useWatch({
-      control,
-      name: `experience.${index}.endDate`,
-    });
-
     useEffect(() => {
-      if (inProgress) {
-        setValue(`experience.${index}.endDate`, "");
-        trigger(`experience.${index}.endDate`);
-      }
-    }, [inProgress, index, setValue, trigger]);
-
-    const handleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    const handleModal = async () => {
-        const fieldsToValidate = [
-          `experience.${index}.company`,
-          `experience.${index}.position`,
-          `experience.${index}.startDate`,
-          `experience.${index}.description`,
-        ] as string[];
-
-        if (!inProgress) {
-            fieldsToValidate.push(`experience.${index}.endDate` as const);
+        if (inProgress) {
+          setValue(`${AdditionalAreasEnum.EXPERIENCE}.${index}.endDate`, "");
+          trigger(`${AdditionalAreasEnum.EXPERIENCE}.${index}.endDate`);
         }
-
-        const isValid = await trigger(fieldsToValidate as Path<ResumeData>[]);
-        if (isValid) {
-          setIsDropdownOpen(false);
-        }
-    };
-  
+      }, [inProgress, index, setValue, trigger]);
+      
     return (
       <motion.div
         key={field.id}
@@ -268,21 +232,10 @@ export function ExperienceItem({ field, index, onRemove }: { field: Experience; 
     
                 <div className="md:col-span-2">
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                    {t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION")} <span className="text-red-500">*</span>
+                    {t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION")}
                     </label>
                     <textarea
-                    {...register(`experience.${index}.description`, {
-                        required: t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.REQUIRED", {
-                        field: t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION"),
-                        }),
-                        minLength: {
-                        value: 20,
-                        message: t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.MIN_LENGTH", {
-                            field: t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION"),
-                            length: 20,
-                        }),
-                        },
-                    })}
+                    {...register(`experience.${index}.description`)}
                     rows={4}
                     className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all resize-none"
                     placeholder={t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION_PLACEHOLDER")}
