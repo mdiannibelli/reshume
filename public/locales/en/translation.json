@@ -65,16 +65,35 @@
           "TITLE": "Title",
           "TITLE_PLACEHOLDER": "Computer Science",
           "START_DATE": "Start date",
-          "START_DATE_PLACEHOLDER": "2020-09",
+          "START_DATE_PLACEHOLDER": "Select date",
           "END_DATE": "End date",
-          "END_DATE_PLACEHOLDER": "2024-06",
+          "END_DATE_PLACEHOLDER": "Select date",
           "IN_PROGRESS": "In progress",
           "DESCRIPTION": "Description",
           "DESCRIPTION_PLACEHOLDER": "Describe your education..."
         }
       },
       "EXPERIENCE": {
-        "TITLE": "Experience"
+        "TITLE": "Experience",
+        "BUTTONS": {
+          "ADD": "+ Add experience",
+          "DELETE": "Delete",
+          "SAVE": "Save"
+        },
+        "NO_EXPERIENCE_ADDED": "No experience added. Click 'Add Experience' to start.",
+        "FIELDS": {
+          "COMPANY": "Company",
+          "COMPANY_PLACEHOLDER": "Google Inc.",
+          "POSITION": "Position",
+          "POSITION_PLACEHOLDER": "Senior Developer",
+          "START_DATE": "Start date",
+          "START_DATE_PLACEHOLDER": "Select date",
+          "END_DATE": "End date",
+          "END_DATE_PLACEHOLDER": "Select date",
+          "IN_PROGRESS": "Current job",
+          "DESCRIPTION": "Description",
+          "DESCRIPTION_PLACEHOLDER": "Describe your responsibilities and achievements in this position..."
+        }
       },
       "SKILLS": {
         "TITLE": "Skills"

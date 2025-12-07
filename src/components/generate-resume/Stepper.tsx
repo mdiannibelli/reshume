@@ -85,9 +85,9 @@ export function Stepper({ currentStep, totalSteps, steps }: StepperProps) {
                     text-sm font-medium cursor-default
                     ${
                       isActive
-                        ? "text-white"
+                        ? "text-red-500"
                         : isCompleted
-                        ? "text-gray-400"
+                        ? "text-white"
                         : "text-white/10"
                     }
                   `}

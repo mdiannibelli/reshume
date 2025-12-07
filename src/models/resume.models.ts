@@ -36,8 +36,8 @@ export const resumeSchema = z.object({
     z
       .object({
         id: z.string(),
-        institution: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
-        title: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
+        institution: minLengthField(3),
+        title: minLengthField(3),
         startDate: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
         endDate: z.string().optional().or(z.literal("")),
         inProgress: z.boolean(),
@@ -57,16 +57,29 @@ export const resumeSchema = z.object({
       )
   ),
   experience: z.array(
-    z.object({
-      id: z.string(),
-      company: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
-      position: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
-      startDate: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
-      endDate: z.string().optional(),
-      inProgress: z.boolean(),
-      description: z.string().min(20, "GENERATE.RESUME.ERRORS.MIN_LENGTH"),
-      achievements: z.array(z.string()).optional(),
-    })
+    z
+      .object({
+        id: z.string(),
+        company: minLengthField(3),
+        position: minLengthField(3),
+        startDate: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
+        endDate: z.string().optional().or(z.literal("")),
+        inProgress: z.boolean(),
+        description: z.string().optional(),
+        achievements: z.array(z.string()).optional(),
+      })
+      .refine(
+        (data) => {
+          if (!data.inProgress) {
+            return data.endDate && data.endDate.trim().length > 0;
+          }
+          return true;
+        },
+        {
+          message: "GENERATE_RESUME.ERRORS.REQUIRED",
+          path: ["endDate"],
+        }
+      )
   ),
   skills: z.array(
     z.object({

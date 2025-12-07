@@ -1,6 +1,8 @@
+import type { ValidateEndDate, ValidateMinLength } from "@/interfaces";
 import z from "zod";
 
-export function minLengthField(minLength: number, mustBeNumber?: boolean) {
+export function minLengthField(args: ValidateMinLength) {
+  const { minLength, mustBeNumber } = args;
   return z.string().superRefine((val, ctx) => {
     if (val.length === 0) {
       ctx.addIssue({
@@ -41,4 +43,16 @@ export function minLengthField(minLength: number, mustBeNumber?: boolean) {
       });
     }
   });
+}
+
+export function validateEndDate(args: ValidateEndDate) {
+  const { value, inProgress, stepKey, t } = args;
+  if (!inProgress) {
+    if (!value || value.trim().length === 0) {
+      return t(`GENERATE_RESUME.FORM_STEPS.${stepKey}.ERRORS.REQUIRED`, {
+        field: t(`GENERATE_RESUME.FORM_STEPS.${stepKey}.FIELDS.END_DATE`),
+      });
+    }
+  }
+  return true;
 }

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import type { ResumeData } from "@/interfaces";
 import { AdditionalAreasEnum } from "@/enums";
 import { useTranslation } from "react-i18next";
-import { EducationItem } from "../EducationItem";
+import { EducationItem } from "../items/EducationItem";
 
 export function EducationStep() {
   const { control } = useFormContext<ResumeData>();
@@ -21,8 +21,7 @@ export function EducationStep() {
       exit={{ opacity: 0, y: -20 }}
       className="space-y-6"
     >
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-white">{t("GENERATE_RESUME.FORM_STEPS.EDUCATION.TITLE")}</h3>
+      <div className="flex justify-end">
         <button
           type="button"
           onClick={() =>

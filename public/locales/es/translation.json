@@ -65,16 +65,35 @@
           "TITLE": "Título",
           "TITLE_PLACEHOLDER": "Ingeniería Informática",
           "START_DATE": "Fecha de inicio",
-          "START_DATE_PLACEHOLDER": "2020-09",
+          "START_DATE_PLACEHOLDER": "Seleccionar fecha",
           "END_DATE": "Fecha de fin",
-          "END_DATE_PLACEHOLDER": "2024-06",
+          "END_DATE_PLACEHOLDER": "Seleccionar fecha",
           "IN_PROGRESS": "En progreso",
           "DESCRIPTION": "Descripción",
           "DESCRIPTION_PLACEHOLDER": "Describe tu educación..."
         }
       },
       "EXPERIENCE": {
-        "TITLE": "Experiencia"
+        "TITLE": "Experiencia",
+        "BUTTONS": {
+          "ADD": "+ Agregar experiencia",
+          "DELETE": "Eliminar",
+          "SAVE": "Guardar"
+        },
+        "NO_EXPERIENCE_ADDED": "No hay experiencia agregada. Haz clic en 'Agregar Experiencia' para comenzar.",
+        "FIELDS": {
+          "COMPANY": "Empresa",
+          "COMPANY_PLACEHOLDER": "Google Inc.",
+          "POSITION": "Puesto",
+          "POSITION_PLACEHOLDER": "Desarrollador Senior",
+          "START_DATE": "Fecha de inicio",
+          "START_DATE_PLACEHOLDER": "Seleccionar fecha",
+          "END_DATE": "Fecha de fin",
+          "END_DATE_PLACEHOLDER": "Seleccionar fecha",
+          "IN_PROGRESS": "Trabajo actual",
+          "DESCRIPTION": "Descripción",
+          "DESCRIPTION_PLACEHOLDER": "Describe tus responsabilidades y logros en este puesto..."
+        }
       },
       "SKILLS": {
         "TITLE": "Habilidades"
