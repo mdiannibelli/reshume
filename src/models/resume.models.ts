@@ -1,12 +1,13 @@
 import z from "zod";
 import { minLengthField } from "@/helpers";
+import { AvailableSkillLevelsEnum } from "@/enums";
 export const resumeSchema = z.object({
   personalInfo: z.object({
     name: minLengthField(3),
     lastName: minLengthField(3),
     professionalTitle: minLengthField(3),
     email: z.string().email("GENERATE_RESUME.ERRORS.INVALID"),
-    phone: minLengthField(9),
+    phone: minLengthField(9, true),
     country: minLengthField(3),
     city: minLengthField(3),
     website: z
@@ -71,7 +72,7 @@ export const resumeSchema = z.object({
     z.object({
       id: z.string(),
       name: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
-      level: z.enum(["basic", "intermediate", "advanced", "expert"]),
+      level: z.enum(Object.values(AvailableSkillLevelsEnum)),
       category: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
     })
   ),

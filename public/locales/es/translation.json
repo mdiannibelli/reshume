@@ -81,10 +81,11 @@
       }
     },
     "ERRORS": {
-      "REQUIRED": "{{field}} is required",
-      "INVALID": "{{field}} is invalid",
-      "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
-      "INVALID_URL": "Invalid URL"
+      "REQUIRED": "{{field}} es requerido",
+      "INVALID": "{{field}} es inválido",
+      "MIN_LENGTH": "{{field}} debe tener al menos {{length}} caracteres",
+      "INVALID_URL": "URL inválida",
+      "INVALID_NUMBER": "El número de teléfono debe empezar con '+' y contener solo números, espacios y guiones"
     },
     "PREVIOUS": "Anterior",
     "NEXT": "Siguiente",

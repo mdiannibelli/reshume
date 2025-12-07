@@ -84,7 +84,8 @@
       "REQUIRED": "{{field}} is required",
       "INVALID": "{{field}} is invalid",
       "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
-      "INVALID_URL": "Invalid URL"
+      "INVALID_URL": "Invalid URL",
+      "INVALID_NUMBER": "Phone number must start with '+' and contain only numbers, spaces, and hyphens"
     },
     "PREVIOUS": "Previous",
     "NEXT": "Next",
