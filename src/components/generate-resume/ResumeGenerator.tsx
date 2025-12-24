@@ -1,5 +1,5 @@
 import { FormProvider } from "react-hook-form";
-import type { ResumeData } from "@/interfaces";
+import type { ResumeDataSchema } from "@/models/resume.models";
 import { Stepper } from "./Stepper";
 import { PersonalInfoStep } from "./steps/PersonalInfoStep";
 import { EducationStep } from "./steps/EducationStep";
@@ -20,11 +20,11 @@ export function ResumeGenerator() {
   } = useSteps();
   const { t } = useTranslation();
 
-  const onSubmit = (data: ResumeData) => {
+  const onSubmit = (data: ResumeDataSchema) => {
     // TODO implement generate cv
     console.log("data", data);
   };
-
+  
   const renderStep = () => {
     switch (currentStep) {
       case 1:

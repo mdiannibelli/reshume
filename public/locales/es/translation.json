@@ -96,7 +96,46 @@
         }
       },
       "SKILLS": {
-        "TITLE": "Habilidades"
+        "TITLE": "Habilidades",
+        "ITEM": "Habilidad #",
+        "FIELDS": {
+          "NAME": "Nombre",
+          "NAME_PLACEHOLDER": "Nombre de la habilidad",
+          "LEVEL": "Nivel",
+          "LEVEL_PLACEHOLDER": "Seleccionar nivel"
+        },
+        "LEVELS": {
+          "BASIC": "Básico",
+          "INTERMEDIATE": "Intermedio",
+          "ADVANCED": "Avanzado",
+          "EXPERT": "Experto"
+        },
+        "CATEGORIES": {
+          "PROGRAMMING_LANGUAGES": "Lenguaje de programación",
+          "PROGRAMMING_LANGUAGES_DESCRIPTION": "Los lenguajes de programación son la base de la programación moderna. Son usados para crear la lógica y la funcionalidad de las aplicaciones.",
+          "FRAMEWORKS": "Framework",
+          "FRAMEWORKS_DESCRIPTION": "Los frameworks son bibliotecas que proporcionan una base para la creación de aplicaciones. Son usados para crear la estructura y la funcionalidad de las aplicaciones.",
+          "DATABASES": "Base de datos",
+          "DATABASES_DESCRIPTION": "Las bases de datos son usadas para almacenar y gestionar datos. Son usadas para crear la estructura y la funcionalidad de las aplicaciones.",
+          "TOOLS": "Herramienta",
+          "TOOLS_DESCRIPTION": "Las herramientas son usadas para crear la estructura y la funcionalidad de las aplicaciones.",
+          "CLOUD": "Cloud",
+          "CLOUD_DESCRIPTION": "Cloud es el uso de la nube para almacenar y gestionar datos. Es usado para crear la estructura y la funcionalidad de las aplicaciones.",
+          "DEVOPS": "DevOps",
+          "DEVOPS_DESCRIPTION": "DevOps es la práctica de combinar el desarrollo de software y las operaciones de TI. Es usado para crear la estructura y la funcionalidad de las aplicaciones.",
+          "DESIGN": "Diseño",
+          "DESIGN_DESCRIPTION": "El diseño es la práctica de crear los elementos visuales y estéticos de las aplicaciones. Es usado para crear la estructura y la funcionalidad de las aplicaciones.",
+          "LANGUAGES": "Idioma",
+          "LANGUAGES_DESCRIPTION": "Los idiomas son usados para crear la lógica y la funcionalidad de las aplicaciones. Son usados para crear la estructura y la funcionalidad de las aplicaciones.",
+          "OTHER": "Otro",
+          "OTHER_DESCRIPTION": "Otro es usado para crear la estructura y la funcionalidad de las aplicaciones."
+        },
+        "BUTTONS": {
+          "ADD": "+ Agregar habilidad",
+          "DELETE": "Eliminar",
+          "SAVE": "Guardar"
+        },
+        "NO_SKILLS_ADDED": "No hay habilidades agregadas. Haz click en 'Agregar Habilidad' para comenzar."
       }
     },
     "ERRORS": {

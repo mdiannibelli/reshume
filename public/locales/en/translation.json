@@ -96,7 +96,45 @@
         }
       },
       "SKILLS": {
-        "TITLE": "Skills"
+        "TITLE": "Skills",
+        "ITEM": "Skill #",
+        "FIELDS": {
+          "NAME": "Name",
+          "NAME_PLACEHOLDER": "Skill name",
+          "LEVEL": "Level",
+          "LEVEL_PLACEHOLDER": "Select level"
+        },
+        "LEVELS": {
+          "BASIC": "Basic",
+          "INTERMEDIATE": "Intermediate",
+          "ADVANCED": "Advanced",
+          "EXPERT": "Expert"
+        },
+        "CATEGORIES": {
+          "PROGRAMMING_LANGUAGES": "Programming Languages",
+          "PROGRAMMING_LANGUAGES_DESCRIPTION": "Programming languages are the foundation of modern software development. They are used to create the logic and functionality of applications.",
+          "FRAMEWORKS": "Frameworks",
+          "FRAMEWORKS_DESCRIPTION": "Frameworks are libraries that provide a foundation for building applications. They are used to create the structure and functionality of applications.",
+          "DATABASES": "Databases",
+          "DATABASES_DESCRIPTION": "Databases are used to store and manage data. They are used to create the structure and functionality of applications.",
+          "TOOLS": "Tools",
+          "TOOLS_DESCRIPTION": "Tools are used to create the structure and functionality of applications.",
+          "CLOUD": "Cloud",
+          "DEVOPS": "DevOps",
+          "DEVOPS_DESCRIPTION": "DevOps is the practice of combining software development and IT operations. It is used to create the structure and functionality of applications.",
+          "DESIGN": "Design",
+          "DESIGN_DESCRIPTION": "Design is the practice of creating the visual and aesthetic elements of applications. It is used to create the structure and functionality of applications.",
+          "LANGUAGES": "Languages",
+          "LANGUAGES_DESCRIPTION": "Languages are used to create the logic and functionality of applications. They are used to create the structure and functionality of applications.",
+          "OTHER": "Other",
+          "OTHER_DESCRIPTION": "Other is used to create the structure and functionality of applications."
+        },
+        "BUTTONS": {
+          "ADD": "+ Add skill",
+          "DELETE": "Delete",
+          "SAVE": "Save"
+        },
+        "NO_SKILLS_ADDED": "No skills added. Click 'Add Skill' to start."
       }
     },
     "ERRORS": {

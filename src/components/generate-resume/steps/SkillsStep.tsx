@@ -1,25 +1,10 @@
 import { useFormContext, useFieldArray } from "react-hook-form";
-import type { ResumeData } from "@/types/resume.types";
+import type { ResumeData } from "@/interfaces";
 import { motion, AnimatePresence } from "motion/react";
-
-const niveles = [
-  { value: "basico", label: "Básico" },
-  { value: "intermedio", label: "Intermedio" },
-  { value: "avanzado", label: "Avanzado" },
-  { value: "experto", label: "Experto" },
-] as const;
-
-const categoriasComunes = [
-  "Lenguajes de Programación",
-  "Frameworks",
-  "Bases de Datos",
-  "Herramientas",
-  "Cloud",
-  "DevOps",
-  "Diseño",
-  "Idiomas",
-  "Otras",
-];
+import { SKILLS_LEVELS } from "@/constants";
+import { useTranslation } from "react-i18next";
+import { AdditionalAreasEnum, AvailableSkillLevelsEnum, StepKeysEnum } from "@/enums";
+import { getErrorMessage } from "@/utils";
 
 export function SkillsStep() {
   const {
@@ -27,10 +12,11 @@ export function SkillsStep() {
     control,
     formState: { errors },
   } = useFormContext<ResumeData>();
+  const { t } = useTranslation();
 
   const { fields, append, remove } = useFieldArray({
     control,
-    name: "habilidades",
+    name: AdditionalAreasEnum.SKILLS,
   });
 
   return (
@@ -41,20 +27,19 @@ export function SkillsStep() {
       className="space-y-6"
     >
       <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-white">Habilidades</h3>
+        <h3 className="text-lg font-semibold text-white">{t("GENERATE_RESUME.FORM_STEPS.SKILLS.TITLE")}</h3>
         <button
           type="button"
           onClick={() =>
             append({
               id: Date.now().toString(),
-              nombre: "",
-              nivel: "intermedio",
-              categoria: "",
+              name: "",
+              level: AvailableSkillLevelsEnum.BASIC,
             })
           }
-          className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all font-medium"
+          className="px-4 py-2 cursor-pointer bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all font-medium"
         >
-          + Agregar Habilidad
+          {t("GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.ADD")}
         </button>
       </div>
 
@@ -66,7 +51,7 @@ export function SkillsStep() {
             exit={{ opacity: 0 }}
             className="text-center py-12 text-gray-500"
           >
-            <p>No hay habilidades agregadas. Haz clic en "Agregar Habilidad" para comenzar.</p>
+            <p>{t("GENERATE_RESUME.FORM_STEPS.SKILLS.NO_SKILLS_ADDED")}</p>
           </motion.div>
         ) : (
           fields.map((field, index) => (
@@ -75,88 +60,66 @@ export function SkillsStep() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="p-6 bg-gray-900 border border-gray-800 rounded-lg space-y-4"
+              className="p-6 bg-white/5 border border-white/10 rounded-lg space-y-4 mt-8 flex-col relative cursor-pointer"
             >
               <div className="flex justify-between items-center mb-4">
-                <h4 className="text-md font-semibold text-white">Habilidad #{index + 1}</h4>
+                <h4 className="text-md font-semibold text-white">{t("GENERATE_RESUME.FORM_STEPS.SKILLS.ITEM")} {index + 1}</h4>
                 {fields.length > 1 && (
                   <button
                     type="button"
                     onClick={() => remove(index)}
                     className="text-red-500 hover:text-red-400 transition-colors"
                   >
-                    Eliminar
+                    {t("GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.DELETE")}
                   </button>
                 )}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Nombre de la Habilidad */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Nombre <span className="text-red-500">*</span>
+                    {t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.NAME")} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
-                    {...register(`habilidades.${index}.nombre`, {
-                      required: "El nombre de la habilidad es requerido",
-                    })}
+                    {...register(`skills.${index}.name`)}
                     className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
-                    placeholder="JavaScript"
+                    placeholder={t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.NAME_PLACEHOLDER")}
                   />
-                  {errors.habilidades?.[index]?.nombre && (
+                  {errors.skills?.[index]?.name && (
                     <p className="mt-1 text-sm text-red-500">
-                      {errors.habilidades[index]?.nombre?.message}
+                      {getErrorMessage({
+                        t,
+                        error: errors.skills[index]?.name,
+                        fieldKey: "NAME",
+                        stepKey: StepKeysEnum.SKILLS,
+                      })}
                     </p>
                   )}
                 </div>
 
-                {/* Categoría */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Categoría <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    list={`categorias-${index}`}
-                    {...register(`habilidades.${index}.categoria`, {
-                      required: "La categoría es requerida",
-                    })}
-                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
-                    placeholder="Lenguajes de Programación"
-                  />
-                  <datalist id={`categorias-${index}`}>
-                    {categoriasComunes.map((cat) => (
-                      <option key={cat} value={cat} />
-                    ))}
-                  </datalist>
-                  {errors.habilidades?.[index]?.categoria && (
-                    <p className="mt-1 text-sm text-red-500">
-                      {errors.habilidades[index]?.categoria?.message}
-                    </p>
-                  )}
-                </div>
-
-                {/* Nivel */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Nivel <span className="text-red-500">*</span>
+                    {t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.LEVEL")} <span className="text-red-500">*</span>
                   </label>
                   <select
-                    {...register(`habilidades.${index}.nivel`, {
-                      required: "El nivel es requerido",
-                    })}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    {...register(`skills.${index}.level`)}
+                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                   >
-                    {niveles.map((nivel) => (
-                      <option key={nivel.value} value={nivel.value}>
-                        {nivel.label}
+                    {SKILLS_LEVELS.map((level) => (
+                      <option key={level.value} value={level.value}>
+                        {t(level.label)}
                       </option>
                     ))}
                   </select>
-                  {errors.habilidades?.[index]?.nivel && (
+                  {errors.skills?.[index]?.level && (
                     <p className="mt-1 text-sm text-red-500">
-                      {errors.habilidades[index]?.nivel?.message}
+                      {getErrorMessage({
+                        t,
+                        error: errors.skills[index]?.level,
+                        fieldKey: "LEVEL",
+                        stepKey: StepKeysEnum.SKILLS,
+                      })}
                     </p>
                   )}
                 </div>
