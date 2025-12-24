@@ -1,15 +1,15 @@
 import { FORM_STEPS } from "@/constants";
 import { resumeSchema } from "@/models";
-import type { ResumeData } from "@/interfaces";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm, type Path } from "react-hook-form";
+import type { ResumeDataSchema } from "@/models/resume.models";
 
 export function useSteps() {
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = FORM_STEPS.length;
 
-  const formValues = useForm<ResumeData>({
+  const formValues = useForm<ResumeDataSchema>({
     resolver: zodResolver(resumeSchema),
     defaultValues: {
       personalInfo: {
@@ -39,7 +39,7 @@ export function useSteps() {
   };
 
   const nextStep = async () => {
-    let fieldsToValidate: Path<ResumeData>[] = [];
+    let fieldsToValidate: Path<ResumeDataSchema>[] = [];
 
     switch (currentStep) {
       case 1:

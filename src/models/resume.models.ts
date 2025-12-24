@@ -1,6 +1,7 @@
 import z from "zod";
 import { minLengthField } from "@/helpers";
 import { AvailableSkillLevelsEnum } from "@/enums";
+
 export const resumeSchema = z.object({
   personalInfo: z.object({
     name: minLengthField({ minLength: 3 }),
@@ -86,7 +87,8 @@ export const resumeSchema = z.object({
       id: z.string(),
       name: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
       level: z.enum(Object.values(AvailableSkillLevelsEnum)),
-      category: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
     })
   ),
 });
+
+export type ResumeDataSchema = z.infer<typeof resumeSchema>;
