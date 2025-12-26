@@ -266,6 +266,29 @@ export function PersonalInfoStep() {
             </p>
           )}
         </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.BEHANCE")}{" "}
+          </label>
+          <input
+            type="url"
+            {...register("personalInfo.behance")}
+            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+            placeholder={t(
+              "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.BEHANCE_PLACEHOLDER"
+            )}
+          />
+          {errors.personalInfo?.behance && (
+            <p className="mt-3 ml-1 text-sm text-red-500">
+              {getErrorMessage({
+                t,
+                error: errors.personalInfo.behance,
+                fieldKey: "BEHANCE",
+                stepKey: StepKeysEnum.PERSONAL_INFO,
+              })}
+            </p>
+          )}
+        </div>
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
