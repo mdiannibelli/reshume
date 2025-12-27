@@ -39,7 +39,7 @@ export interface Experience {
 export interface Skill {
   id: string;
   name: string;
-  level: SkillLevel;
+  /* level: SkillLevel; */
 }
 
 export interface ResumeData {

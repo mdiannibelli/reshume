@@ -99,6 +99,7 @@
         "TITLE": "Skills",
         "ITEM": "Skill #",
         "FIELDS": {
+          "ADD_SKILL": "Add skill",
           "NAME": "Name",
           "NAME_PLACEHOLDER": "Skill name",
           "LEVEL": "Level",

@@ -86,7 +86,6 @@ export const resumeSchema = z.object({
     z.object({
       id: z.string(),
       name: z.string().min(1, "GENERATE_RESUME.ERRORS.REQUIRED"),
-      level: z.enum(Object.values(AvailableSkillLevelsEnum)),
     })
   ),
   language: z
@@ -100,4 +99,5 @@ export const resumeSchema = z.object({
   wantIcons: z.boolean().optional(),
 });
 
+/* level: z.enum(Object.values(AvailableSkillLevelsEnum)), */
 export type ResumeDataSchema = z.infer<typeof resumeSchema>;

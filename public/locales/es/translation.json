@@ -140,6 +140,7 @@
       "CONFIGURATION": {
         "TITLE": "Configuración",
         "FIELDS": {
+          "ADD_SKILL": "Agregar habilidad",
           "LANGUAGE": "Idioma",
           "LANGUAGE_LABEL": "Seleccione el idioma de tu currículum",
           "LANGUAGE_DESCRIPTION": "El idioma de tu currículum será usado para generar el currículum en el idioma seleccionado, tanto los títulos de las secciones como las fechas de tus estudios y experiencias serán traducidos.",

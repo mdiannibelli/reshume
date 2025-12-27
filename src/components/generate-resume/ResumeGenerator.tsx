@@ -32,6 +32,12 @@ export function ResumeGenerator() {
     await generatePDF(formData);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
+    if (e.key === "Enter" && currentStep < totalSteps) {
+      e.preventDefault();
+    }
+  };
+
   const renderStep = () => {
     switch (currentStep) {
       case 1:
@@ -53,7 +59,7 @@ export function ResumeGenerator() {
     <>
       <div className="w-full max-w-4xl mx-auto px-6 py-8">
         <FormProvider {...formValues}>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
             <Stepper
               currentStep={currentStep}
               totalSteps={totalSteps}

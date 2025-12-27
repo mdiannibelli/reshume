@@ -1,23 +1,47 @@
 import { useFormContext, useFieldArray } from "react-hook-form";
 import type { ResumeData } from "@/interfaces";
 import { motion, AnimatePresence } from "motion/react";
-import { SKILLS_LEVELS } from "@/constants";
 import { useTranslation } from "react-i18next";
-import { AdditionalAreasEnum, AvailableSkillLevelsEnum, StepKeysEnum } from "@/enums";
-import { getErrorMessage } from "@/utils";
+import { useState } from "react";
+import { AdditionalAreasEnum, AvailableSkillLevelsEnum } from "@/enums";
 
 export function SkillsStep() {
   const {
-    register,
     control,
     formState: { errors },
+    trigger,
   } = useFormContext<ResumeData>();
   const { t } = useTranslation();
-
   const { fields, append, remove } = useFieldArray({
     control,
     name: AdditionalAreasEnum.SKILLS,
   });
+
+  const [skillInput, setSkillInput] = useState("");
+
+  const handleAddSkill = async () => {
+    if (!skillInput.trim() || skillInput.trim().length < 3) return;
+
+    const skillExists = fields.some(
+      (field) => field.name.toLowerCase() === skillInput.trim().toLowerCase()
+    );
+
+    if (skillExists) return;
+
+    append({
+      id: Date.now().toString(),
+      name: skillInput.trim(),
+    });
+
+    setSkillInput("");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleAddSkill();
+    }
+  };
 
   return (
     <motion.div
@@ -26,109 +50,69 @@ export function SkillsStep() {
       exit={{ opacity: 0, y: -20 }}
       className="space-y-6"
     >
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-white">{t("GENERATE_RESUME.FORM_STEPS.SKILLS.TITLE")}</h3>
-        <button
-          type="button"
-          onClick={() =>
-            append({
-              id: Date.now().toString(),
-              name: "",
-              level: AvailableSkillLevelsEnum.BASIC,
-            })
-          }
-          className="px-4 py-2 cursor-pointer bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all font-medium"
-        >
-          {t("GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.ADD")}
-        </button>
+      <div>
+        <h3 className="text-lg font-semibold text-white mb-6">
+          {t("GENERATE_RESUME.FORM_STEPS.SKILLS.TITLE")}
+        </h3>
+
+        <div className="flex gap-3 mb-6">
+          <div className="flex-1">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
+              {t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.ADD_SKILL")}{" "}
+              <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              value={skillInput}
+              onChange={(e) => setSkillInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+              placeholder={t(
+                "GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.NAME_PLACEHOLDER"
+              )}
+            />
+          </div>
+          <div className="flex items-end">
+            <button
+              type="button"
+              onClick={handleAddSkill}
+              disabled={!skillInput.trim() || skillInput.trim().length < 3}
+              className="cursor-pointer px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-red-500"
+            >
+              {t("GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.ADD")}
+            </button>
+          </div>
+        </div>
       </div>
 
       <AnimatePresence>
-        {fields.length === 0 ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="text-center py-12 text-gray-500"
-          >
-            <p>{t("GENERATE_RESUME.FORM_STEPS.SKILLS.NO_SKILLS_ADDED")}</p>
-          </motion.div>
-        ) : (
-          fields.map((field, index) => (
-            <motion.div
-              key={field.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="p-6 bg-white/5 border border-white/10 rounded-lg space-y-4 mt-8 flex-col relative cursor-pointer"
-            >
-              <div className="flex justify-between items-center mb-4">
-                <h4 className="text-md font-semibold text-white">{t("GENERATE_RESUME.FORM_STEPS.SKILLS.ITEM")} {index + 1}</h4>
-                {fields.length > 1 && (
-                  <button
-                    type="button"
-                    onClick={() => remove(index)}
-                    className="text-red-500 hover:text-red-400 transition-colors"
-                  >
-                    {t("GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.DELETE")}
-                  </button>
-                )}
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    {t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.NAME")} <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    {...register(`skills.${index}.name`)}
-                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
-                    placeholder={t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.NAME_PLACEHOLDER")}
-                  />
-                  {errors.skills?.[index]?.name && (
-                    <p className="mt-1 text-sm text-red-500">
-                      {getErrorMessage({
-                        t,
-                        error: errors.skills[index]?.name,
-                        fieldKey: "NAME",
-                        stepKey: StepKeysEnum.SKILLS,
-                      })}
-                    </p>
+        {fields.length > 0 && (
+          <div className="flex flex-wrap gap-3">
+            {fields.map((field, index) => (
+              <motion.div
+                key={field.id}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-red-500 rounded-lg"
+              >
+                <span className="text-white text-sm">{field.name}</span>
+                <button
+                  key={field.id}
+                  type="button"
+                  onClick={() => remove(index)}
+                  className="cursor-pointer text-red-500 hover:text-red-400 transition-colors text-lg font-bold leading-none"
+                  aria-label={t(
+                    "GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.DELETE"
                   )}
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    {t("GENERATE_RESUME.FORM_STEPS.SKILLS.FIELDS.LEVEL")} <span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    {...register(`skills.${index}.level`)}
-                    className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
-                  >
-                    {SKILLS_LEVELS.map((level) => (
-                      <option key={level.value} value={level.value}>
-                        {t(level.label)}
-                      </option>
-                    ))}
-                  </select>
-                  {errors.skills?.[index]?.level && (
-                    <p className="mt-1 text-sm text-red-500">
-                      {getErrorMessage({
-                        t,
-                        error: errors.skills[index]?.level,
-                        fieldKey: "LEVEL",
-                        stepKey: StepKeysEnum.SKILLS,
-                      })}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))
+                >
+                  ×
+                </button>
+              </motion.div>
+            ))}
+          </div>
         )}
       </AnimatePresence>
     </motion.div>
   );
 }
-
