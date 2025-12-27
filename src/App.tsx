@@ -1,6 +1,6 @@
 import { Footer, Navbar } from "@components/ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, GenerateResume } from "@/pages";
+import { Home, GenerateResume, NotFound } from "@/pages";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/generate-resume" element={<GenerateResume />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
