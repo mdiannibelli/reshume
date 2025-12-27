@@ -47,4 +47,6 @@ export interface ResumeData {
   education: Education[];
   experience: Experience[];
   skills: Skill[];
+  language: string;
+  wantIcons?: boolean;
 }

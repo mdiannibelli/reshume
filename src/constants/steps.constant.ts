@@ -3,4 +3,5 @@ export const FORM_STEPS = [
   "EDUCATION",
   "EXPERIENCE",
   "SKILLS",
+  "CONFIGURATION",
 ];

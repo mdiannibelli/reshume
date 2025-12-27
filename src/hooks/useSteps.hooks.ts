@@ -39,6 +39,9 @@ export function useSteps() {
       case 4:
         fieldsToValidate = ["skills"];
         break;
+      case 5:
+        fieldsToValidate = ["language", "wantIcons"];
+        break;
     }
 
     const isValid = await formValues.trigger(fieldsToValidate);

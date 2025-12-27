@@ -26,6 +26,8 @@ const getInitialState = (): ResumeDataSchema => {
     education: [],
     experience: [],
     skills: [],
+    language: "",
+    wantIcons: false,
   };
 };
 
@@ -64,6 +66,18 @@ export const formValueSlice = createSlice({
     addSkill: (state, action: PayloadAction<ResumeDataSchema["skills"]>) => {
       state.skills = JSON.parse(JSON.stringify(action.payload));
     },
+    updateLanguage: (
+      state,
+      action: PayloadAction<ResumeDataSchema["language"]>
+    ) => {
+      state.language = action.payload;
+    },
+    updateWantIcons: (
+      state,
+      action: PayloadAction<ResumeDataSchema["wantIcons"]>
+    ) => {
+      state.wantIcons = action.payload;
+    },
     resetFormValues: () => getInitialState(),
   },
 });
@@ -75,6 +89,8 @@ export const {
   addExperience,
   addSkill,
   resetFormValues,
+  updateLanguage,
+  updateWantIcons,
 } = formValueSlice.actions;
 
 export default formValueSlice.reducer;

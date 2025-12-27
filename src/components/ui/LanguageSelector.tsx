@@ -1,4 +1,5 @@
 import { AVAILABLE_LANGUAGES } from "@/constants";
+import type { LanguagesEnum } from "@/enums";
 import type { AvailableLanguagesInterface } from "@/interfaces";
 import { MenuItem, Menu, HoveredLink } from "@/shared/components";
 import { getLanguageEnum } from "@/utils";
