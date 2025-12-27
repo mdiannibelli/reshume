@@ -2,26 +2,133 @@ import { StyleSheet } from "@react-pdf/renderer";
 
 export const pdfStylesConfig = StyleSheet.create({
   page: {
-    flexDirection: "row",
+    flexDirection: "column",
     backgroundColor: "white",
-    padding: 30,
+    padding: 40,
     fontFamily: "Helvetica",
+    fontSize: 10,
+    color: "#000000",
+  },
+  header: {
+    marginBottom: 15,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  name: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 4,
+    letterSpacing: 0.5,
+  },
+  title: {
+    fontSize: 12,
+    fontWeight: "normal",
+    color: "#333333",
+    marginBottom: 8,
+  },
+  contactInfo: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 15,
+    fontSize: 9,
+    color: "#333333",
+  },
+  contactItem: {
+    lineHeight: 0.8,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 4,
+  },
+  contactIcon: {
+    width: 8,
+    height: 8,
+    transform: "translateY(-2px)",
   },
   section: {
     marginBottom: 10,
-    padding: 10,
   },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-  subheader: {
+  sectionTitle: {
     fontSize: 12,
     fontWeight: "bold",
+    marginBottom: 12,
+    textTransform: "uppercase",
+    textAlign: "center",
+    letterSpacing: 0.5,
+    color: "#000000",
   },
-  text: {
-    fontSize: 12,
+  summary: {
+    fontSize: 10,
+    lineHeight: 1.5,
+    textAlign: "justify",
     marginBottom: 10,
+    color: "#333333",
+  },
+  skillsContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginBottom: 12,
+  },
+  skillItem: {
+    marginRight: 6,
+    fontSize: 10,
+    color: "#333333",
+  },
+  skillSeparator: {
+    marginRight: 6,
+    color: "#666666",
+  },
+  itemContainer: {
+    margin: 12,
+  },
+  itemHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 4,
+  },
+  itemTitle: {
+    fontSize: 12,
+    fontWeight: "bold",
+    color: "#000000",
+  },
+  itemSubtitle: {
+    fontSize: 10,
+    color: "#666666",
+    marginTop: 2,
+    marginBottom: 2,
+  },
+  itemDate: {
+    fontSize: 9,
+    color: "#666666",
+    fontStyle: "italic",
+  },
+  itemDescription: {
+    fontSize: 10,
+    lineHeight: 1.4,
+    color: "#333333",
+    marginTop: 4,
+    marginLeft: 0,
+  },
+  bulletList: {
+    marginTop: 4,
+    marginLeft: 12,
+  },
+  bulletItem: {
+    fontSize: 10,
+    lineHeight: 1.4,
+    color: "#333333",
+    marginBottom: 3,
+  },
+  bullet: {
+    marginRight: 6,
+  },
+  barSeparator: {
+    width: "100%",
+    height: 0.5,
+    backgroundColor: "#333333",
+    marginBottom: 12,
   },
 });

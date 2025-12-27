@@ -135,6 +135,19 @@
           "SAVE": "Save"
         },
         "NO_SKILLS_ADDED": "No skills added. Click 'Add Skill' to start."
+      },
+      "CONFIGURATION": {
+        "TITLE": "Configuration",
+        "FIELDS": {
+          "LANGUAGE": "Language",
+          "LANGUAGE_LABEL": "Select the language of your resume",
+          "en": "English",  
+          "es": "Spanish",
+          "LANGUAGE_PLACEHOLDER": "Select language",
+          "WANT_ICONS": "Want icons in your resume?",
+          "YES": "Yes",
+          "NO": "No"
+        }
       }
     },
     "ERRORS": {
@@ -142,7 +155,30 @@
       "INVALID": "{{field}} is invalid",
       "MIN_LENGTH": "{{field}} must be at least {{length}} characters",
       "INVALID_URL": "Invalid URL",
-      "INVALID_NUMBER": "Phone number must start with '+' and contain only numbers, spaces, and hyphens"
+      "INVALID_NUMBER": "Phone number must start with '+' and contain only numbers, spaces, and hyphens",
+      "INVALID_OPTION": "The selected option is not valid"
+    },
+    "GENERATE_PDF": {
+      "TITLE": "Generating PDF...",
+      "DESCRIPTION": "Please wait while we generate your resume",
+      "PRESENT": "Present",
+      "SKILLS": "Skills",
+      "PROFESSIONAL_EXPERIENCE": "Professional Experience",
+      "EDUCATION": "Education",
+      "MONTHS": {
+        "JAN": "January",
+        "FEB": "February",
+        "MAR": "March",
+        "APR": "April",
+        "MAY": "May",
+        "JUN": "June",
+        "JUL": "July",
+        "AUG": "August",
+        "SEP": "September",
+        "OCT": "October",
+        "NOV": "November",
+        "DEC": "December"
+      }
     },
     "PREVIOUS": "Previous",
     "NEXT": "Next",

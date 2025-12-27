@@ -136,6 +136,19 @@
           "SAVE": "Guardar"
         },
         "NO_SKILLS_ADDED": "No hay habilidades agregadas. Haz click en 'Agregar Habilidad' para comenzar."
+      },
+      "CONFIGURATION": {
+        "TITLE": "Configuración",
+        "FIELDS": {
+          "LANGUAGE": "Idioma",
+          "LANGUAGE_LABEL": "Seleccione el idioma de tu currículum",
+          "en": "Inglés",
+          "es": "Español",
+          "LANGUAGE_PLACEHOLDER": "Seleccionar idioma",
+          "WANT_ICONS": "¿Quieres iconos en tu currículum?",
+          "YES": "Sí",
+          "NO": "No"
+        }
       }
     },
     "ERRORS": {
@@ -143,7 +156,30 @@
       "INVALID": "{{field}} es inválido",
       "MIN_LENGTH": "{{field}} debe tener al menos {{length}} caracteres",
       "INVALID_URL": "URL inválida",
-      "INVALID_NUMBER": "El número de teléfono debe empezar con '+' y contener solo números, espacios y guiones"
+      "INVALID_NUMBER": "El número de teléfono debe empezar con '+' y contener solo números, espacios y guiones",
+      "INVALID_OPTION": "La opción seleccionada no es válida"
+    },
+    "GENERATE_PDF": {
+      "TITLE": "Generando PDF...",
+      "DESCRIPTION": "Por favor, espera mientras generamos tu currículum",
+      "PRESENT": "Presente",
+      "SKILLS": "Habilidades",
+      "PROFESSIONAL_EXPERIENCE": "Experiencia Profesional",
+      "EDUCATION": "Educación",
+      "MONTHS": {
+        "JAN": "Enero",
+        "FEB": "Febrero",
+        "MAR": "Marzo",
+        "APR": "Abril",
+        "MAY": "Mayo",
+        "JUN": "Junio",
+        "JUL": "Julio",
+        "AUG": "Agosto",
+        "SEP": "Septiembre",
+        "OCT": "Octubre",
+        "NOV": "Noviembre",
+        "DEC": "Diciembre"
+      }
     },
     "PREVIOUS": "Anterior",
     "NEXT": "Siguiente",

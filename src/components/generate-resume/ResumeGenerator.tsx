@@ -1,9 +1,12 @@
+import {
+  ConfigurationStep,
+  PersonalInfoStep,
+  EducationStep,
+  ExperienceStep,
+  SkillsStep,
+} from "./steps";
 import { FormProvider } from "react-hook-form";
 import { Stepper } from "./Stepper";
-import { PersonalInfoStep } from "./steps/PersonalInfoStep";
-import { EducationStep } from "./steps/EducationStep";
-import { ExperienceStep } from "./steps/ExperienceStep";
-import { SkillsStep } from "./steps/SkillsStep";
 import { FORM_STEPS } from "@/constants";
 import { useFormStore, useSteps } from "@/hooks";
 import { useTranslation } from "react-i18next";
@@ -26,7 +29,8 @@ export function ResumeGenerator() {
 
   const onSubmit = async () => {
     console.log("formData", formData);
-    await generatePDF(formData);
+    const selectedLanguage = formData.language;
+    await generatePDF(formData, selectedLanguage);
   };
 
   const renderStep = () => {
@@ -39,6 +43,8 @@ export function ResumeGenerator() {
         return <ExperienceStep />;
       case 4:
         return <SkillsStep />;
+      case 5:
+        return <ConfigurationStep />;
       default:
         return null;
     }
