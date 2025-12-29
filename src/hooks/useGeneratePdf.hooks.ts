@@ -1,14 +1,15 @@
-import { generatePdfBlob } from "@/utils";
-import type { ResumeData } from "@/interfaces";
-import { useState } from "react";
 import i18n from "@/i18n";
+import { delay, generatePdfBlob } from "@/utils";
+import type { ResumeData } from "@/interfaces";
+import { useUI } from "./useUI.hooks";
 
 export function useGeneratePdf() {
-  const [isGenerating, setIsGenerating] = useState(false);
+  const { setIsGeneratingPDF, isGeneratingPDF } = useUI();
 
   const generatePDF = async (data: ResumeData) => {
-    setIsGenerating(true);
+    setIsGeneratingPDF(true);
     try {
+      await delay(5000);
       await i18n.changeLanguage(data.selectedCvLanguage);
       const blob = await generatePdfBlob(data);
       const url = URL.createObjectURL(blob);
@@ -20,12 +21,12 @@ export function useGeneratePdf() {
     } catch (err) {
       console.error("Error generating PDF..", err);
     } finally {
-      setIsGenerating(false);
+      setIsGeneratingPDF(false);
     }
   };
 
   return {
     generatePDF,
-    isGenerating,
+    isGeneratingPDF,
   };
 }

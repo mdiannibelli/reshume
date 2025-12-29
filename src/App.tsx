@@ -1,4 +1,4 @@
-import { Footer, Navbar } from "@components/ui";
+import { Footer, LoadingScreen, Navbar } from "@components/ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home, GenerateResume, NotFound } from "@/pages";
 
@@ -15,6 +15,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <LoadingScreen />
       </div>
     </BrowserRouter>
   );

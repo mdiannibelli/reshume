@@ -2,15 +2,15 @@ import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "@/store/form-store";
 import {
   updateFormValues,
-  resetFormValues,
-  addPersonalInfo,
-  addEducation,
-  addExperience,
-  addSkill,
-  updateWantIcons,
-  addLanguage,
-  updateSelectedCvLanguage,
-  updateClearFieldsAfterGeneration,
+  resetFormValuesAction,
+  addPersonalInfoAction,
+  addEducationAction,
+  addExperienceAction,
+  addSkillAction,
+  addLanguageAction,
+  updateSelectedCvLanguageAction,
+  updateWantIconsAction,
+  updateClearFieldsAfterGenerationAction,
 } from "@/store/slices/form-value.slice";
 import type { ResumeDataSchema } from "@/models/resume.models";
 
@@ -24,22 +24,22 @@ export function useFormStore() {
     updateFormValues: (data: ResumeDataSchema) =>
       dispatch(updateFormValues(data)),
     updatePersonalInfo: (data: ResumeDataSchema["personalInfo"]) =>
-      dispatch(addPersonalInfo(data)),
+      dispatch(addPersonalInfoAction(data)),
     updateEducation: (data: ResumeDataSchema["education"]) =>
-      dispatch(addEducation(data)),
+      dispatch(addEducationAction(data)),
     updateExperience: (data: ResumeDataSchema["experience"]) =>
-      dispatch(addExperience(data)),
+      dispatch(addExperienceAction(data)),
     updateSkills: (data: ResumeDataSchema["skills"]) =>
-      dispatch(addSkill(data)),
+      dispatch(addSkillAction(data)),
     updateLanguages: (data: ResumeDataSchema["languages"]) =>
-      dispatch(addLanguage(data)),
+      dispatch(addLanguageAction(data)),
     updateSelectedCvLanguage: (data: ResumeDataSchema["selectedCvLanguage"]) =>
-      dispatch(updateSelectedCvLanguage(data)),
+      dispatch(updateSelectedCvLanguageAction(data)),
     updateWantIcons: (data: ResumeDataSchema["wantIcons"]) =>
-      dispatch(updateWantIcons(data)),
+      dispatch(updateWantIconsAction(data)),
     updateClearFieldsAfterGeneration: (
       data: ResumeDataSchema["clearFieldsAfterGeneration"]
-    ) => dispatch(updateClearFieldsAfterGeneration(data)),
-    resetForm: () => dispatch(resetFormValues()),
+    ) => dispatch(updateClearFieldsAfterGenerationAction(data)),
+    resetForm: () => dispatch(resetFormValuesAction()),
   };
 }

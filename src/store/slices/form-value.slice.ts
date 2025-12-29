@@ -47,52 +47,55 @@ export const formValueSlice = createSlice({
         ...clonedPayload,
       };
     },
-    addPersonalInfo: (
+    addPersonalInfoAction: (
       state,
       action: PayloadAction<ResumeDataSchema["personalInfo"]>
     ) => {
       state.personalInfo = { ...action.payload };
     },
-    addEducation: (
+    addEducationAction: (
       state,
       action: PayloadAction<ResumeDataSchema["education"]>
     ) => {
       state.education = JSON.parse(JSON.stringify(action.payload));
     },
-    addExperience: (
+    addExperienceAction: (
       state,
       action: PayloadAction<ResumeDataSchema["experience"]>
     ) => {
       state.experience = JSON.parse(JSON.stringify(action.payload));
     },
-    addSkill: (state, action: PayloadAction<ResumeDataSchema["skills"]>) => {
+    addSkillAction: (
+      state,
+      action: PayloadAction<ResumeDataSchema["skills"]>
+    ) => {
       state.skills = JSON.parse(JSON.stringify(action.payload));
     },
-    addLanguage: (
+    addLanguageAction: (
       state,
       action: PayloadAction<ResumeDataSchema["languages"]>
     ) => {
       state.languages = JSON.parse(JSON.stringify(action.payload));
     },
-    updateSelectedCvLanguage: (
+    updateSelectedCvLanguageAction: (
       state,
       action: PayloadAction<ResumeDataSchema["selectedCvLanguage"]>
     ) => {
       state.selectedCvLanguage = action.payload;
     },
-    updateWantIcons: (
+    updateWantIconsAction: (
       state,
       action: PayloadAction<ResumeDataSchema["wantIcons"]>
     ) => {
       state.wantIcons = action.payload;
     },
-    updateClearFieldsAfterGeneration: (
+    updateClearFieldsAfterGenerationAction: (
       state,
       action: PayloadAction<ResumeDataSchema["clearFieldsAfterGeneration"]>
     ) => {
       state.clearFieldsAfterGeneration = action.payload;
     },
-    resetFormValues: (state) => {
+    resetFormValuesAction: (state) => {
       state.selectedCvLanguage = "";
       state.wantIcons = false;
       state.clearFieldsAfterGeneration = false;
@@ -120,15 +123,15 @@ export const formValueSlice = createSlice({
 
 export const {
   updateFormValues,
-  addPersonalInfo,
-  addEducation,
-  addExperience,
-  addSkill,
-  addLanguage,
-  resetFormValues,
-  updateSelectedCvLanguage,
-  updateWantIcons,
-  updateClearFieldsAfterGeneration,
+  addPersonalInfoAction,
+  addEducationAction,
+  addExperienceAction,
+  addSkillAction,
+  addLanguageAction,
+  resetFormValuesAction,
+  updateSelectedCvLanguageAction,
+  updateWantIconsAction,
+  updateClearFieldsAfterGenerationAction,
 } = formValueSlice.actions;
 
 export default formValueSlice.reducer;

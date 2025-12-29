@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import formValueReducer from "./slices/form-value.slice";
 import { saveStateToLocalStorage } from "./storage/form-value.storage";
+import uiReducer from "./slices/ui.slice";
 
 export const formStore = configureStore({
   reducer: {
     form: formValueReducer,
+    ui: uiReducer,
   },
 });
 

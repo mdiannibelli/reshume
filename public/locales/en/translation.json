@@ -21,6 +21,10 @@
     }
   },
   "GENERATE_RESUME": {
+    "LOADING_SCREEN": {
+      "GENERATING_PDF": "Generating PDF...",
+      "PLEASE_WAIT": "Please wait while we generate your resume"
+    },
     "FORM_STEPS": {
       "PERSONAL_INFO": {
         "TITLE": "Personal Info",
