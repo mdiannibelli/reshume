@@ -1,6 +1,6 @@
 import { Document, Image, Page, Text, View } from "@react-pdf/renderer";
 import type { ContactItem, ResumeData } from "@/interfaces";
-import { translate } from "@/lib/translate";
+import { translate } from "@/lib";
 import { formatDate, shortenUrl } from "@/utils";
 import { GENERATE_PDF_CONFIG } from "@/config";
 

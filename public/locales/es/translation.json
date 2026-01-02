@@ -176,6 +176,10 @@
         }
       }
     },
+    "TOASTS": {
+      "SUCCESS": "Tu currículum ha sido generado!",
+      "ERROR": "Error al generar el currículum"
+    },
     "ERRORS": {
       "REQUIRED": "{{field}} es requerido",
       "INVALID": "{{field}} es inválido",

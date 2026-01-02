@@ -1,6 +1,7 @@
 import { Footer, LoadingScreen, Navbar } from "@components/ui";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home, GenerateResume, NotFound } from "@/pages";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </main>
         <Footer />
         <LoadingScreen />
+        <ToastContainer />
       </div>
     </BrowserRouter>
   );

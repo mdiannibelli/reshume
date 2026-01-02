@@ -13,6 +13,8 @@ import { useTranslation } from "react-i18next";
 import { useGeneratePdf } from "@/hooks";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastService } from "@/services";
+import { TOAST_CONFIG } from "@/config";
 
 export function ResumeGenerator() {
   const {
@@ -48,6 +50,7 @@ export function ResumeGenerator() {
     }
 
     navigate("/");
+    ToastService().success(t("GENERATE_RESUME.TOASTS.SUCCESS"), TOAST_CONFIG);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
