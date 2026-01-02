@@ -26,6 +26,7 @@
       "PLEASE_WAIT": "Please wait while we generate your resume"
     },
     "FORM_STEPS": {
+      "OPEN_PREVIEW": "Open preview",
       "PERSONAL_INFO": {
         "TITLE": "Personal Info",
         "FIELDS": {

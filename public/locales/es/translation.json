@@ -26,6 +26,7 @@
       "PLEASE_WAIT": "Por favor espera mientras generamos tu currículum"
     },
     "FORM_STEPS": {
+      "OPEN_PREVIEW": "Ver preview",
       "PERSONAL_INFO": {
         "TITLE": "Información Personal",
         "FIELDS": {

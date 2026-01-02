@@ -8,9 +8,11 @@ import {
 import { FormProvider } from "react-hook-form";
 import { Stepper } from "./Stepper";
 import { FORM_STEPS } from "@/constants";
-import { useFormStore, useSteps } from "@/hooks";
+import { useFormStore, useSteps, useUI } from "@/hooks";
 import { useTranslation } from "react-i18next";
 import { useGeneratePdf } from "@/hooks";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function ResumeGenerator() {
   const {
@@ -25,13 +27,27 @@ export function ResumeGenerator() {
   const { t } = useTranslation();
   const { formData, resetForm } = useFormStore();
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const { generatePDF } = useGeneratePdf();
+  const { setIsPDFModalOpen, isPDFModalOpen } = useUI();
+
+  useEffect(() => {
+    setIsPDFModalOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
 
   const onSubmit = async () => {
-    await generatePDF(formData);
+    const success = await generatePDF(formData);
+    if (success) {
+      setIsPDFModalOpen(true);
+    }
     if (formData.clearFieldsAfterGeneration) {
       resetForm();
     }
+
+    navigate("/");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
@@ -58,7 +74,14 @@ export function ResumeGenerator() {
   };
 
   return (
+    // TODO Preview modal will be implemented late, in another feature, because actually it doesn't work as expected
     <>
+      {/* {isPDFModalOpen && (
+        <PDFModal
+          formData={formData}
+          onClose={() => setIsPDFModalOpen(false)}
+        />
+      )} */}
       <div className="w-full max-w-4xl mx-auto px-6 py-8">
         <FormProvider {...formValues}>
           <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>

@@ -5,3 +5,5 @@ export * from "./form-validations.interface";
 export * from "./education-item.interface";
 export * from "./use-stepper-item.interface";
 export * from "./contact-items.interface";
+export * from "./ui-state.interface";
+export * from "./toast.interface";
