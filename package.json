@@ -1,16 +1,16 @@
 {
-  "name": "harvard-resume-generator",
+  "name": "reshume",
   "private": false,
   "version": "0.0.0",
   "license": "MIT",
   "author": "Marcos Dionel Iannibelli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mdiannibelli/harvard-resume-generator"
+    "url": "https://github.com/mdiannibelli/reshume"
   },
-  "homepage": "https://github.com/mdiannibelli/harvard-resume-generator",
+  "homepage": "https://github.com/mdiannibelli/reshume",
   "bugs": {
-    "url": "https://github.com/mdiannibelli/harvard-resume-generator/issues"
+    "url": "https://github.com/mdiannibelli/reshume/issues"
   },
   "type": "module",
   "scripts": {

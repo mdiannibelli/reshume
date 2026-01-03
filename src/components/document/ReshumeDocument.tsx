@@ -4,11 +4,11 @@ import { translate } from "@/lib";
 import { formatDate, shortenUrl } from "@/utils";
 import { GENERATE_PDF_CONFIG } from "@/config";
 
-interface HarvardDocumentProps {
+interface ReshumeDocumentProps {
   data: ResumeData;
 }
 
-export function HarvardDocument({ data }: HarvardDocumentProps) {
+export function ReshumeDocument({ data }: ReshumeDocumentProps) {
   const {
     personalInfo,
     education,

@@ -12,7 +12,7 @@ export function Footer() {
         </p>
         <div className="flex gap-x-8 mt-4 items-center pt-2">
           <a
-            href="https://github.com/mdiannibelli/harvard-resume-generator"
+            href="https://github.com/mdiannibelli/reshume"
             target="_blank"
             className="flex items-center gap-2"
           >

@@ -4,6 +4,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 const initialState: UIState = {
   isGeneratingPDF: false,
   isPDFModalOpen: false,
+  isStickyBannerOpen: true,
 };
 
 export const uiSlice = createSlice({
@@ -16,10 +17,16 @@ export const uiSlice = createSlice({
     setIsPDFModalOpenAction: (state, action: PayloadAction<boolean>) => {
       state.isPDFModalOpen = action.payload;
     },
+    setIsStickyBannerOpenAction: (state, action: PayloadAction<boolean>) => {
+      state.isStickyBannerOpen = action.payload;
+    },
   },
 });
 
-export const { setIsGeneratingPDFAction, setIsPDFModalOpenAction } =
-  uiSlice.actions;
+export const {
+  setIsGeneratingPDFAction,
+  setIsPDFModalOpenAction,
+  setIsStickyBannerOpenAction,
+} = uiSlice.actions;
 
 export default uiSlice.reducer;

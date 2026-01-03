@@ -1,12 +1,18 @@
 {
   "HERO": {
-    "SUBTITLE": "generá tu currículum con",
-    "TITLE": "Generador de Currículum Harvard",
-    "CTA": "Generar Currículum"
+    "SUBTITLE": "Convierte tu experiencia en oportunidad",
+    "TITLE": "Reescribí tu historia profesional\ncon Reshume",
+    "CTA": "Generar Currículum",
+    "FEATURES": {
+      "1": "No requiere registro",
+      "2": "Compatibilidad con ATS",
+      "3": "Resultados instantáneos"
+    }
   },
   "NAVBAR": {
-    "HOME": "Inicio",
-    "ABOUT": "Acerca de",
+    "FEATURES": "Características",
+    "PRICING": "Precios",
+    "FAQ": "Preguntas frecuentes",
     "CONTACT": "Contacto",
     "LOGIN": "Iniciar sesión",
     "LOGIN_2": "Iniciá sesión con tu cuenta",
@@ -18,7 +24,7 @@
     }
   },
   "FOOTER": {
-    "COPYRIGHT": "© 2025 Generador de Currículum Harvard. Todos los derechos reservados.",
+    "COPYRIGHT": "© 2025 Reshume. Todos los derechos reservados.",
     "LINKS": {
       "CONTRIBUTE": "Contribuir",
       "DONATE": "Donar"

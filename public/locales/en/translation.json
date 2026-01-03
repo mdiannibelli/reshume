@@ -1,12 +1,18 @@
 {
   "HERO": {
-    "SUBTITLE": "generate your resume with",
-    "TITLE": "Harvard Resume Generator",
-    "CTA": "Generate Resume"
+    "SUBTITLE": "Turn experience into opportunity",
+    "TITLE": "Rewrite your career story\n with Reshume",
+    "CTA": "Generate Resume",
+    "FEATURES": {
+      "1": "No registration required",
+      "2": "ATS friendly",
+      "3": "Instant results"
+    }
   },
   "NAVBAR": {
-    "HOME": "Home",
-    "ABOUT": "About",
+    "FEATURES": "Features",
+    "PRICING": "Pricing",
+    "FAQ": "FAQ",
     "CONTACT": "Contact",
     "LOGIN": "Login",
     "LOGIN_2": "Login with your account",
@@ -18,7 +24,7 @@
     }
   },
   "FOOTER": {
-    "COPYRIGHT": "© 2025 Harvard Resume Generator. All rights reserved.",
+    "COPYRIGHT": "© 2025 Reshume. All rights reserved.",
     "LINKS": {
       "CONTRIBUTE": "Contribute",
       "DONATE": "Donate"

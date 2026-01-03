@@ -43,27 +43,36 @@ export function MenuResponsive() {
               <div className="px-8 py-16 flex flex-col justify-between h-full">
                 <nav className="flex flex-col gap-y-2 py-8">
                   <Link
-                    to="/"
+                    to="/#features"
                     onClick={() => setIsOpen(false)}
-                    className="hover:opacity-[0.9] text-white text-lg hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
+                    className="hover:opacity-[0.9] text-white text-xl hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
-                    {t("NAVBAR.HOME")}
+                    {t("NAVBAR.FEATURES")}
                   </Link>
                   <Link
-                    to="/about"
+                    to="/#pricing"
                     onClick={() => setIsOpen(false)}
-                    className="hover:opacity-[0.9] text-whit text-lg hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
+                    className="hover:opacity-[0.9] text-white text-xl hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
-                    {t("NAVBAR.ABOUT")}
+                    {t("NAVBAR.PRICING")}
                   </Link>
                   <Link
-                    to="/contact"
+                    to="/#faq"
                     onClick={() => setIsOpen(false)}
-                    className="hover:opacity-[0.9] text-white text-lg hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
+                    className="hover:opacity-[0.9] text-white text-xl hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
+                  >
+                    {t("NAVBAR.FAQ")}
+                  </Link>
+                  <Link
+                    to="/#contact"
+                    onClick={() => setIsOpen(false)}
+                    className="hover:opacity-[0.9] text-white text-xl hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.CONTACT")}
                   </Link>
                 </nav>
+                {/* 
+                // TODO Login and register will be implemented soon
                 <div className="flex flex-col gap-y-4">
                   <Link
                     to="/login"
@@ -82,7 +91,7 @@ export function MenuResponsive() {
                   >
                     {t("NAVBAR.GENERATE_RESUME")}
                   </Link>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </>

@@ -8,7 +8,10 @@ i18n
   .use(LanguageDetector) // detect user language
   .use(initReactI18next) // pass i18n instance to react-i18next
   .init({
-    fallbackLng: "en",
+    fallbackLng: "en", // default language is english
+    supportedLngs: ["en", "es"],
+    nonExplicitSupportedLngs: true,
+    load: "languageOnly",
     interpolation: {
       escapeValue: false, // react already safes from xss
     },

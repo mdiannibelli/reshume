@@ -1,6 +1,6 @@
 // TODO Preview modal will be implemented late, in another feature, because actually it doesn't work as expected
 /* import { BlobProvider } from "@react-pdf/renderer";
-import { HarvardDocument } from "@/components/document";
+import { ReshumeDocument } from "@/components/document";
 import { useUI } from "@/hooks";
 import type { ResumeData } from "@/interfaces";
 import { useTranslation } from "react-i18next";
@@ -23,7 +23,7 @@ export function PDFModal({ formData, onClose }: PDFModalProps) {
 
   return (
     <div className="fixed w-full h-full inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-      <BlobProvider document={<HarvardDocument data={formData} />}>
+      <BlobProvider document={<ReshumeDocument data={formData} />}>
         {({ blob, url, loading, error }) => {
           return (
             <div className="relative w-full h-full flex flex-col">
