@@ -1,8 +1,8 @@
-import { useUI } from "@/hooks";
 import type { StepperProps } from "@/interfaces";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { FaEye } from "react-icons/fa";
+// import { useUI } from "@/hooks";
+// import { FaEye } from "react-icons/fa";
 
 export function Stepper({
   currentStep,
@@ -11,19 +11,19 @@ export function Stepper({
   handleStepClick,
 }: StepperProps) {
   const { t } = useTranslation();
-  const { setIsPDFModalOpen } = useUI();
+  // const { setIsPDFModalOpen } = useUI();
 
-  const handlePDFModalOpen = () => {
-    setIsPDFModalOpen(true);
-  };
+  // const handlePDFModalOpen = () => {
+  //   setIsPDFModalOpen(true);
+  // };
 
   return (
     <>
       <div className="w-full max-w-4xl mx-auto mb-12">
         <div className="flex items-center flex-wrap lg:flex-nowrap gap-8 mx-4 justify-center md:justify-between relative">
-          <div className="absolute top-6 left-0 right-0 h-0.5 bg-white opacity-5 -z-10">
+          <div className="absolute top-6 left-0 right-0 h-0.5 bg-(--text-primary) opacity-5 -z-10">
             <motion.div
-              className="h-full bg-linear-to-r from-blue-500 to-purple-500"
+              className="h-full bg-linear-to-r from-(--primary) to-(--primary-light)"
               initial={{ width: "0%" }}
               animate={{
                 width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%`,
@@ -52,10 +52,10 @@ export function Stepper({
                   border-2 transition-all duration-300
                   ${
                     isCompleted
-                      ? "bg-red-500 border-transparent"
+                      ? "bg-(--primary) border-transparent"
                       : isActive
-                      ? "bg-black border-red-500 shadow-lg shadow-red-500/50"
-                      : "bg-black border-white/10"
+                      ? "bg-(--background-secondary) border-(--primary) shadow-lg shadow-(--primary)/50"
+                      : "bg-(--background-secondary) border-(--border)"
                   }
                 `}
                   animate={{
@@ -65,7 +65,7 @@ export function Stepper({
                 >
                   {isCompleted ? (
                     <motion.svg
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-(--text-primary)"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -84,7 +84,11 @@ export function Stepper({
                     <span
                       className={`
                       text-sm font-semibold cursor-default
-                      ${isActive ? "text-red-400" : "text-white/10"}
+                      ${
+                        isActive
+                          ? "text-(--primary)"
+                          : "text-(--text-secondary)"
+                      }
                     `}
                     >
                       {stepNumber}
@@ -103,10 +107,10 @@ export function Stepper({
                     text-sm font-medium cursor-default
                     ${
                       isActive
-                        ? "text-red-500"
+                        ? "text-(--primary)"
                         : isCompleted
-                        ? "text-white"
-                        : "text-white/10"
+                        ? "text-(--text-primary)"
+                        : "text-(--text-secondary)"
                     }
                   `}
                   >
@@ -123,7 +127,7 @@ export function Stepper({
         <button
           type="button"
           onClick={handlePDFModalOpen}
-          className="flex items-center px-6 py-2 bg-red-500 hover:bg-red-600 duration-300 cursor-pointer transition-all text-white rounded-lg font-medium"
+          className="flex items-center px-6 py-2 bg-(--primary) hover:bg-(--primary-hover) duration-300 cursor-pointer transition-all text-(--text-primary) rounded-lg font-medium"
         >
           <FaEye className="w-4 h-4 mr-2" />
           <span>{t("GENERATE_RESUME.FORM_STEPS.OPEN_PREVIEW")}</span>

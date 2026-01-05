@@ -2,10 +2,10 @@
   "HERO": {
     "SUBTITLE": "Turn experience into opportunity",
     "TITLE": "Rewrite your career story\n with Reshume",
-    "CTA": "Generate Resume",
+    "CTA": "Get Started",
     "FEATURES": {
       "1": "No registration required",
-      "2": "ATS friendly",
+      "2": "ATS-optimized",
       "3": "Instant results"
     }
   },
@@ -19,7 +19,7 @@
     "GENERATE_RESUME": "Generate resume",
     "OR": "or",
     "TOP_BANNER": {
-      "ANNOUNCEMENT": "⭐ Coming soon authentication with Google and <bold>more resume templates</bold>.",
+      "ANNOUNCEMENT": "Coming soon authentication with Google and <bold>more resume templates.</bold>",
       "READ_ANNOUNCEMENT": "More information"
     }
   },

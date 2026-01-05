@@ -5,9 +5,9 @@ export function Footer() {
   const { t } = useTranslation();
   return (
     <div className="absolute bottom-0 w-full">
-      <div className="w-[80%] md:max-w-2xl xl:max-w-7xl mx-auto bg-white opacity-5 h-px"></div>
+      <div className="w-[80%] md:max-w-2xl xl:max-w-7xl mx-auto bg-(--text-primary) opacity-10 h-px"></div>
       <footer className="flex flex-col justify-center items-center p-8">
-        <p className="text-xs text-center text-slate-100">
+        <p className="text-xs text-center text-(--text-primary)">
           {t("FOOTER.COPYRIGHT")}
         </p>
         <div className="flex gap-x-8 mt-4 items-center pt-2">
@@ -16,8 +16,8 @@ export function Footer() {
             target="_blank"
             className="flex items-center gap-2"
           >
-            <FaGithub className="text-white" />
-            <span className="text-xs text-slate-100">
+            <FaGithub className="text-(--text-primary)" />
+            <span className="text-xs text-(--text-primary)">
               {t("FOOTER.LINKS.CONTRIBUTE")}
             </span>
           </a>
@@ -26,8 +26,8 @@ export function Footer() {
             target="_blank"
             className="flex items-center gap-2"
           >
-            <FaHeart className="text-red-500" />
-            <span className="text-xs text-slate-100">
+            <FaHeart className="text-(--primary)" />
+            <span className="text-xs text-(--text-primary)">
               {t("FOOTER.LINKS.DONATE")}
             </span>
           </a>

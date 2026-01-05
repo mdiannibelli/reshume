@@ -2,7 +2,7 @@
   "HERO": {
     "SUBTITLE": "Convierte tu experiencia en oportunidad",
     "TITLE": "Reescribí tu historia profesional\ncon Reshume",
-    "CTA": "Generar Currículum",
+    "CTA": "Comenzar",
     "FEATURES": {
       "1": "No requiere registro",
       "2": "Compatibilidad con ATS",
@@ -19,7 +19,7 @@
     "GENERATE_RESUME": "Generar currículum",
     "OR": "o",
     "TOP_BANNER": {
-      "ANNOUNCEMENT": "⭐ Proximamente autenticación con Google y <bold>más plantillas</bold> de currículum.",
+      "ANNOUNCEMENT": "Proximamente autenticación con Google y <bold>más plantillas</bold> de currículum.",
       "READ_ANNOUNCEMENT": "Más información"
     }
   },

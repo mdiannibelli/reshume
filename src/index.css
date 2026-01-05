@@ -1,13 +1,39 @@
 @import "tailwindcss";
 
 :root {
+  --primary: #ef4444;
+  --primary-hover: #dc2626;
+  --primary-light: #f87171;
+  --primary-dark: #dc2626;
+  --primary-darker: #640000;
+  
+  --secondary: #ffffff;
+  --secondary-hover: #f3f4f6;
+  
+  --background: #0B0B0F;
+  --background-secondary: #111114;
+  
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-tertiary: rgba(255, 255, 255, 0.4);
+  
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --border-light: rgba(255, 255, 255, 0.07);
+  
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --yellow: #fffb00;
+  --info: #3b82f6; 
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+  color: var(--text-secondary);
+  background-color: var(--background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

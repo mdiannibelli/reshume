@@ -61,9 +61,9 @@ export function ConfigurationStep() {
       >
         <div className="flex flex-col gap-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.LANGUAGE")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <select
               {...register("selectedCvLanguage")}
@@ -71,7 +71,7 @@ export function ConfigurationStep() {
                 handleLanguage(e.target.value as LanguagesCodeEnum)
               }
               defaultValue=""
-              className="w-full p-6 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full p-6 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
             >
               <option value="">
                 {t(
@@ -85,7 +85,7 @@ export function ConfigurationStep() {
               ))}
             </select>
             {errors.selectedCvLanguage && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.selectedCvLanguage,
@@ -96,7 +96,7 @@ export function ConfigurationStep() {
             )}
 
             {isLanguageSelected && (
-              <div className="p-6 border-red-500 border bg-red-500/10 text-white rounded-xl flex flex-col md:flex-row gap-3 items-center mt-8">
+              <div className="p-6 border-(--primary) border bg-(--primary)/10 text-(--text-primary) rounded-xl flex flex-col md:flex-row gap-3 items-center mt-8">
                 <IoWarningOutline className="hidden md:block text-4xl" />
                 <p className="text-sm">
                   {t(
@@ -108,7 +108,7 @@ export function ConfigurationStep() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.WANT_ICONS")}
             </label>
             <select
@@ -123,7 +123,7 @@ export function ConfigurationStep() {
                 });
               }}
               defaultValue="false"
-              className="w-full p-6 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full p-6 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
             >
               <option value="true">
                 {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.YES")}
@@ -135,7 +135,7 @@ export function ConfigurationStep() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t(
                 "GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.CLEAR_FIELDS_AFTER_GENERATION"
               )}{" "}
@@ -145,8 +145,8 @@ export function ConfigurationStep() {
                 type="button"
                 onClick={() => handleClearFieldsAfterGeneration(true)}
                 className={cn(
-                  "cursor-pointer w-full px-6 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all",
-                  saveMode ? "bg-red-500" : "bg-black"
+                  "cursor-pointer w-full px-6 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all",
+                  saveMode ? "bg-(--primary)" : "bg-(--background-secondary)"
                 )}
               >
                 {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.YES")}
@@ -155,8 +155,8 @@ export function ConfigurationStep() {
                 type="button"
                 onClick={() => handleClearFieldsAfterGeneration(false)}
                 className={cn(
-                  "cursor-pointer w-full px-6 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all",
-                  saveMode ? "bg-black" : "bg-red-500"
+                  "cursor-pointer w-full px-6 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all",
+                  saveMode ? "bg-(--background-secondary)" : "bg-(--primary)"
                 )}
               >
                 {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.NO")}

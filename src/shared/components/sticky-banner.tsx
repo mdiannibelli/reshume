@@ -26,7 +26,7 @@ export const StickyBanner = ({
   return (
     <motion.div
       className={cn(
-        "sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center bg-transparent px-4 py-1",
+        "sticky inset-x-0 top-0 z-40 flex min-h-14 w-full items-center justify-center bg-(--primary-dark) px-4 py-1",
         className
       )}
       animate={{
@@ -50,7 +50,7 @@ export const StickyBanner = ({
         className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer"
         onClick={() => setIsStickyBannerOpen(!isStickyBannerOpen)}
       >
-        <CloseIcon className="h-5 w-5 text-white" />
+        <CloseIcon className="h-5 w-5 text-(--text-primary)" />
       </motion.button>
     </motion.div>
   );

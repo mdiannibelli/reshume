@@ -85,7 +85,7 @@ export function ResumeGenerator() {
           onClose={() => setIsPDFModalOpen(false)}
         />
       )} */}
-      <div className="w-full max-w-4xl mx-auto px-6 py-8">
+      <div className="w-full max-w-4xl mx-auto p-8">
         <FormProvider {...formValues}>
           <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
             <Stepper
@@ -102,7 +102,7 @@ export function ResumeGenerator() {
                 type="button"
                 onClick={prevStep}
                 disabled={currentStep === 1}
-                className="px-6 py-3 bg-white/5 cursor-pointer text-white rounded-lg hover:bg-white/10 transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                className="px-6 py-3 bg-(--border-light) cursor-pointer text-(--text-primary) rounded-lg hover:bg-(--border-hover) transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium"
               >
                 {t("GENERATE_RESUME.PREVIOUS")}
               </button>
@@ -114,14 +114,14 @@ export function ResumeGenerator() {
                     e.preventDefault();
                     nextStep();
                   }}
-                  className="px-6 py-3 bg-red-500 hover:bg-red-600 duration-300 cursor-pointer transition-all text-white rounded-lg font-medium"
+                  className="px-6 py-3 bg-(--primary) hover:bg-(--primary-hover) duration-300 cursor-pointer transition-all text-(--text-primary) rounded-lg font-medium"
                 >
                   {t("GENERATE_RESUME.NEXT")}
                 </button>
               ) : (
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-red-500 hover:bg-red-600 duration-300 cursor-pointer transition-all text-white rounded-lg font-medium"
+                  className="px-6 py-3 bg-(--primary) hover:bg-(--primary-hover) duration-300 cursor-pointer transition-all text-(--text-primary) rounded-lg font-medium"
                 >
                   {t("GENERATE_RESUME.GENERATE")}
                 </button>

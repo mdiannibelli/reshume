@@ -3,14 +3,17 @@ import { cn } from "@/lib/utils";
 export function StepWrapper({
   children,
   className,
+  borderDisabled = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  borderDisabled?: boolean;
 }) {
   return (
     <div
       className={cn(
-        "bg-black/90 border border-white/5 rounded-xl p-0 md:p-8 ",
+        "bg-(--background) rounded-xl p-0 md:p-8 ",
+        !borderDisabled && "md:border border-(--border)",
         className
       )}
     >
