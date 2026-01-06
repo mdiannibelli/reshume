@@ -1,21 +1,12 @@
 import { Link } from "react-router-dom";
-import { LanguageSelector, MenuResponsive, TopBanner } from "@components/ui";
+import { LanguageSelector, MenuResponsive } from "@components/ui";
 import { useTranslation } from "react-i18next";
-import { useUI } from "@/hooks";
-import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const { t } = useTranslation();
-  const { isStickyBannerOpen } = useUI();
   return (
     <div className="absolute inset-x-0 z-20">
-      <TopBanner />
-      <header
-        className={cn(
-          "relative top-3 flex justify-between lg:grid lg:grid-cols-3 items-center px-6 md:px-8 lg:px-4",
-          isStickyBannerOpen ? "lg:top-12" : "top-3"
-        )}
-      >
+      <header className="relative top-3 flex justify-between lg:grid lg:grid-cols-3 items-center px-6 md:px-8 lg:px-4">
         <div className="flex items-center gap-x-4 col-span-1 max-w-2xl lg:mx-auto">
           <div className="block lg:hidden">
             <MenuResponsive />
