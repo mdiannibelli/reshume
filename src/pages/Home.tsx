@@ -1,10 +1,10 @@
-import { Hero } from "@/components";
-import { SectionWrapper } from "@/layouts";
+import { Hero, Stats } from "@/components";
 
 export function Home() {
-    return (
-        <SectionWrapper>
-            <Hero/>
-        </SectionWrapper>
-    );
+  return (
+    <div className="relative w-full">
+      <Hero />
+      <Stats />
+    </div>
+  );
 }

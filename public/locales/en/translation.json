@@ -30,6 +30,40 @@
       "DONATE": "Donate"
     }
   },
+  "HOME": {
+    "STATISTICS": {
+      "TITLE": "Helping professionals improve their resumes and unlock new career opportunities",
+      "DESCRIPTION": "Thousands of professionals have increased their job opportunities by making their resumes stand out from the rest",
+      "IMPROVES": {
+        "1": "Customizable",
+        "2": "Clear Structure",
+        "3": "Consistency",
+        "4": "Professional Design",
+        "5": "Clarity",
+        "6": "ATS Optimized",
+        "7": "Professional",
+        "8": "Easy to read",
+        "9": "Recruiter-approved",
+        "10": "Innovative",
+        "11": "Elegant",
+        "12": "Modern"
+      },
+      "STATS": {
+        "1": {
+          "TITLE": "80%+",
+          "DESCRIPTION": "ATS-Compatible Structure"
+        },
+        "2": {
+          "TITLE": "3x",
+          "DESCRIPTION": "Faster Resume Creation"
+        },
+        "3": {
+          "TITLE": "70%",
+          "DESCRIPTION": "Focus on Impact"
+        }
+      }
+    }
+  },
   "GENERATE_RESUME": {
     "LOADING_SCREEN": {
       "GENERATING_PDF": "Generating PDF...",

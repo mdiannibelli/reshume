@@ -41,3 +41,57 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+.rotate-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;
+  will-change: transform;
+  transform: translateX(170px) translateY(1.5px) scale(1.70) rotateX(25deg) rotateY(15deg) rotateZ(-18deg);
+}
+
+@media (min-width: 768px) {
+  .rotate-3d {
+    transform: translateX(50px) translateY(1.5px) scale(1.15) rotateX(25deg) rotateY(15deg) rotateZ(-18deg);
+  }
+}
+
+.image-fade-gradient {
+  position: relative;
+}
+
+.image-fade-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 10%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.infinite-scroll {
+  animation: infinite-scroll 60s linear infinite;
+  width: fit-content;
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

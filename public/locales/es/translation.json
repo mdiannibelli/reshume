@@ -12,7 +12,7 @@
   "NAVBAR": {
     "FEATURES": "Características",
     "PRICING": "Precios",
-    "FAQ": "Preguntas frecuentes",
+    "FAQ": "FAQ",
     "CONTACT": "Contacto",
     "LOGIN": "Iniciar sesión",
     "LOGIN_2": "Iniciá sesión con tu cuenta",
@@ -28,6 +28,40 @@
     "LINKS": {
       "CONTRIBUTE": "Contribuir",
       "DONATE": "Donar"
+    }
+  },
+  "HOME": {
+    "STATISTICS": {
+      "TITLE": "Ayudando a profesionales a mejorar sus currículums y abrir nuevas oportunidades de carrera",
+      "DESCRIPTION": "Miles de profesionales han aumentado sus oportunidades de trabajo al hacer que sus currículums destaquen del resto",
+      "IMPROVES": {
+        "1": "Personalizable",
+        "2": "Estructura clara",
+        "3": "Consistencia",
+        "4": "Diseño profesional",
+        "5": "Claridad",
+        "6": "Compatibilidad con ATS",
+        "7": "Profesional",
+        "8": "Fácil de leer",
+        "9": "Aprobado por reclutadores",
+        "10": "Elegante",
+        "11": "Innovador",
+        "12": "Moderno"
+      },
+      "STATS": {
+        "1": {
+          "TITLE": "80%+",
+          "DESCRIPTION": "Estructura compatible con ATS"
+        },
+        "2": {
+          "TITLE": "3x",
+          "DESCRIPTION": "Creación de currículum más rápida"
+        },
+        "3": {
+          "TITLE": "70%+",
+          "DESCRIPTION": "Enfoque en el impacto"
+        }
+      }
     }
   },
   "GENERATE_RESUME": {
