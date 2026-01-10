@@ -57,6 +57,26 @@
   }
 }
 
+.fade-image-gradient-bottom {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 10%,
+    rgba(0, 0, 0, 0.03) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.fade-image-gradient-right {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 10%,
+    rgba(0, 0, 0, 0.03) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
 .image-fade-gradient {
   position: relative;
 }

@@ -17,11 +17,7 @@
     "LOGIN": "Iniciar sesión",
     "LOGIN_2": "Iniciá sesión con tu cuenta",
     "GENERATE_RESUME": "Generar currículum",
-    "OR": "o",
-    "TOP_BANNER": {
-      "ANNOUNCEMENT": "Proximamente autenticación con Google y <bold>más plantillas</bold> de currículum.",
-      "READ_ANNOUNCEMENT": "Más información"
-    }
+    "OR": "o"
   },
   "FOOTER": {
     "COPYRIGHT": "Reshume. Todos los derechos reservados.",
@@ -62,7 +58,24 @@
           "DESCRIPTION": "Enfoque en el impacto"
         }
       }
-    }
+    },
+    "FEATURES": {
+        "ATS_OPTIMIZED": {
+          "HEAD": "Legible por reclutadores y sistemas",
+          "TITLE": "Estructura optimizada para ATS",
+          "DESCRIPTION": "Currículums construidos usando diseños probados, <bold>compatibles con ATS</bold> que pueden ser leídos exactamente como lo esperan los reclutadores — sin pérdida de información, sin secciones rotas.",
+          "CHARACTERISTICS": {
+            "1": {
+              "TITLE": "Análisis inteligente de secciones",
+              "DESCRIPTION": "Secciones como Experiencia, Educación y Habilidades siguen una estructura estándar y nomenclatura, ayudando a los sistemas ATS a categorizar y priorizar correctamente el contenido de tu currículum."
+            },
+            "2": {
+              "TITLE": "Jerarquía de contenido clara",
+              "DESCRIPTION": "Encabezados claros, espaciado consistente y flujo lógico de contenido aseguran que ambos sistemas automatizados y reclutadores humanos puedan escanear tu currículum sin esfuerzo."
+            }
+          }
+        }
+      }
   },
   "GENERATE_RESUME": {
     "LOADING_SCREEN": {

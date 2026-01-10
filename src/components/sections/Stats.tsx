@@ -9,10 +9,7 @@ export function Stats() {
   const { t } = useTranslation();
 
   return (
-    <SectionWrapper
-      resetStyles
-      className="relative -top-152 md:-top-86 lg:-top-64"
-    >
+    <SectionWrapper resetStyles>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

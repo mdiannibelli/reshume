@@ -17,11 +17,7 @@
     "LOGIN": "Login",
     "LOGIN_2": "Login with your account",
     "GENERATE_RESUME": "Generate resume",
-    "OR": "or",
-    "TOP_BANNER": {
-      "ANNOUNCEMENT": "Coming soon authentication with Google and <bold>more resume templates.</bold>",
-      "READ_ANNOUNCEMENT": "More information"
-    }
+    "OR": "or"
   },
   "FOOTER": {
     "COPYRIGHT": "Reshume. All rights reserved.",
@@ -62,7 +58,24 @@
           "DESCRIPTION": "Focus on Impact"
         }
       }
-    }
+    },
+    "FEATURES": {
+        "ATS_OPTIMIZED": {
+          "HEAD": "Readable by recruiters and systems",
+          "TITLE": "ATS-Optimized Structure",
+          "DESCRIPTION": "Resumes built using proven, <bold>ATS-safe layouts that hiring systems</bold> can read accurately. We avoid tables, columns, icons, and hidden formatting to ensure your experience is parsed exactly as recruiters expect — no lost information, no broken sections.",
+          "CHARACTERISTICS": {
+            "1": {
+              "TITLE": "Smart Section Parsing",
+              "DESCRIPTION": "Sections like Experience, Education, and Skills follow standardized naming and structure, helping ATS systems correctly categorize and rank your resume content."
+            },
+            "2": {
+              "TITLE": "Clean Content Hierarchy",
+              "DESCRIPTION": "Clear headings, consistent spacing, and logical content flow ensure both automated systems and human recruiters can scan your resume effortlessly."
+            }
+          }
+        }
+      }
   },
   "GENERATE_RESUME": {
     "LOADING_SCREEN": {
