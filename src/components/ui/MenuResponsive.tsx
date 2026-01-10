@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
+import { useNavHandling } from "@/hooks";
 
 export function MenuResponsive() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-
+  const { handleHashNavigation } = useNavHandling();
   return (
     <>
       <button
@@ -42,34 +42,46 @@ export function MenuResponsive() {
               </button>
               <div className="px-8 py-16 flex flex-col justify-between h-full">
                 <nav className="flex flex-col gap-y-2 py-8">
-                  <Link
-                    to="/#features"
-                    onClick={() => setIsOpen(false)}
+                  <a
+                    href="/#features"
+                    onClick={() => {
+                      setIsOpen(false);
+                      handleHashNavigation("features");
+                    }}
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.FEATURES")}
-                  </Link>
-                  <Link
-                    to="/#pricing"
-                    onClick={() => setIsOpen(false)}
+                  </a>
+                  <a
+                    href="/#pricing"
+                    onClick={() => {
+                      setIsOpen(false);
+                      handleHashNavigation("pricing");
+                    }}
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.PRICING")}
-                  </Link>
-                  <Link
-                    to="/#faq"
-                    onClick={() => setIsOpen(false)}
+                  </a>
+                  <a
+                    href="/#faq"
+                    onClick={() => {
+                      setIsOpen(false);
+                      handleHashNavigation("faq");
+                    }}
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.FAQ")}
-                  </Link>
-                  <Link
-                    to="/#contact"
-                    onClick={() => setIsOpen(false)}
+                  </a>
+                  <a
+                    href="/#contact"
+                    onClick={() => {
+                      setIsOpen(false);
+                      handleHashNavigation("contact");
+                    }}
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.CONTACT")}
-                  </Link>
+                  </a>
                 </nav>
                 {/* 
                 // TODO Login and register will be implemented soon

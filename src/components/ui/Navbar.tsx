@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { LanguageSelector, MenuResponsive } from "@components/ui";
 import { useTranslation } from "react-i18next";
+import { useNavHandling } from "@/hooks";
 
 export function Navbar() {
   const { t } = useTranslation();
+  const { handleHashNavigation } = useNavHandling();
+
   return (
     <div className="absolute inset-x-0 z-20">
       <header className="relative top-3 flex justify-between lg:grid lg:grid-cols-4 items-center px-6 md:px-8 lg:px-4">
@@ -17,30 +20,34 @@ export function Navbar() {
           </Link>
         </div>
         <nav className="hidden lg:flex flex-1 justify-center col-span-2">
-          <Link
-            to="/#features"
+          <a
+            href="/#features"
+            onClick={() => handleHashNavigation("features")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.FEATURES")}
-          </Link>
-          <Link
-            to="/#pricing"
+          </a>
+          <a
+            href="/#pricing"
+            onClick={() => handleHashNavigation("pricing")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.PRICING")}
-          </Link>
-          <Link
-            to="/#faq"
+          </a>
+          <a
+            href="/#faq"
+            onClick={() => handleHashNavigation("faq")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.FAQ")}
-          </Link>
-          <Link
-            to="/#contact"
+          </a>
+          <a
+            href="/#contact"
+            onClick={() => handleHashNavigation("contact")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.CONTACT")}
-          </Link>
+          </a>
         </nav>
         <div className="flex items-center gap-x-2 xl:gap-x-4 justify-end lg:mx-auto col-span-1">
           <LanguageSelector />
