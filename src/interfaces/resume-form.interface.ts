@@ -53,6 +53,7 @@ export interface SelectedTemplate {
   description: string;
   styles: TemplateStyles;
   decorator?: DecoratorType;
+  tag?: string;
 }
 
 export interface ResumeData {

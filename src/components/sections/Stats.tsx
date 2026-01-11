@@ -19,7 +19,7 @@ export function Stats() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative overflow-x-clip overflow-y-visible lg:overflow-visible max-w-3xl md:max-w-full lg:max-w-2xl xl:max-w-6xl mx-auto px-8 md:px-12 lg:px-8 py-24 lg:py-0"
+        className="relative overflow-x-clip overflow-y-visible lg:overflow-visible max-w-3xl md:max-w-full lg:max-w-2xl xl:max-w-6xl mx-auto px-6 md:px-12 lg:px-8 py-24 lg:py-0"
       >
         <div className="absolute inset-0 bg-(--primary) blur-3xl opacity-10 lg:opacity-25 rotate-3d"></div>
         <div className="relative rounded-xl overflow-hidden border border-(--border) shadow-4xl transition-transform duration-300 ease-out rotate-3d image-fade-gradient">
@@ -31,12 +31,12 @@ export function Stats() {
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-8 relative pt-32 lg:pt-48 xl:pt-64">
+      <div className="container mx-auto px-6 md:px-8 relative pt-32 lg:pt-48 xl:pt-64">
         <div className="flex flex-col items-center text-center">
           <span className="bg-clip-text text-transparent bg-linear-to-r text-xl from-white to-(--text-secondary)">
             {t("HOME.STATISTICS.TITLE")}
           </span>
-          <p className="text-lg text-(--text-secondary) mt-2">
+          <p className="text-sm md:text-lg text-(--text-secondary) mt-2">
             {t("HOME.STATISTICS.DESCRIPTION")}
           </p>
         </div>

@@ -11,6 +11,7 @@ export const TEMPLATES: SelectedTemplate[] = [
       label: "DECORATORS.FREE",
       color: "bg-(--success)",
     },
+    tag: "classic",
   },
   {
     id: "2",
@@ -21,6 +22,7 @@ export const TEMPLATES: SelectedTemplate[] = [
       label: "DECORATORS.FREE",
       color: "bg-(--success)",
     },
+    tag: "modern",
   },
   {
     id: "3",
@@ -31,6 +33,7 @@ export const TEMPLATES: SelectedTemplate[] = [
       label: "DECORATORS.UNAVAILABLE",
       color: "bg-(--error)",
     },
+    tag: "executive",
   },
   {
     id: "4",
@@ -41,5 +44,6 @@ export const TEMPLATES: SelectedTemplate[] = [
       label: "DECORATORS.UNAVAILABLE",
       color: "bg-(--error)",
     },
+    tag: "impact",
   },
 ];

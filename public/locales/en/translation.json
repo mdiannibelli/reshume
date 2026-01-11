@@ -28,7 +28,7 @@
   },
   "HOME": {
     "STATISTICS": {
-      "TITLE": "Helping professionals improve their resumes and unlock new career opportunities",
+      "TITLE": "Helping professionals unlock new career opportunities",
       "DESCRIPTION": "Thousands of professionals have increased their job opportunities by making their resumes stand out from the rest",
       "IMPROVES": {
         "1": "Customizable",
@@ -63,7 +63,7 @@
         "ATS_OPTIMIZED": {
           "HEAD": "Readable by recruiters and systems",
           "TITLE": "ATS-Optimized Structure",
-          "DESCRIPTION": "Resumes built using proven, <bold>ATS-safe layouts that hiring systems</bold> can read accurately. We avoid tables, columns, icons, and hidden formatting to ensure your experience is parsed exactly as recruiters expect — no lost information, no broken sections.",
+          "DESCRIPTION": "Resumes built using proven, <bold>ATS-safe layouts that hiring systems</bold> can read accurately. We avoid tables, columns, icons, and hidden formatting to ensure your experience is parsed exactly as recruiters expect no lost information, no broken sections.",
           "CHARACTERISTICS": {
             "1": {
               "TITLE": "Smart Section Parsing",
@@ -72,6 +72,69 @@
             "2": {
               "TITLE": "Clean Content Hierarchy",
               "DESCRIPTION": "Clear headings, consistent spacing, and logical content flow ensure both automated systems and human recruiters can scan your resume effortlessly."
+            }
+          }
+        },
+        "INSTANT_RESUME_GENERATION": {
+          "HEAD": "From empty to ready in seconds",
+          "TITLE": "Instant Generation",
+          "DESCRIPTION": "Create a professional resume in minutes by simply filling in your information. Reshume <bold>handles layout, spacing, and structure automatically</bold> so you can focus on your experience, not formatting or design decisions.",
+          "CHECKLIST": {
+            "1": "No manual formatting",
+            "2": "No templates to fight with",
+            "3": "No design decisions required"
+          }
+        },
+        "PROFESSIONAL_TEMPLATES": {
+          "HEAD": "Designed to look serious and professional",
+          "TITLE": "Professional Templates",
+          "SUBTITLE": "Choose a template that fits your career stage, not just your style.",
+          "RECOMMENDED": "Recommended for",
+          "DESCRIPTION": "Reshume offers professionally designed resume templates based on real hiring standards. <bold>Clean layouts, balanced typography, and structured sections</bold> built to highlight your experience without distractions.",
+          "TEMPLATES": {
+            "CLASSIC": {
+              "NAME": "Classic",
+              "DESCRIPTION": "A traditional, well-structured layout inspired by academic and corporate resumes. Ideal for conservative industries, junior to mid-level roles, and applications where clarity matters most.",
+              "FOR": {
+                "1": "Corporate roles",
+                "2": "Entry & mid-level positions",
+                "3": "Academic / formal environments"
+              },
+              "STATUS": "Available",
+              "PRICE": "Free"
+            },
+            "MODERN": {
+              "NAME": "Modern",
+              "DESCRIPTION": "A contemporary layout with subtle visual hierarchy and improved readability designed for tech, product, and creative professionals who want a modern but professional look.",
+              "FOR": {
+                "1": "Tech & product roles",
+                "2": "Startups",
+                "3": "Designers, developers, merketers"
+              },
+              "STATUS": "Available",
+              "PRICE": "Free"
+            },
+            "EXECUTIVE": {
+              "NAME": "Executive",
+              "DESCRIPTION": "A refined, high-impact layout designed for leadership positions, focusing on strategic achievements and executive presence.",
+              "FOR": {
+                "1": "Senior & leadership roles",
+                "2": "Managment",
+                "3": "Executive applications"
+              },
+              "STATUS": "Coming soon...",
+              "PRICE": "Premium"
+            },
+            "IMPACT": {
+              "NAME": "Impact",
+              "DESCRIPTION": "A bold, results-oriented template that highlights measurable achievements, metrics, and business impact.",
+              "FOR": {
+                "1": "High-performance roles",
+                "2": "Sales, growth, product",
+                "3": "Results-heavy resumes"
+              },
+              "STATUS": "Coming soon...",
+              "PRICE": "Premium"
             }
           }
         }

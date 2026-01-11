@@ -42,6 +42,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .rotate-3d {
   transform-style: preserve-3d;

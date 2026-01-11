@@ -28,7 +28,7 @@
   },
   "HOME": {
     "STATISTICS": {
-      "TITLE": "Ayudando a profesionales a mejorar sus currículums y abrir nuevas oportunidades de carrera",
+      "TITLE": "Ayudando a profesionales a conseguir nuevas oportunidades de carrera",
       "DESCRIPTION": "Miles de profesionales han aumentado sus oportunidades de trabajo al hacer que sus currículums destaquen del resto",
       "IMPROVES": {
         "1": "Personalizable",
@@ -63,7 +63,7 @@
         "ATS_OPTIMIZED": {
           "HEAD": "Legible por reclutadores y sistemas",
           "TITLE": "Estructura optimizada para ATS",
-          "DESCRIPTION": "Currículums construidos usando diseños probados, <bold>compatibles con ATS</bold> que pueden ser leídos exactamente como lo esperan los reclutadores — sin pérdida de información, sin secciones rotas.",
+          "DESCRIPTION": "Currículums construidos usando diseños probados, <bold>compatibles con ATS</bold> que pueden ser leídos exactamente como lo esperan los reclutadores sin pérdida de información, sin secciones rotas.",
           "CHARACTERISTICS": {
             "1": {
               "TITLE": "Análisis inteligente de secciones",
@@ -72,6 +72,69 @@
             "2": {
               "TITLE": "Jerarquía de contenido clara",
               "DESCRIPTION": "Encabezados claros, espaciado consistente y flujo lógico de contenido aseguran que ambos sistemas automatizados y reclutadores humanos puedan escanear tu currículum sin esfuerzo."
+            }
+          }
+        },
+        "INSTANT_RESUME_GENERATION": {
+          "HEAD": "Tené tu currículum listo en segundos",
+          "TITLE": "Generación instantánea",
+          "DESCRIPTION": "Crea un currículum profesional en minutos simplemente llenando tu información. Reshume <bold>maneja el diseño, el espaciado y la estructura automáticamente</bold> así puedes enfocarte en tu experiencia, no en el formato o decisiones de diseño.",
+          "CHECKLIST": {
+            "1": "No formateas manualmente",
+            "2": "No luchas con plantillas",
+            "3": "No tomas decisiones de diseño"
+          }
+        },
+        "PROFESSIONAL_TEMPLATES": {
+          "HEAD": "Diseñados para ser serios y profesionales",
+          "TITLE": "Plantillas profesionales",
+          "SUBTITLE": "Elegí una plantilla que se adapte a tu etapa de carrera, no solo a tu estilo.",
+          "RECOMMENDED": "Recomendado para",
+          "DESCRIPTION": "Reshume ofrece plantillas de currículum profesionalmente diseñadas basadas en estándares de contratación reales. <bold>Diseños limpios, tipografía equilibrada y secciones estructuradas</bold> construidas para destacar tu experiencia sin distracciones.",
+          "TEMPLATES": {
+            "CLASSIC": {
+              "NAME": "Clásico",
+              "DESCRIPTION": "Un diseño tradicional, bien estructurado inspirado en currículums académicos y corporativos. Ideal para industrias conservadoras, puestos de entrada y medio nivel, y aplicaciones donde la claridad es lo más importante.",
+              "FOR": {
+                "1": "Roles corporativos",
+                "2": "Puestos de entrada y medio nivel",
+                "3": "Ambientes académicos / formales"
+              },
+              "STATUS": "Disponible",
+              "PRICE": "Gratis"
+            },
+            "MODERN": {
+              "NAME": "Moderno",
+              "DESCRIPTION": "Un diseño moderno con jerarquía visual sutil y mejor legibilidad diseñado para profesionales de tecnología, producto y creatividad que quieren un aspecto moderno pero profesional.",
+              "FOR": {
+                "1": "Roles de tecnología y producto",
+                "2": "Startups",
+                "3": "Diseñadores, desarrolladores, mercadotecnistas"
+              },
+              "STATUS": "Disponible",
+              "PRICE": "Gratis"
+            },
+            "EXECUTIVE": {
+              "NAME": "Ejecutivo",
+              "DESCRIPTION": "Un diseño refinado, de alto impacto diseñado para posiciones de liderazgo, enfocado en logros estratégicos y presencia ejecutiva.",
+              "FOR": {
+                "1": "Roles senior y de liderazgo",
+                "2": "Gestión",
+                "3": "Aplicaciones ejecutivas"
+              },
+              "STATUS": "Próximamente...",
+              "PRICE": "Premium"
+            },
+            "IMPACT": {
+              "NAME": "Impacto",
+              "DESCRIPTION": "Un diseño audaz, orientado a resultados que destaca logros medibles, métricas y impacto empresarial.",
+              "FOR": {
+                "1": "Roles de alto rendimiento",
+                "2": "Ventas, crecimiento, producto",
+                "3": "Currículums orientados a resultados"
+              },
+              "STATUS": "Próximamente...",
+              "PRICE": "Premium"
             }
           }
         }
