@@ -62,11 +62,11 @@ export function Navbar() {
             {t("NAVBAR.FAQ")}
           </a>
           <a
-            href="/#contact"
-            onClick={() => handleHashNavigation("contact")}
+            href="/#contribute"
+            onClick={() => handleHashNavigation("contribute")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
-            {t("NAVBAR.CONTACT")}
+            {t("NAVBAR.CONTRIBUTE")}
           </a>
         </nav>
         <div className="flex items-center gap-x-2 xl:gap-x-4 justify-end lg:mx-auto col-span-1">

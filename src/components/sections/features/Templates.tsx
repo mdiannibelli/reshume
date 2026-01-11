@@ -31,10 +31,10 @@ export function Templates() {
       {/* Column 2 */}
       <div className="flex col-span-4">
         <div className="flex flex-col justify-center items-center">
-          <h2 className="text-xl bg-clip-text text-transparent bg-linear-to-r from-white to-(--text-secondary)">
+          <BentoTemplates />
+          <h2 className="mt-16 text-xl bg-clip-text text-transparent bg-linear-to-r from-white to-(--text-secondary)">
             {t("HOME.FEATURES.PROFESSIONAL_TEMPLATES.SUBTITLE")}
           </h2>
-          <BentoTemplates />
         </div>
       </div>
     </div>

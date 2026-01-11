@@ -14,7 +14,7 @@ export function BentoTemplates() {
   };
 
   return (
-    <div className="flex flex-col md:grid gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2">
+    <div className="flex flex-col md:grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2">
       <div className="relative row-span-2">
         <div className="absolute inset-px rounded-lg bg-(--background-secondary) border-(--border) border lg:rounded-l-4xl"></div>
         <TemplatePrice templateName={availableTemplates.CLASSIC} />

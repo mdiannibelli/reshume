@@ -73,14 +73,14 @@ export function MenuResponsive() {
                     {t("NAVBAR.FAQ")}
                   </a>
                   <a
-                    href="/#contact"
+                    href="/#contribute"
                     onClick={() => {
                       setIsOpen(false);
-                      handleHashNavigation("contact");
+                      handleHashNavigation("contribute");
                     }}
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
-                    {t("NAVBAR.CONTACT")}
+                    {t("NAVBAR.CONTRIBUTE")}
                   </a>
                 </nav>
                 {/* 
