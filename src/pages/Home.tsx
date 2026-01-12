@@ -1,4 +1,5 @@
 import { Features, Hero, Stats } from "@/components";
+import { Pricing } from "@/components/sections/Pricing";
 
 export function Home() {
   return (
@@ -7,6 +8,7 @@ export function Home() {
       <div className="relative -top-152 md:-top-104 lg:-top-86">
         <Stats />
         <Features />
+        <Pricing />
       </div>
     </div>
   );

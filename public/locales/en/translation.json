@@ -138,6 +138,43 @@
             }
           }
         }
+      },
+      "PRICING": {
+        "TITLE": "No need to pay for a resume builder",
+        "DESCRIPTION": "Reshume is currently free while in early development, you can generate a professional resume. Future premium features will always remain optional.",
+        "CARDS": {
+          "STANDARD": {
+            "PLAN": "Standard",
+            "HEADLINE": "Everything you need to generate a professional resume.",
+            "PRICE": "$0",
+            "PERIOD": "/month",
+            "DESCRIPTION": "Perfect for job seekers and professionals looking for a professional resume.",
+            "BUTTON": "Get Started for free",
+            "CHECKS": {
+              "1": "Instant resume generation",
+              "2": "Classic template",
+              "3": "Modern template",
+              "4": "ATS-optimized structure",
+              "5": "PDF export",
+              "6": "No account required"
+            }
+          },
+          "PREMIUM": {
+            "PLAN": "Premium",
+            "HEADLINE": "Advanced templates and features for specialized roles.",
+            "PRICE": "$0",
+            "PERIOD": "/month",
+            "DESCRIPTION": "Designed for executives, managers, and high-performance roles.",
+            "BUTTON": "Get Started for free",
+            "CHECKS": {
+              "1": "Executive template",
+              "2": "Impact template",
+              "3": "Additional layout customization",
+              "4": "Priority access to new templates"
+            },
+            "STATUS": "Coming soon..."
+          }
+        }
       }
   },
   "GENERATE_RESUME": {

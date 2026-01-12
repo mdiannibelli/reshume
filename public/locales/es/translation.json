@@ -138,6 +138,43 @@
             }
           }
         }
+      },
+      "PRICING": {
+        "TITLE": "No necesitas pagar para construir tu currículum",
+        "DESCRIPTION": "Reshume es completamente gratis. Las futuras características premium siempre permanecerán opcionales.",
+        "CARDS": {
+          "STANDARD": {
+            "PLAN": "Standard",
+            "HEADLINE": "Todo lo que necesitas para generar un currículum profesional.",
+            "PRICE": "$0",
+            "PERIOD": "/mes",
+            "DESCRIPTION": "Perfecto para postulantes y profesionales que buscan un currículum profesional.",
+            "BUTTON": "Comenzar gratis",
+            "CHECKS": {
+              "1": "Generación instantánea de currículum",
+              "2": "Plantilla clásica",
+              "3": "Plantilla moderna",
+              "4": "Estructura optimizada para ATS",
+              "5": "Exportación a PDF",
+              "6": "No requiere cuenta"
+            }
+          },
+          "PREMIUM": {
+            "PLAN": "Premium",
+            "HEADLINE": "Plantillas y características avanzadas para roles especializados.",
+            "PRICE": "$0",
+            "PERIOD": "/mes",
+            "DESCRIPTION": "Diseñado para gerentes, líderes y roles de alto rendimiento profesional.",
+            "BUTTON": "Comenzar gratis",
+            "CHECKS": {
+              "1": "Plantilla ejecutiva",
+              "2": "Plantilla impacto",
+              "3": "Personalización adicional de diseño",
+              "4": "Acceso prioritario a nuevas plantillas"
+            },
+            "STATUS": "Próximamente..."
+          }
+        }
       }
   },
   "GENERATE_RESUME": {
