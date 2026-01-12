@@ -9,7 +9,7 @@ export function Pricing() {
     <SectionWrapper
       sectionId="pricing"
       resetStyles
-      className="mt-24 lg:mt-36 pt-12 md:pt-32"
+      className="mt-24 lg:mt-36 pt-32"
     >
       <div className="container mx-auto px-3 md:px-6 lg:px-8">
         <div className="text-center mb-12">
