@@ -197,6 +197,53 @@
           "DESCRIPTION": "Danos una estrella en GitHub y ayuda a validar y mantener el proyecto en movimiento.",
           "BUTTON": "Dar una estrella"
         }
+      },
+      "FAQ": {
+        "BADGE": "FAQ",
+        "TITLE": "Preguntas frecuentes",
+        "DESCRIPTION": "Encuentra respuestas a preguntas comunes sobre Reshume.",
+        "QUESTIONS": {
+          "1": {
+            "QUESTION": "¿Cuál es la diferencia entre Reshume y otros generadores de currículums?",
+            "ANSWER": "Reshume es un generador de currículums gratuito y de código abierto que te ayuda a crear un currículum profesional en minutos. Está diseñado para ser fácil de usar y entender, con un enfoque en simplicidad y claridad."
+          },
+          "2": {
+            "QUESTION": "¿Es Reshume realmente gratuito?",
+            "ANSWER": "Sí. Reshume es completamente gratuito durante el acceso temprano. Puedes generar y descargar currículums profesionales sin pagar o crear una cuenta."
+          },
+          "3": {
+            "QUESTION": "¿Reshume siempre será gratuito?",
+            "ANSWER": "El generador de currículums principal permanecerá gratuito. En el futuro, se pueden introducir plantillas y características premium opcionales, pero la funcionalidad básica siempre estará disponible."
+          },
+          "4": {
+            "QUESTION": "¿Es Reshume de código abierto?",
+            "ANSWER": "Sí. Reshume es 100% de código abierto. Puedes ver el código, contribuir o auto-hospedarlo si quieres tener el control total."
+          },
+          "5": {
+            "QUESTION": "¿Son currículums Reshume compatibles con ATS?",
+            "ANSWER": "Las plantillas de Reshume se construyen usando diseños y estructuras seguras para ATS para asegurar que tu currículum pueda ser correctamente analizado por sistemas de seguimiento de candidatos."
+          },
+          "6": {
+            "QUESTION": "¿Puede Reshume garantizar que mi currículum pasará por ATS?",
+            "ANSWER": "No herramienta puede garantizar eso. Sin embargo, Reshume sigue las mejores prácticas para maximizar la compatibilidad y la legibilidad."
+          },
+          "7": {
+            "QUESTION": "¿Necesito crear una cuenta para usar Reshume?",
+            "ANSWER": "No. Puedes generar y descargar tu currículum sin registrarte."
+          },
+          "8": {
+            "QUESTION": "¿Qué formatos de currículum puedo exportar?",
+            "ANSWER": "Actualmente, Reshume soporta exportaciones de PDF de alta calidad. Se pueden agregar formatos adicionales en el futuro."
+          },
+          "9": {
+            "QUESTION": "¿Puedo editar o regenerar mi currículum más tarde?",
+            "ANSWER": "Sí. Puedes actualizar tu información y regenerar tu currículum en cualquier momento."
+          },
+          "10": {
+            "QUESTION": "¿Se almacenan o comparten mis datos?",
+            "ANSWER": "No. Reshume no vende o comparte tus datos. La información de tu currículum permanece en tu control."
+          }
+        }
       }
   },
   "GENERATE_RESUME": {

@@ -197,6 +197,53 @@
           "DESCRIPTION": "Star the project on GitHub and help validate and keep it moving forward.",
           "BUTTON": "Give a star"
         }
+      },
+      "FAQ": {
+        "BADGE": "FAQ",
+        "TITLE": "Frequently Asked Questions",
+        "DESCRIPTION": "Find answers to common questions about Reshume.",
+        "QUESTIONS": {
+          "1": {
+            "QUESTION": "What is the difference between Reshume and other resume builders?",
+            "ANSWER": "Reshume is a free and open-source resume builder that helps you create a professional resume in minutes. It is designed to be easy to use and understand, with a focus on simplicity and clarity."
+          },
+          "2": {
+            "QUESTION": "Is Reshume really free?",
+            "ANSWER": "Yes. Reshume is completely free during early access. You can generate and download professional resumes without paying or creating an account."
+          },
+          "3": {
+            "QUESTION": "Will Reshume always be free?",
+            "ANSWER": "The core resume generator will remain free. In the future, optional premium templates and features may be introduced, but basic functionality will always be available."
+          },
+          "4": {
+            "QUESTION": "Is Reshume open source?",
+            "ANSWER": "Yes. Reshume is 100% open source. You can view the code, contribute, or self-host it if you want full control."
+          },
+          "5": {
+            "QUESTION": "Are Reshume resumes ATS-friendly?",
+            "ANSWER": "Reshume templates are built using ATS-safe layouts and structures to ensure your resume can be properly parsed by applicant tracking systems."
+          },
+          "6": {
+            "QUESTION": "Can Reshume guarantee that my resume will pass ATS systems?",
+            "ANSWER": "No tool can guarantee that. However, Reshume follows best practices to maximize compatibility and readability."
+          },
+          "7": {
+            "QUESTION": "Do I need to create an account to use Reshume?",
+            "ANSWER": "No. You can generate and download your resume without signing up."
+          },
+          "8": {
+            "QUESTION": "What resume formats can I export?",
+            "ANSWER": "Currently, Reshume supports high-quality PDF exports. Additional formats may be added in the future."
+          },
+          "9": {
+            "QUESTION": "Can I edit or regenerate my resume later?",
+            "ANSWER": "Yes. You can update your information and regenerate your resume at any time."
+          },
+          "10": {
+            "QUESTION": "Is my data stored or shared?",
+            "ANSWER": "No. Reshume does not sell or share your data. Your resume information stays in your control."
+          }
+        }
       }
   },
   "GENERATE_RESUME": {

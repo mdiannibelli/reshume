@@ -3,3 +3,4 @@ export * from "./Stats";
 export * from "./Features";
 export * from "./Pricing";
 export * from "./Contribute";
+export * from "./FAQ";
