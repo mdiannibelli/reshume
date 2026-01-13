@@ -2,15 +2,13 @@ import { SectionWrapper } from "@/layouts";
 import { useTranslation } from "react-i18next";
 import { PricingCard } from "./pricing/PricingCard";
 import { PricingVariants } from "@/enums";
+import { Badge } from "@/components/ui";
 
 export function Pricing() {
   const { t } = useTranslation();
   return (
-    <SectionWrapper
-      sectionId="pricing"
-      resetStyles
-      className="mt-24 lg:mt-36 pt-32"
-    >
+    <SectionWrapper sectionId="pricing" resetStyles>
+      <Badge text="Pricing" />
       <div className="container mx-auto px-3 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">

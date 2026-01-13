@@ -12,8 +12,8 @@
   "NAVBAR": {
     "FEATURES": "Features",
     "PRICING": "Pricing",
-    "FAQ": "FAQ",
     "CONTRIBUTE": "Contribute",
+    "FAQ": "FAQ",
     "LOGIN": "Login",
     "LOGIN_2": "Login with your account",
     "GENERATE_RESUME": "Generate resume",

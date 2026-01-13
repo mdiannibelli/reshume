@@ -63,16 +63,6 @@ export function MenuResponsive() {
                     {t("NAVBAR.PRICING")}
                   </a>
                   <a
-                    href="/#faq"
-                    onClick={() => {
-                      setIsOpen(false);
-                      handleHashNavigation("faq");
-                    }}
-                    className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
-                  >
-                    {t("NAVBAR.FAQ")}
-                  </a>
-                  <a
                     href="/#contribute"
                     onClick={() => {
                       setIsOpen(false);
@@ -81,6 +71,16 @@ export function MenuResponsive() {
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.CONTRIBUTE")}
+                  </a>
+                  <a
+                    href="/#faq"
+                    onClick={() => {
+                      setIsOpen(false);
+                      handleHashNavigation("faq");
+                    }}
+                    className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
+                  >
+                    {t("NAVBAR.FAQ")}
                   </a>
                 </nav>
                 {/* 
