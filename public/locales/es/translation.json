@@ -60,6 +60,7 @@
       }
     },
     "FEATURES": {
+      "BADGE": "Características",
         "ATS_OPTIMIZED": {
           "HEAD": "Legible por reclutadores y sistemas",
           "TITLE": "Estructura optimizada para ATS",
@@ -140,6 +141,7 @@
         }
       },
       "PRICING": {
+        "BADGE": "Precios",
         "TITLE": "No necesitas pagar para construir tu currículum",
         "DESCRIPTION": "Reshume es completamente gratis. Las futuras características premium siempre permanecerán opcionales.",
         "CARDS": {

@@ -8,7 +8,7 @@ export function Pricing() {
   const { t } = useTranslation();
   return (
     <SectionWrapper sectionId="pricing" resetStyles>
-      <Badge text="Pricing" />
+      <Badge text="HOME.PRICING.BADGE" />
       <div className="container mx-auto px-3 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">

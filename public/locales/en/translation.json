@@ -60,6 +60,7 @@
       }
     },
     "FEATURES": {
+      "BADGE": "Features",
         "ATS_OPTIMIZED": {
           "HEAD": "Readable by recruiters and systems",
           "TITLE": "ATS-Optimized Structure",
@@ -140,6 +141,7 @@
         }
       },
       "PRICING": {
+        "BADGE": "Pricing",
         "TITLE": "No need to pay for a resume builder",
         "DESCRIPTION": "Reshume is currently free while in early development, you can generate a professional resume. Future premium features will always remain optional.",
         "CARDS": {
