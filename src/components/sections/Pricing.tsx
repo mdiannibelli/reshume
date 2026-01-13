@@ -11,7 +11,7 @@ export function Pricing() {
       <Badge text="HOME.PRICING.BADGE" />
       <div className="container mx-auto px-3 md:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-transparent bg-clip-text bg-linear-to-r from-white to-(--text-secondary)">
               {t("HOME.PRICING.TITLE")}
             </span>

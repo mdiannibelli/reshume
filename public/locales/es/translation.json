@@ -177,6 +177,26 @@
             "STATUS": "Próximamente..."
           }
         }
+      },
+      "CONTRIBUTE": {
+        "BADGE": "Contribuir",
+        "TITLE": "Reshume es 100% de código abierto",
+        "DESCRIPTION": "Construyamos algo grande juntos.",
+        "LAYOUT": {
+          "TITLE": "Código abierto. Desarrollado en público",
+          "DESCRIPTION": "Cada plantilla, diseño y decisión es desarrollado en público. Puedes inspeccionar el código, sugerir mejoras o construir sobre él."
+        },
+        "MAIN_BUTTON": "Ver código",
+        "CONTRIBUTIONS": {
+          "TITLE": "Contribuir con código",
+          "DESCRIPTION": "Encontraste un bug, quieres mejorar una plantilla o agregar una característica? <bold>Pull requests son bienvenidos.</bold>",
+          "BUTTON": "Abrir un issue"
+        },
+        "RATING": {
+          "TITLE": "¿Te gusta el proyecto?",
+          "DESCRIPTION": "Danos una estrella en GitHub y ayuda a validar y mantener el proyecto en movimiento.",
+          "BUTTON": "Dar una estrella"
+        }
       }
   },
   "GENERATE_RESUME": {

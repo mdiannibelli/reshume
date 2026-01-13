@@ -1,5 +1,4 @@
-import { Features, Hero, Stats } from "@/components";
-import { Pricing } from "@/components/sections/Pricing";
+import { Contribute, Features, Hero, Pricing, Stats } from "@/components";
 
 export function Home() {
   return (
@@ -9,6 +8,7 @@ export function Home() {
         <Stats />
         <Features />
         <Pricing />
+        <Contribute />
       </div>
     </div>
   );

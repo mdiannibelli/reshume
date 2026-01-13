@@ -177,6 +177,26 @@
             "STATUS": "Coming soon..."
           }
         }
+      },
+      "CONTRIBUTE": {
+        "BADGE": "Contribute",
+        "TITLE": "Reshume is 100% open source",
+        "DESCRIPTION": "Let's build something great together.",
+        "LAYOUT": {
+          "TITLE": "Open Source. Built in public",
+          "DESCRIPTION": "Every template, layout, and decision is developed in the open. You can inspect the code, suggest improvements, or build on top of it."
+        },
+        "MAIN_BUTTON": "View code",
+        "CONTRIBUTIONS": {
+          "TITLE": "Contribute with Code",
+          "DESCRIPTION": "Found a bug, want to improve a template, or add a feature? <bold>Pull requests are welcome.</bold>",
+          "BUTTON": "Open an issue"
+        },
+        "RATING": {
+          "TITLE": "Like the project?",
+          "DESCRIPTION": "Star the project on GitHub and help validate and keep it moving forward.",
+          "BUTTON": "Give a star"
+        }
       }
   },
   "GENERATE_RESUME": {
