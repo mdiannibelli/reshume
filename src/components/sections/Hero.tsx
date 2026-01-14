@@ -11,7 +11,7 @@ export function Hero() {
     t("HERO.FEATURES.3"),
   ];
   return (
-    <SectionWrapper className="pt-64 md:pt-96">
+    <SectionWrapper resetStyles className="pt-64 md:pt-96">
       <LampContainer btnName={t("HERO.CTA")} features={features}>
         <motion.span
           initial={{ opacity: 0 }}

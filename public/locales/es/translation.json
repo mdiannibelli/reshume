@@ -20,8 +20,40 @@
     "OR": "o"
   },
   "FOOTER": {
-    "COPYRIGHT": "Reshume. Todos los derechos reservados.",
+    "TITLE": "Reshume",
+    "DESCRIPTION": "Generador de currículums ATS-friendly gratuito y de código abierto.",
+    "COPYRIGHT": "Reshume. Todos los derechos reservados. Hecho con ❤️ por <a>Marcos Dionel</a>",
     "LINKS": {
+      "NAVBAR": {
+        "FEATURES": {
+          "TITLE": "Características",
+          "LINK": "/#features",
+          "LIST": {
+            "1": "Todas las características"
+          }
+        },
+        "PRICING": {
+          "TITLE": "Precios",
+          "LINK": "/#pricing",
+          "LIST": {
+            "1": "Planes disponibles"
+          }
+        },
+        "CONTRIBUTE": {
+          "TITLE": "Contribuir",
+          "LINK": "/#contribute",
+          "LIST": {
+            "1": "Contribuir con código"
+          }
+        },
+        "FAQ": {
+          "TITLE": "Preguntas frecuentes",
+          "LINK": "/#faq",
+          "LIST": {
+            "1": "Resolvé tus dudas"
+          }
+        }
+      },
       "CONTRIBUTE": "Contribuir",
       "DONATE": "Donar"
     }

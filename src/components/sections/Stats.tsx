@@ -19,7 +19,7 @@ export function Stats() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative overflow-x-clip overflow-y-visible lg:overflow-visible max-w-3xl md:max-w-full lg:max-w-2xl xl:max-w-6xl mx-auto px-6 md:px-12 lg:px-8 py-24 lg:py-0"
+        className="relative overflow-x-clip overflow-y-visible lg:overflow-visible max-w-3xl md:max-w-full lg:max-w-2xl xl:max-w-6xl mx-auto px-6 md:px-12 lg:px-8 py-8 lg:py-0"
       >
         <div className="relative rounded-xl overflow-hidden shadow-4xl transition-transform duration-300 ease-out rotate-3d image-fade-gradient">
           <img

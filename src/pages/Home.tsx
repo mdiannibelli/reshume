@@ -12,7 +12,7 @@ export function Home() {
   return (
     <div className="relative w-full">
       <Hero />
-      <div className="relative -top-152 md:-top-104 lg:-top-86">
+      <div className="relative pb-24">
         <Stats />
         <Features />
         <Pricing />

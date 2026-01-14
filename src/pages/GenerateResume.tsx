@@ -3,7 +3,7 @@ import { ResumeGenerator } from "@/components";
 
 export function GenerateResume() {
   return (
-    <SectionWrapper className="py-52 justify-start">
+    <SectionWrapper className="py-52 justify-start min-h-0">
       <ResumeGenerator />
     </SectionWrapper>
   );
