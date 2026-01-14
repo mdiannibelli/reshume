@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export function useNavHandling() {
@@ -6,6 +6,7 @@ export function useNavHandling() {
   const location = useLocation();
 
   const pendingHash = useRef<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (location.pathname === "/" && pendingHash.current) {
@@ -21,6 +22,16 @@ export function useNavHandling() {
     }
   }, [location.pathname]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleHashNavigation = (hash: string) => {
     if (location.pathname === "/") {
       const element = document.getElementById(hash);
@@ -32,5 +43,11 @@ export function useNavHandling() {
       navigate("/");
     }
   };
-  return { handleHashNavigation, pendingHash };
+
+  const handleToHome = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/");
+  };
+
+  return { handleHashNavigation, pendingHash, handleToHome, isScrolled };
 }

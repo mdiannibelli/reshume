@@ -2,23 +2,11 @@ import { Link } from "react-router-dom";
 import { LanguageSelector, MenuResponsive } from "@components/ui";
 import { useTranslation } from "react-i18next";
 import { useNavHandling } from "@/hooks";
-import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const { t } = useTranslation();
-  const { handleHashNavigation } = useNavHandling();
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { handleHashNavigation, isScrolled, handleToHome } = useNavHandling();
 
   return (
     <div className="inset-x-0 z-20 transition-all duration-500 fixed">
@@ -34,9 +22,21 @@ export function Navbar() {
           <div className="block lg:hidden">
             <MenuResponsive />
           </div>
-          <Link to="/" className="hidden lg:block">
-            {/* // TODO Insert logo */}
-            Reshume
+          <Link
+            to="/"
+            onClick={handleToHome}
+            className="hidden lg:flex items-center gap-x-2"
+          >
+            <div className="rounded-xl h-10 w-10 border-(--background) border-2">
+              <img
+                src="/reshume.svg"
+                alt="Reshume"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-(--text-secondary)">
+              {t("NAVBAR.TITLE")}
+            </span>
           </Link>
         </div>
         <nav className="hidden lg:flex flex-1 justify-center col-span-2">

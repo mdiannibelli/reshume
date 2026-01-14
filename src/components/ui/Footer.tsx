@@ -1,9 +1,11 @@
 import { FaGithub, FaHeart, FaInstagram } from "react-icons/fa6";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useNavHandling } from "@/hooks";
 
 export function Footer() {
   const { t } = useTranslation();
+  const { handleToHome, handleHashNavigation } = useNavHandling();
   const currentYear = new Date().getFullYear();
   return (
     <div className="relative w-full mt-auto container mx-auto px-3 md:px-6 lg:px-8">
@@ -11,13 +13,22 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4">
           <div className="col-span-1 sm:col-span-2 lg:col-span-3">
             <div className="flex items-center">
-              <Link to="/" className="hidden lg:block">
-                {/* // TODO Insert logo */}
-                Reshume
+              <Link
+                to="/"
+                onClick={handleToHome}
+                className="hidden lg:flex items-center gap-x-2"
+              >
+                <div className="rounded-xl h-10 w-10 border-(--background) border-2">
+                  <img
+                    src="/reshume.svg"
+                    alt="Reshume"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-(--text-secondary)">
+                  {t("FOOTER.TITLE")}
+                </span>
               </Link>
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-(--text-secondary)">
-                {t("FOOTER.TITLE")}
-              </span>
             </div>
             <p className="mt-4 text-(--text-secondary) max-w-xs">
               {t("FOOTER.DESCRIPTION")}
@@ -54,6 +65,7 @@ export function Footer() {
                   <a
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
                     href={t("FOOTER.LINKS.NAVBAR.FEATURES.LINK")}
+                    onClick={() => handleHashNavigation("features")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.FEATURES.LIST.1")}
                   </a>
@@ -73,6 +85,7 @@ export function Footer() {
                   <a
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
                     href={t("FOOTER.LINKS.NAVBAR.PRICING.LINK")}
+                    onClick={() => handleHashNavigation("pricing")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.PRICING.LIST.1")}
                   </a>
@@ -92,6 +105,7 @@ export function Footer() {
                   <a
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
                     href={t("FOOTER.LINKS.NAVBAR.CONTRIBUTE.LINK")}
+                    onClick={() => handleHashNavigation("contribute")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.CONTRIBUTE.LIST.1")}
                   </a>
@@ -111,6 +125,7 @@ export function Footer() {
                   <a
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
                     href={t("FOOTER.LINKS.NAVBAR.FAQ.LINK")}
+                    onClick={() => handleHashNavigation("faq")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.FAQ.LIST.1")}
                   </a>
