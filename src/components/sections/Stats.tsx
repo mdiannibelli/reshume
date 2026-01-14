@@ -3,7 +3,7 @@ import { STATS } from "@/constants/stats.constant";
 import { SectionWrapper } from "@/layouts";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { AnimatedCounter } from "..";
+import { AnimatedCounter } from "@/components/ui";
 
 export function Stats() {
   const { t } = useTranslation();

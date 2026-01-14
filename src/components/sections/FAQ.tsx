@@ -1,7 +1,7 @@
 import { SectionWrapper } from "@/layouts";
 import { useTranslation } from "react-i18next";
-import { Badge } from "..";
-import { FAQItem } from "./FAQItem";
+import { Badge } from "@/components/ui";
+import { FAQItem } from "./faq/FAQItem";
 
 export function FAQ() {
   const { t } = useTranslation();

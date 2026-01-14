@@ -1,4 +1,12 @@
-import { Contribute, Features, Hero, Pricing, Stats, FAQ } from "@/components";
+import {
+  Contribute,
+  Features,
+  Hero,
+  Pricing,
+  Stats,
+  FAQ,
+  Suggestion,
+} from "@/components";
 
 export function Home() {
   return (
@@ -10,6 +18,7 @@ export function Home() {
         <Pricing />
         <Contribute />
         <FAQ />
+        <Suggestion />
       </div>
     </div>
   );
