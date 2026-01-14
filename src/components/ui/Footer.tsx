@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram } from "react-icons/fa6";
+import { FaGithub, FaHeart, FaInstagram } from "react-icons/fa6";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -6,8 +6,8 @@ export function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   return (
-    <div className="relative w-full mt-auto">
-      <div className="container mx-auto px-3 md:px-6 lg:px-8">
+    <div className="relative w-full mt-auto container mx-auto px-3 md:px-6 lg:px-8">
+      <div className="">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4">
           <div className="col-span-1 sm:col-span-2 lg:col-span-3">
             <div className="flex items-center">
@@ -121,8 +121,35 @@ export function Footer() {
         </div>
       </div>
 
+      <div className="flex lg:absolute right-16 top-4 bottom-0 items-center gap-6 mt-6 lg:col-span-3 justify-end">
+        <a
+          href="https://cafecito.app/marcosdionel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Donate to Reshume"
+          className="flex items-center gap-2"
+        >
+          <span className="text-(--text-primary)">
+            {t("FOOTER.LINKS.DONATE")}
+          </span>
+          <FaHeart className="text-(--primary) text-lg" />
+        </a>
+        <a
+          href="https://github.com/mdiannibelli/reshume"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contribute to Reshume"
+          className="flex items-center gap-2"
+        >
+          <span className="text-(--text-primary)">
+            {t("FOOTER.LINKS.CONTRIBUTE")}
+          </span>
+          <FaGithub className="text-(--text-primary) text-lg" />
+        </a>
+      </div>
+
       {/* separator */}
-      <div className="w-[80%] md:max-w-2xl xl:max-w-7xl mx-auto bg-(--text-primary) opacity-10 h-px mt-8"></div>
+      <div className="w-[95%] md:max-w-2xl xl:max-w-7xl mx-auto bg-(--text-primary) opacity-10 h-px mt-8"></div>
       <footer className="p-8">
         <p className="text-base text-center text-(--text-primary)">
           © {currentYear}{" "}
