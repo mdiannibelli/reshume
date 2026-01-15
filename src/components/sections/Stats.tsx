@@ -4,6 +4,7 @@ import { SectionWrapper } from "@/layouts";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { AnimatedCounter } from "@/components/ui";
+import heroSvg from "@/assets/images/home/hero.svg";
 
 export function Stats() {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ export function Stats() {
       >
         <div className="relative rounded-xl overflow-hidden shadow-4xl transition-transform duration-300 ease-out rotate-3d image-fade-gradient">
           <img
-            src="/imgs/home/hero.svg"
+            src={heroSvg}
             alt="Reshume Showcase Image"
             className="w-full h-full border border-transparent rounded-xl object-cover"
           ></img>

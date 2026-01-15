@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { TEMPLATES } from "@/constants";
 import { TemplateFor } from "./TemplateFor";
 import { TemplatePrice } from "./TemplatePrice";
+import classicTemplateImage from "@/assets/images/templates/classic.webp";
 
 export function BentoTemplates() {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ export function BentoTemplates() {
           <div className="@container hidden md:block relative min-h-120 w-full">
             <div className="absolute inset-x-10 right-3 top-24 bottom-[2px] overflow-hidden rounded-t-[6cqw] border-x-[1cqw] border-transparent border-t-[1cqw]">
               <img
-                src="/imgs/templates/classic.webp"
+                src={classicTemplateImage}
                 alt="Classic template image"
                 className="w-full h-full"
               />

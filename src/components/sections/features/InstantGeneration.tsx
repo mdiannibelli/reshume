@@ -1,6 +1,7 @@
 import { Trans, useTranslation } from "react-i18next";
 import { TiArrowRight } from "react-icons/ti";
 import { IoCheckmarkSharp } from "react-icons/io5";
+import demoGif from "@/assets/videos/demo.gif";
 
 export function InstantGeneration() {
   const { t } = useTranslation();
@@ -31,13 +32,12 @@ export function InstantGeneration() {
       {/* Column 2 */}
       <div className="flex w-full row-span-2 col-span-4 max-h-128">
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 z-20 pointer-events-none rounded-2xl fade-image-gradient-right"></div>
-          <div className="absolute inset-0 z-20 pointer-events-none rounded-2xl fade-image-gradient-bottom"></div>
           <img
             className="w-full h-full object-cover rounded-2xl border-(--border) border-2"
-            alt="Showcase resume made with Reshume"
-            src="/imgs/home/features/ats-optimized/showcase-reshume.webp"
-          ></img>
+            src={demoGif}
+            alt="Resume generation demo"
+            loading="eager"
+          />
         </div>
       </div>
 

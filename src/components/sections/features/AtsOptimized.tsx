@@ -2,6 +2,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { TiArrowRight } from "react-icons/ti";
 import { SlGraph } from "react-icons/sl";
 import { SiContentstack } from "react-icons/si";
+import showcaseReshumeSvg from "@/assets/images/home/features/showcase-reshume.webp";
 
 export function AtsOptimized() {
   const { t } = useTranslation();
@@ -37,7 +38,7 @@ export function AtsOptimized() {
           <img
             className="w-full object-cover rounded-2xl border-(--border) border-2"
             alt="Showcase resume made with Reshume"
-            src="/imgs/home/features/ats-optimized/showcase-reshume.webp"
+            src={showcaseReshumeSvg}
           ></img>
         </div>
       </div>
