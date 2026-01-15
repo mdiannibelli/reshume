@@ -103,7 +103,7 @@ body {
 
 @media (min-width: 768px) {
   .rotate-3d {
-    transform: translateX(50px) translateY(1.5px) scale(1.15) rotateX(25deg) rotateY(15deg) rotateZ(-18deg);
+    transform: translateX(50px) translateY(1.5px) scale(1.35) rotateX(25deg) rotateY(15deg) rotateZ(-18deg);
   }
 }
 
@@ -142,7 +142,7 @@ body {
     to bottom,
     transparent 0%,
     transparent 10%,
-    rgba(11, 11, 15, 0.35) 60%,
+    rgba(11, 11, 15, 0.85) 80%,
     rgba(11, 11, 15, 1) 100%
   );
   pointer-events: none;

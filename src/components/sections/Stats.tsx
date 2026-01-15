@@ -23,9 +23,9 @@ export function Stats() {
       >
         <div className="relative rounded-xl overflow-hidden shadow-4xl transition-transform duration-300 ease-out rotate-3d image-fade-gradient">
           <img
-            src="/imgs/home/hero.jpg"
+            src="/imgs/home/hero.svg"
             alt="Reshume Showcase Image"
-            className="w-full h-auto object-cover"
+            className="w-full h-full border border-transparent rounded-xl object-cover"
           ></img>
         </div>
       </motion.div>
