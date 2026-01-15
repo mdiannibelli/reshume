@@ -12,8 +12,7 @@ export function Stats() {
     <SectionWrapper resetStyles>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1 }}
         transition={{
           delay: 3,
           duration: 0.8,
