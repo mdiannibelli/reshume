@@ -32,7 +32,7 @@ export function ResumeGenerator() {
   const location = useLocation();
 
   const { generatePDF } = useGeneratePdf();
-  const { setIsPDFModalOpen, isPDFModalOpen } = useUI();
+  const { setIsPDFModalOpen } = useUI();
 
   useEffect(() => {
     setIsPDFModalOpen(false);
