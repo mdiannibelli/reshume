@@ -12,7 +12,7 @@ import { useFormStore, useSteps, useUI } from "@/hooks";
 import { useTranslation } from "react-i18next";
 import { useGeneratePdf } from "@/hooks";
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { ToastService } from "@/services";
 import { TOAST_CONFIG } from "@/config";
 
@@ -30,7 +30,6 @@ export function ResumeGenerator() {
   const { formData, resetForm } = useFormStore();
 
   const location = useLocation();
-  const navigate = useNavigate();
 
   const { generatePDF } = useGeneratePdf();
   const { setIsPDFModalOpen, isPDFModalOpen } = useUI();
@@ -48,8 +47,6 @@ export function ResumeGenerator() {
     if (formData.clearFieldsAfterGeneration) {
       resetForm();
     }
-
-    navigate("/");
     ToastService().success(t("GENERATE_RESUME.TOASTS.SUCCESS"), TOAST_CONFIG);
   };
 
