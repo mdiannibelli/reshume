@@ -21,7 +21,8 @@
       "@layouts/*": ["./src/layouts/*"],
       "@models/*": ["./src/models/*"],
       "@helpers/*": ["./src/helpers/*"],
-      "@store/*": ["./src/store/*"]
+      "@store/*": ["./src/store/*"],
+      "@data/*": ["./src/data/*"]
     }
   }
 }

@@ -25,7 +25,7 @@ export function LanguageSelector() {
   }, [i18n.language]);
 
   return (
-    <Menu setActive={setActive} className="lg:px-8">
+    <Menu setActive={setActive} className="px-2 xl:px-8">
       <MenuItem setActive={setActive} active={active} item={currentLanguage}>
         <div className="flex flex-col gap-y-2">
           {AVAILABLE_LANGUAGES.map((language) => (

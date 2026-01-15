@@ -1,4 +1,5 @@
 import type { LanguageLevel } from "@/types";
+import type { TemplateStyles, DecoratorType } from "@/interfaces";
 
 export interface PersonalInfo {
   name: string;
@@ -46,6 +47,15 @@ export interface Language {
   level: LanguageLevel;
 }
 
+export interface SelectedTemplate {
+  id: string;
+  name: string;
+  description: string;
+  styles: TemplateStyles;
+  decorator?: DecoratorType;
+  tag?: string;
+}
+
 export interface ResumeData {
   personalInfo: PersonalInfo;
   education: Education[];
@@ -53,6 +63,7 @@ export interface ResumeData {
   skills: Skill[];
   languages: Language[];
   selectedCvLanguage: string;
+  template: SelectedTemplate;
   wantIcons?: boolean;
   clearFieldsAfterGeneration?: boolean;
 }

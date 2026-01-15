@@ -1,5 +1,5 @@
 import { LanguagesCodeEnum, LanguagesEnum } from "@/enums";
-import type { AvailableLanguagesInterface } from "@/interfaces/available-languages.interface";
+import type { AvailableLanguagesInterface } from "@/interfaces";
 
 export const AVAILABLE_LANGUAGES: AvailableLanguagesInterface[] = [
   {

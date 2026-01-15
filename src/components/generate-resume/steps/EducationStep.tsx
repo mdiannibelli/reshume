@@ -16,7 +16,7 @@ export function EducationStep() {
   });
 
   return (
-    <StepWrapper>
+    <StepWrapper borderDisabled>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export function EducationStep() {
                 description: "",
               })
             }
-            className="px-4 py-2 cursor-pointer bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all font-medium"
+            className="px-4 py-2 cursor-pointer bg-(--background-secondary) border border-(--primary) text-(--text-primary) rounded-lg hover:bg-(--primary)/25 duration-500 transition-all font-medium"
           >
             {t("GENERATE_RESUME.FORM_STEPS.EDUCATION.BUTTONS.ADD")}
           </button>
@@ -49,7 +49,7 @@ export function EducationStep() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-center py-12 text-white/25"
+              className="text-center py-12 text-(--text-secondary)"
             >
               <p>
                 {t("GENERATE_RESUME.FORM_STEPS.EDUCATION.NO_EDUCATION_ADDED")}

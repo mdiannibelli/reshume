@@ -94,6 +94,16 @@ export const resumeSchema = z.object({
       level: z.enum(Object.values(LanguagesLevelEnum)),
     })
   ),
+  template: z
+    .object({
+      id: z.string(),
+      name: z.string(),
+      description: z.string(),
+      styles: z.any(),
+    })
+    .refine((data) => data.id && data.id.trim().length > 0, {
+      message: "GENERATE_RESUME.ERRORS.REQUIRED",
+    }),
   selectedCvLanguage: z
     .enum(Object.values(LanguagesCodeEnum), {
       message: "GENERATE_RESUME.ERRORS.INVALID_OPTION",

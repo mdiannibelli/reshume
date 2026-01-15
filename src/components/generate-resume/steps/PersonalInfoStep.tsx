@@ -24,20 +24,20 @@ export function PersonalInfoStep() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.NAME")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="text"
               {...register("personalInfo.name")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.NAME_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.name && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.name,
@@ -49,20 +49,20 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LAST_NAME")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="text"
               {...register("personalInfo.lastName")}
-              className="w-full px-4 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LAST_NAME_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.lastName && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.lastName,
@@ -74,22 +74,22 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_TITLE"
               )}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="text"
               {...register("personalInfo.professionalTitle")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_TITLE_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.professionalTitle && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.professionalTitle,
@@ -101,20 +101,20 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.EMAIL")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="email"
               {...register("personalInfo.email")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.EMAIL_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.email && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.email,
@@ -125,20 +125,20 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PHONE")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="tel"
               {...register("personalInfo.phone")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PHONE_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.phone && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.phone,
@@ -150,20 +150,20 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.COUNTRY")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="text"
               {...register("personalInfo.country")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.COUNTRY_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.country && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.country,
@@ -175,20 +175,20 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.CITY")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
             <input
               type="text"
               {...register("personalInfo.city")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.CITY_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.city && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.city,
@@ -200,19 +200,19 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.WEBSITE")}{" "}
             </label>
             <input
               type="url"
               {...register("personalInfo.website")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.WEBSITE_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.website && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.website,
@@ -223,19 +223,19 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LINKEDIN")}{" "}
             </label>
             <input
               type="url"
               {...register("personalInfo.linkedin")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.LINKEDIN_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.linkedin && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.linkedin,
@@ -246,19 +246,19 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.GITHUB")}{" "}
             </label>
             <input
               type="url"
               {...register("personalInfo.github")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.GITHUB_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.github && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.github,
@@ -269,19 +269,19 @@ export function PersonalInfoStep() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-2">
               {t("GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.BEHANCE")}{" "}
             </label>
             <input
               type="url"
               {...register("personalInfo.behance")}
-              className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all"
               placeholder={t(
                 "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.BEHANCE_PLACEHOLDER"
               )}
             />
             {errors.personalInfo?.behance && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.personalInfo.behance,
@@ -293,22 +293,22 @@ export function PersonalInfoStep() {
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-(--text-secondary) mb-2">
             {t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_SUMMARY"
             )}{" "}
-            <span className="text-red-500">*</span>
+            <span className="text-(--primary)">*</span>
           </label>
           <textarea
             {...register("personalInfo.professionalSummary")}
             rows={6}
-            className="w-full px-4 py-4 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all resize-none"
+            className="w-full px-4 py-4 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all resize-none"
             placeholder={t(
               "GENERATE_RESUME.FORM_STEPS.PERSONAL_INFO.FIELDS.PROFESSIONAL_SUMMARY_PLACEHOLDER"
             )}
           />
           {errors.personalInfo?.professionalSummary && (
-            <p className="mt-3 ml-1 text-sm text-red-500">
+            <p className="mt-3 ml-1 text-sm text-(--primary)">
               {getErrorMessage({
                 t,
                 error: errors.personalInfo.professionalSummary,

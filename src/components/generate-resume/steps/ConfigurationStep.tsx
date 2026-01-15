@@ -1,8 +1,12 @@
-import { StepWrapper } from "@/components";
-import { AVAILABLE_LANGUAGES } from "@/constants";
+import { Selector, StepWrapper } from "@/components";
+import { TEMPLATES } from "@/constants";
 import { LanguagesCodeEnum, StepKeysEnum } from "@/enums";
 import { useFormStore } from "@/hooks";
-import type { ResumeData } from "@/interfaces";
+import type {
+  ResumeData,
+  SelectedTemplate,
+  SelectorOption,
+} from "@/interfaces";
 import { cn } from "@/lib/utils";
 import { getErrorMessage } from "@/utils";
 import { motion } from "motion/react";
@@ -10,12 +14,18 @@ import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { IoWarningOutline } from "react-icons/io5";
+import type { TemplateStyles } from "@/interfaces";
+import {
+  LANGUAGE_SELECTOR_OPTIONS,
+  WANT_ICONS_SELECTOR_OPTIONS,
+} from "@/constants";
 
 export function ConfigurationStep() {
   const {
     register,
     formState: { errors },
     setValue,
+    trigger,
   } = useFormContext<ResumeData>();
 
   const { t } = useTranslation();
@@ -23,6 +33,7 @@ export function ConfigurationStep() {
     updateSelectedCvLanguage,
     updateWantIcons,
     updateClearFieldsAfterGeneration,
+    updateTemplate,
     formData,
   } = useFormStore();
 
@@ -41,14 +52,75 @@ export function ConfigurationStep() {
     setIsLanguageSelected(true);
   };
 
-  const handleWantIcons = (value: boolean) => {
-    updateWantIcons(value);
+  const handleTemplate = (value: string) => {
+    const template = TEMPLATES.find((template) => template.id === value);
+    if (!template) {
+      const emptyTemplate: SelectedTemplate = {
+        id: "",
+        name: "",
+        description: "",
+        styles: {} as TemplateStyles,
+      };
+      setValue("template", emptyTemplate, {
+        shouldValidate: true,
+        shouldTouch: true,
+      });
+      updateTemplate(emptyTemplate);
+      trigger("template");
+      return;
+    }
+
+    updateTemplate(template);
+    setValue("template", template, { shouldValidate: true, shouldTouch: true });
+    trigger("template");
+  };
+
+  const handleTemplateSelect = (option: SelectedTemplate | null) => {
+    if (option) {
+      handleTemplate(option.id);
+    } else {
+      handleTemplate("");
+    }
   };
 
   const handleClearFieldsAfterGeneration = (value: boolean) => {
     updateClearFieldsAfterGeneration(value);
     setValue("clearFieldsAfterGeneration", value);
     setSaveMode(value);
+  };
+
+  const selectedLanguageOption =
+    LANGUAGE_SELECTOR_OPTIONS.find(
+      (opt) => opt.id === formData.selectedCvLanguage
+    ) || null;
+
+  const selectedWantIconsOption =
+    WANT_ICONS_SELECTOR_OPTIONS.find(
+      (opt) => opt.id === String(formData.wantIcons)
+    ) || null;
+
+  const handleLanguageSelect = (option: SelectorOption | null) => {
+    if (option) {
+      const languageValue = option.id as LanguagesCodeEnum;
+      handleLanguage(languageValue);
+      setValue("selectedCvLanguage", languageValue);
+      trigger("selectedCvLanguage");
+    } else {
+      setValue("selectedCvLanguage", "" as LanguagesCodeEnum);
+      trigger("selectedCvLanguage");
+    }
+  };
+
+  const handleWantIconsSelect = (option: SelectorOption | null) => {
+    if (option) {
+      const boolValue = option.id === "true";
+      updateWantIcons(boolValue);
+      setValue("wantIcons", boolValue);
+      trigger("wantIcons");
+    } else {
+      setValue("wantIcons", false);
+      trigger("wantIcons");
+    }
   };
 
   return (
@@ -61,31 +133,23 @@ export function ConfigurationStep() {
       >
         <div className="flex flex-col gap-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.LANGUAGE")}{" "}
-              <span className="text-red-500">*</span>
+              <span className="text-(--primary)">*</span>
             </label>
-            <select
-              {...register("selectedCvLanguage")}
-              onChange={(e) =>
-                handleLanguage(e.target.value as LanguagesCodeEnum)
-              }
-              defaultValue=""
-              className="w-full p-6 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
-            >
-              <option value="">
-                {t(
-                  "GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.LANGUAGE_PLACEHOLDER"
-                )}
-              </option>
-              {AVAILABLE_LANGUAGES.map((language) => (
-                <option key={language.value} value={language.value}>
-                  {t(language.labelFull)}
-                </option>
-              ))}
-            </select>
+            <input type="hidden" {...register("selectedCvLanguage")} />
+            <Selector
+              options={LANGUAGE_SELECTOR_OPTIONS}
+              selectedOption={selectedLanguageOption}
+              onSelect={handleLanguageSelect}
+              placeholder={t(
+                "GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.LANGUAGE_PLACEHOLDER"
+              )}
+              error={!!errors.selectedCvLanguage}
+              onBlur={() => trigger("selectedCvLanguage")}
+            />
             {errors.selectedCvLanguage && (
-              <p className="mt-3 ml-1 text-sm text-red-500">
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
                 {getErrorMessage({
                   t,
                   error: errors.selectedCvLanguage,
@@ -96,7 +160,7 @@ export function ConfigurationStep() {
             )}
 
             {isLanguageSelected && (
-              <div className="p-6 border-red-500 border bg-red-500/10 text-white rounded-xl flex flex-col md:flex-row gap-3 items-center mt-8">
+              <div className="p-6 border-(--primary) border bg-(--primary)/10 text-(--text-primary) rounded-xl flex flex-col md:flex-row gap-3 items-center mt-8">
                 <IoWarningOutline className="hidden md:block text-4xl" />
                 <p className="text-sm">
                   {t(
@@ -108,34 +172,55 @@ export function ConfigurationStep() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
-              {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.WANT_ICONS")}
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
+              {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.TEMPLATE")}{" "}
+              <span className="text-(--primary)">*</span>
             </label>
-            <select
-              {...register("wantIcons", {
-                setValueAs: (value) => value === "true" || value === true,
-              })}
-              onChange={(e) => {
-                const boolValue = e.target.value === "true";
-                handleWantIcons(boolValue);
-                register("wantIcons").onChange({
-                  target: { value: boolValue, name: "wantIcons" },
-                });
-              }}
-              defaultValue="false"
-              className="w-full p-6 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all"
-            >
-              <option value="true">
-                {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.YES")}
-              </option>
-              <option value="false">
-                {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.NO")}
-              </option>
-            </select>
+            <input type="hidden" {...register("template")} />
+            <Selector
+              options={TEMPLATES}
+              selectedOption={formData.template?.id ? formData.template : null}
+              onSelect={handleTemplateSelect}
+              placeholder={t(
+                "GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.TEMPLATE_PLACEHOLDER"
+              )}
+              error={!!errors.template}
+              onBlur={() => trigger("template")}
+            />
+            {errors.template && (
+              <p className="mt-3 ml-1 text-sm text-(--primary)">
+                {getErrorMessage({
+                  t,
+                  error: errors.template,
+                  fieldKey: "TEMPLATE",
+                  stepKey: StepKeysEnum.CONFIGURATION,
+                })}
+              </p>
+            )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-3">
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
+              {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.WANT_ICONS")}
+            </label>
+            <input
+              type="hidden"
+              {...register("wantIcons", {
+                setValueAs: (value) => value === "true" || value === true,
+              })}
+            />
+            <Selector
+              options={WANT_ICONS_SELECTOR_OPTIONS}
+              selectedOption={selectedWantIconsOption}
+              onSelect={handleWantIconsSelect}
+              placeholder={t(
+                "GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.WANT_ICONS"
+              )}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-(--text-secondary) mb-3">
               {t(
                 "GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.CLEAR_FIELDS_AFTER_GENERATION"
               )}{" "}
@@ -145,8 +230,8 @@ export function ConfigurationStep() {
                 type="button"
                 onClick={() => handleClearFieldsAfterGeneration(true)}
                 className={cn(
-                  "cursor-pointer w-full px-6 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all",
-                  saveMode ? "bg-red-500" : "bg-black"
+                  "cursor-pointer w-full px-6 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all",
+                  saveMode ? "bg-(--primary)" : "bg-(--background-secondary)"
                 )}
               >
                 {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.YES")}
@@ -155,8 +240,8 @@ export function ConfigurationStep() {
                 type="button"
                 onClick={() => handleClearFieldsAfterGeneration(false)}
                 className={cn(
-                  "cursor-pointer w-full px-6 py-3 bg-black border border-white/10 rounded-lg text-white placeholder-white/25 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-transparent transition-all",
-                  saveMode ? "bg-black" : "bg-red-500"
+                  "cursor-pointer w-full px-6 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all",
+                  saveMode ? "bg-(--background-secondary)" : "bg-(--primary)"
                 )}
               >
                 {t("GENERATE_RESUME.FORM_STEPS.CONFIGURATION.FIELDS.NO")}

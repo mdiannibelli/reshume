@@ -1,27 +1,291 @@
 {
   "HERO": {
-    "SUBTITLE": "generate your resume with",
-    "TITLE": "Harvard Resume Generator",
-    "CTA": "Generate Resume"
+    "SUBTITLE": "Turn experience into opportunity",
+    "TITLE": "Rewrite your career story\n with Reshume",
+    "CTA": "Get Started",
+    "FEATURES": {
+      "1": "No registration required",
+      "2": "ATS-optimized",
+      "3": "Instant results"
+    }
   },
   "NAVBAR": {
-    "HOME": "Home",
-    "ABOUT": "About",
-    "CONTACT": "Contact",
+    "TITLE": "Reshume",
+    "FEATURES": "Features",
+    "PRICING": "Pricing",
+    "CONTRIBUTE": "Contribute",
+    "FAQ": "FAQ",
     "LOGIN": "Login",
     "LOGIN_2": "Login with your account",
     "GENERATE_RESUME": "Generate resume",
     "OR": "or"
   },
   "FOOTER": {
-    "COPYRIGHT": "© 2025 Harvard Resume Generator. All rights reserved.",
+    "TITLE": "Reshume",
+    "DESCRIPTION": "Free and open-source ATS-friendly resume builder.",
+    "COPYRIGHT": "Reshume. All rights reserved. Made with ❤️ by <a>Marcos Dionel</a>",
     "LINKS": {
+      "NAVBAR": {
+        "FEATURES": {
+          "TITLE": "Features",
+          "LINK": "/#features",
+          "LIST": {
+            "1": "All Features"
+          }
+        },
+        "PRICING": {
+          "TITLE": "Pricing",
+          "LINK": "/#pricing",
+          "LIST": {
+            "1": "Pricing Plans"
+          }
+        },
+        "CONTRIBUTE": {
+          "TITLE": "Contribute",
+          "LINK": "/#contribute",
+          "LIST": {
+            "1": "Contribute with Code"
+          }
+        },
+        "FAQ": {
+          "TITLE": "FAQ",
+          "LINK": "/#faq",
+          "LIST": {
+            "1": "Resolve your Doubts"
+          }
+        }
+      },
       "CONTRIBUTE": "Contribute",
       "DONATE": "Donate"
     }
   },
+  "HOME": {
+    "STATISTICS": {
+      "TITLE": "Helping professionals unlock new career opportunities",
+      "DESCRIPTION": "Thousands of professionals have increased their job opportunities by making their resumes stand out from the rest",
+      "IMPROVES": {
+        "1": "Customizable",
+        "2": "Clear Structure",
+        "3": "Consistency",
+        "4": "Professional Design",
+        "5": "Clarity",
+        "6": "ATS Optimized",
+        "7": "Professional",
+        "8": "Easy to read",
+        "9": "Recruiter-approved",
+        "10": "Innovative",
+        "11": "Elegant",
+        "12": "Modern"
+      },
+      "STATS": {
+        "1": {
+          "TITLE": "80%+",
+          "DESCRIPTION": "ATS-Compatible Structure"
+        },
+        "2": {
+          "TITLE": "3x",
+          "DESCRIPTION": "Faster Resume Creation"
+        },
+        "3": {
+          "TITLE": "70%",
+          "DESCRIPTION": "Focus on Impact"
+        }
+      }
+    },
+    "FEATURES": {
+      "BADGE": "Features",
+        "ATS_OPTIMIZED": {
+          "HEAD": "Readable by recruiters and systems",
+          "TITLE": "ATS-Optimized Structure",
+          "DESCRIPTION": "Resumes built using proven, <bold>ATS-safe layouts that hiring systems</bold> can read accurately. We avoid tables, columns, icons, and hidden formatting to ensure your experience is parsed exactly as recruiters expect no lost information, no broken sections.",
+          "CHARACTERISTICS": {
+            "1": {
+              "TITLE": "Smart Section Parsing",
+              "DESCRIPTION": "Sections like Experience, Education, and Skills follow standardized naming and structure, helping ATS systems correctly categorize and rank your resume content."
+            },
+            "2": {
+              "TITLE": "Clean Content Hierarchy",
+              "DESCRIPTION": "Clear headings, consistent spacing, and logical content flow ensure both automated systems and human recruiters can scan your resume effortlessly."
+            }
+          }
+        },
+        "INSTANT_RESUME_GENERATION": {
+          "HEAD": "From empty to ready in seconds",
+          "TITLE": "Instant Generation",
+          "DESCRIPTION": "Create a professional resume in minutes by simply filling in your information. Reshume <bold>handles layout, spacing, and structure automatically</bold> so you can focus on your experience, not formatting or design decisions.",
+          "CHECKLIST": {
+            "1": "No manual formatting",
+            "2": "No templates to fight with",
+            "3": "No design decisions required"
+          }
+        },
+        "PROFESSIONAL_TEMPLATES": {
+          "HEAD": "Designed to look serious and professional",
+          "TITLE": "Professional Templates",
+          "SUBTITLE": "Choose a template that fits your career stage, not just your style.",
+          "RECOMMENDED": "Recommended for",
+          "DESCRIPTION": "Reshume offers professionally designed resume templates based on real hiring standards. <bold>Clean layouts, balanced typography, and structured sections</bold> built to highlight your experience without distractions.",
+          "TEMPLATES": {
+            "CLASSIC": {
+              "NAME": "Classic",
+              "DESCRIPTION": "A traditional, well-structured layout inspired by academic and corporate resumes. Ideal for conservative industries, junior to mid-level roles, and applications where clarity matters most.",
+              "FOR": {
+                "1": "Corporate roles",
+                "2": "Entry & mid-level positions",
+                "3": "Academic / formal environments"
+              },
+              "STATUS": "Available",
+              "PRICE": "Free"
+            },
+            "MODERN": {
+              "NAME": "Modern",
+              "DESCRIPTION": "A contemporary layout with subtle visual hierarchy and improved readability designed for tech, product, and creative professionals who want a modern but professional look.",
+              "FOR": {
+                "1": "Tech & product roles",
+                "2": "Startups",
+                "3": "Designers, developers, merketers"
+              },
+              "STATUS": "Available",
+              "PRICE": "Free"
+            },
+            "EXECUTIVE": {
+              "NAME": "Executive",
+              "DESCRIPTION": "A refined, high-impact layout designed for leadership positions, focusing on strategic achievements and executive presence.",
+              "FOR": {
+                "1": "Senior & leadership roles",
+                "2": "Managment",
+                "3": "Executive applications"
+              },
+              "STATUS": "Coming soon...",
+              "PRICE": "Premium"
+            },
+            "IMPACT": {
+              "NAME": "Impact",
+              "DESCRIPTION": "A bold, results-oriented template that highlights measurable achievements, metrics, and business impact.",
+              "FOR": {
+                "1": "High-performance roles",
+                "2": "Sales, growth, product",
+                "3": "Results-heavy resumes"
+              },
+              "STATUS": "Coming soon...",
+              "PRICE": "Premium"
+            }
+          }
+        }
+      },
+      "PRICING": {
+        "BADGE": "Pricing",
+        "TITLE": "No need to pay for a resume builder",
+        "DESCRIPTION": "Reshume is currently free while in early development, you can generate a professional resume. Future premium features will always remain optional.",
+        "CARDS": {
+          "STANDARD": {
+            "PLAN": "Standard",
+            "HEADLINE": "Everything you need to generate a professional resume.",
+            "PRICE": "$0",
+            "PERIOD": "/month",
+            "DESCRIPTION": "Perfect for job seekers and professionals looking for a professional resume.",
+            "BUTTON": "Get Started for free",
+            "CHECKS": {
+              "1": "Instant resume generation",
+              "2": "Classic template",
+              "3": "Modern template",
+              "4": "ATS-optimized structure",
+              "5": "PDF export",
+              "6": "No account required"
+            }
+          },
+          "PREMIUM": {
+            "PLAN": "Premium",
+            "HEADLINE": "Advanced templates and features for specialized roles.",
+            "PRICE": "$0",
+            "PERIOD": "/month",
+            "DESCRIPTION": "Designed for executives, managers, and high-performance roles.",
+            "BUTTON": "Get Started for free",
+            "CHECKS": {
+              "1": "Executive template",
+              "2": "Impact template",
+              "3": "Additional layout customization",
+              "4": "Priority access to new templates"
+            },
+            "STATUS": "Coming soon..."
+          }
+        }
+      },
+      "CONTRIBUTE": {
+        "BADGE": "Contribute",
+        "TITLE": "Reshume is 100% open source",
+        "DESCRIPTION": "Let's build something great together.",
+        "LAYOUT": {
+          "TITLE": "Open Source. Built in public",
+          "DESCRIPTION": "Every template, layout, and decision is developed in the open. You can inspect the code, suggest improvements, or build on top of it."
+        },
+        "MAIN_BUTTON": "View code",
+        "CONTRIBUTIONS": {
+          "TITLE": "Contribute with Code",
+          "DESCRIPTION": "Found a bug, want to improve a template, or add a feature? <bold>Pull requests are welcome.</bold>",
+          "BUTTON": "Open an issue"
+        },
+        "RATING": {
+          "TITLE": "Like the project?",
+          "DESCRIPTION": "Star the project on GitHub and help validate and keep it moving forward.",
+          "BUTTON": "Give a star"
+        }
+      },
+      "FAQ": {
+        "BADGE": "FAQ",
+        "TITLE": "Frequently Asked Questions",
+        "DESCRIPTION": "Find answers to common questions about Reshume.",
+        "QUESTIONS": {
+          "1": {
+            "QUESTION": "What is the difference between Reshume and other resume builders?",
+            "ANSWER": "Reshume is a free and open-source resume builder that helps you create a professional resume in minutes. It is designed to be easy to use and understand, with a focus on simplicity and clarity."
+          },
+          "2": {
+            "QUESTION": "Is Reshume really free?",
+            "ANSWER": "Yes. Reshume is completely free during early access. You can generate and download professional resumes without paying or creating an account."
+          },
+          "3": {
+            "QUESTION": "Will Reshume always be free?",
+            "ANSWER": "The core resume generator will remain free. In the future, optional premium templates and features may be introduced, but basic functionality will always be available."
+          },
+          "4": {
+            "QUESTION": "Is Reshume open source?",
+            "ANSWER": "Yes. Reshume is 100% open source. You can view the code, contribute, or self-host it if you want full control."
+          },
+          "5": {
+            "QUESTION": "Are Reshume resumes ATS-friendly?",
+            "ANSWER": "Reshume templates are built using ATS-safe layouts and structures to ensure your resume can be properly parsed by applicant tracking systems."
+          },
+          "6": {
+            "QUESTION": "Can Reshume guarantee that my resume will pass ATS systems?",
+            "ANSWER": "No tool can guarantee that. However, Reshume follows best practices to maximize compatibility and readability."
+          },
+          "7": {
+            "QUESTION": "Do I need to create an account to use Reshume?",
+            "ANSWER": "No. You can generate and download your resume without signing up."
+          },
+          "8": {
+            "QUESTION": "What resume formats can I export?",
+            "ANSWER": "Currently, Reshume supports high-quality PDF exports. Additional formats may be added in the future."
+          },
+          "9": {
+            "QUESTION": "Can I edit or regenerate my resume later?",
+            "ANSWER": "Yes. You can update your information and regenerate your resume at any time."
+          },
+          "10": {
+            "QUESTION": "Is my data stored or shared?",
+            "ANSWER": "No. Reshume does not sell or share your data. Your resume information stays in your control."
+          }
+        }
+      }
+  },
   "GENERATE_RESUME": {
+    "LOADING_SCREEN": {
+      "GENERATING_PDF": "Generating PDF...",
+      "PLEASE_WAIT": "Please wait while we generate your resume"
+    },
     "FORM_STEPS": {
+      "OPEN_PREVIEW": "Open preview",
       "PERSONAL_INFO": {
         "TITLE": "Personal Info",
         "FIELDS": {
@@ -147,10 +411,15 @@
         },
         "LEVELS": {
           "NATIVE": "Native",
+          "NATIVE_DESCRIPTION": "Your native language.",
           "B1": "B1",
+          "B1_DESCRIPTION": "Intermediate level.",
           "B2": "B2",
+          "B2_DESCRIPTION": "Advanced level.",
           "C1": "C1",
-          "C2": "C2"
+          "C1_DESCRIPTION": "Fluent level.",
+          "C2": "C2",
+          "C2_DESCRIPTION": "Almost native level."
         }
       },
       "CONFIGURATION": {
@@ -162,12 +431,22 @@
           "en": "English",  
           "es": "Spanish",
           "LANGUAGE_PLACEHOLDER": "Select language",
+          "LEVEL_PLACEHOLDER": "Select level",
+          "TEMPLATE": "Resume template",
+          "TEMPLATE_PLACEHOLDER": "Select resume template",
+          "TEMPLATE_DESCRIPTION": "The resume template will be used to generate the resume in the selected template. You can select the template that you like the most.",
           "WANT_ICONS": "Want icons in your resume?",
           "YES": "Yes",
           "NO": "No",
+          "YES_DESCRIPTION": "Icons are used to improve the visualization of your resume. They are used in the social media section.",
+          "NO_DESCRIPTION": "No icons will be displayed in your resume. Only your social media links will be displayed.",
           "CLEAR_FIELDS_AFTER_GENERATION": "Do you want to clear the fields after generating the resume?"
         }
       }
+    },
+    "TOASTS": {
+      "SUCCESS": "Your resume has been generated!",
+      "ERROR": "Error generating your resume"
     },
     "ERRORS": {
       "REQUIRED": "{{field}} is required",
@@ -212,6 +491,30 @@
     "PREVIOUS": "Previous",
     "NEXT": "Next",
     "GENERATE": "Generate Resume"
+  },
+  "TEMPLATES": {
+    "CLASSIC": {
+      "NAME": "Classic",
+      "DESCRIPTION": "A clean, recruiter-approved format optimized for ATS and traditional hiring processes."
+    },
+    "MODERN": {
+      "NAME": "Modern",
+      "DESCRIPTION": "A modern layout that balances visual clarity with full ATS compatibility."
+    },
+    "EXECUTIVE": {
+      "NAME": "Executive",
+      "DESCRIPTION": "Ideal for managers, leads, and executives who need to communicate impact, leadership, and results — while staying fully ATS-compliant."
+    },
+    "IMPACT": {
+      "NAME": "Impact",
+      "DESCRIPTION": "Built for professionals who want to stand out by showcasing real impact using data, KPIs, and quantified results."
+    }
+  },
+  "DECORATORS": {
+    "FREE": "FREE",
+    "PREMIUM": "PREMIUM",
+    "UNAVAILABLE": "NO DISPONIBLE",
+    "COMING_SOON": "Coming soon..."
   },
   "NOT_FOUND": {
     "TITLE": "Page not found",

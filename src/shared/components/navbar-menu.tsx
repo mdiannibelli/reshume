@@ -2,29 +2,32 @@ import { motion, type Transition } from "motion/react";
 import { FaChevronDown } from "react-icons/fa6";
 
 export const MenuItem = ({
-    setActive,
-    active,
-    item,
-    children,
+  setActive,
+  active,
+  item,
+  children,
 }: {
-    setActive: (item: string) => void;
-    active: string | null;
-    item: string | React.ReactNode;
-    children?: React.ReactNode;
+  setActive: (item: string) => void;
+  active: string | null;
+  item: string | React.ReactNode;
+  children?: React.ReactNode;
 }) => {
-    const transition: Transition = {
-      type: "spring",
-      mass: 0.5,
-      damping: 11.5,
-      stiffness: 100,
-      restDelta: 0.001,
-      restSpeed: 0.001,
-    };
-    return (
-    <div onMouseEnter={() => setActive(typeof item === 'string' ? item : '')} className="relative ">
+  const transition: Transition = {
+    type: "spring",
+    mass: 0.5,
+    damping: 11.5,
+    stiffness: 100,
+    restDelta: 0.001,
+    restSpeed: 0.001,
+  };
+  return (
+    <div
+      onMouseEnter={() => setActive(typeof item === "string" ? item : "")}
+      className="relative "
+    >
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer hover:opacity-[0.9] text-white hover:bg-white/10 rounded-full px-4 py-2 transition-all duration-300 flex items-center gap-x-2"
+        className="cursor-pointer hover:opacity-[0.9] text-(--text-primary) hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300 flex items-center gap-x-2"
       >
         {item}
         <FaChevronDown className="w-4 h-4" />
@@ -40,12 +43,9 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-black backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl "
+                className="bg-(--background) backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl "
               >
-                <motion.div
-                  layout
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-4">
                   {children}
                 </motion.div>
               </motion.div>
@@ -56,7 +56,7 @@ export const MenuItem = ({
     </div>
   );
 };
- 
+
 export const Menu = ({
   setActive,
   children,
@@ -75,12 +75,15 @@ export const Menu = ({
     </div>
   );
 };
- 
-export const HoveredLink = ({ children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+
+export const HoveredLink = ({
+  children,
+  ...rest
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   return (
     <a
       {...rest}
-      className="text-neutral-200 hover:text-white cursor-pointer"
+      className="text-(--text-secondary) hover:text-(--text-primary) cursor-pointer"
     >
       {children}
     </a>

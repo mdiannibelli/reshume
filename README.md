@@ -1,4 +1,4 @@
-# Harvard Resume Generator
+# Reshume - Rewrite your career story
 
 <div align="center">
 
@@ -7,7 +7,7 @@
 ![React](https://img.shields.io/badge/React-19.2-blue)
 ![Vite](https://img.shields.io/badge/Vite-7.2-purple)
 
-**Generate professional Harvard-style resumes with a modern and intuitive interface**
+**Turn experience into opportunity and rewrite your career story generating a new resume with Reshume**
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Technologies](#-technologies)
 
@@ -17,7 +17,9 @@
 
 ## 📋 Description
 
-**Harvard Resume Generator** is a modern web application that allows you to create professional Harvard-style resumes quickly and easily. With an intuitive step-by-step interface, real-time validation, and automatic PDF generation, creating your resume has never been easier.
+**Reshume** helps you create professional, ATS-optimized resumes that increase your chances of getting hired — no design or HR knowledge required.
+
+Your experience deserves more than a template. Reshume helps you tell your career story in a way that gets results.
 
 ### ✨ Features
 
@@ -27,7 +29,7 @@
 - 💾 **Automatic persistence** - Your progress is automatically saved to localStorage
 - 🌍 **Multi-language** - Support for English and Spanish
 - 📄 **PDF generation** - Export your resume in professional PDF format
-- 🎯 **Harvard format** - Internationally recognized standard design
+- 🎯 **Some resume formats** - Internationally recognized standard design
 - 🔄 **Step navigation** - Go back and edit any section
 - 🎨 **Optional icons** - Choose whether to include icons in your resume
 - 🧹 **Automatic cleanup** - Option to clear the form after generation
@@ -51,13 +53,13 @@ Make sure you have installed on your system:
 #### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/mdiannibelli/harvard-resume-generator.git
+git clone https://github.com/mdiannibelli/reshume.git
 ```
 
 #### 2️⃣ Navigate to the project directory
 
 ```bash
-cd harvard-resume-generator
+cd reshume
 ```
 
 #### 3️⃣ Install dependencies
@@ -137,7 +139,7 @@ This project is built with the following technologies:
 ## 📁 Project Structure
 
 ```
-harvard-resume-generator/
+reshume/
 ├── public/
 │   └── locales/          # Translation files (en, es)
 ├── src/
@@ -168,7 +170,7 @@ harvard-resume-generator/
 3. **Detail your experience** - Previous jobs with descriptions and achievements
 4. **List your skills and languages** - Technical skills and languages with levels
 5. **Configure the PDF** - Select the resume language and format options
-6. **Generate your PDF** - Download your professional resume in Harvard format
+6. **Generate your PDF** - Download your professional resume using a customized template
 
 ---
 
@@ -190,7 +192,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - GitHub: [@mdiannibelli](https://github.com/mdiannibelli)
 - Website: [@web](https://mdiannibelli.com/en)
-- Project: [Harvard Resume Generator](https://github.com/mdiannibelli/harvard-resume-generator)
+- Project: [Reshume](https://github.com/mdiannibelli/reshume)
 
 ---
 

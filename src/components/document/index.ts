@@ -1,1 +1,1 @@
-export * from "./HarvardDocument";
+export * from "./ReshumeDocument";

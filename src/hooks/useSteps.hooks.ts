@@ -61,6 +61,7 @@ export function useSteps() {
       case 5:
         fieldsToValidate = [
           "selectedCvLanguage",
+          "template",
           "wantIcons",
           "clearFieldsAfterGeneration",
         ];

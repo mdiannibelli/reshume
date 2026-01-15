@@ -1,6 +1,6 @@
-# Contributing to Harvard Resume Generator
+# Contributing to Reshume
 
-First off, thank you for considering contributing to Harvard Resume Generator! 🎉
+First off, thank you for considering contributing to Reshume! 🎉
 
 ## 🤝 How to Contribute
 
@@ -9,7 +9,7 @@ We welcome contributions of all kinds! Whether it's fixing bugs, adding features
 ## 📋 Getting Started
 
 1. **Fork the repository** - Click the "Fork" button on GitHub
-2. **Clone your fork** - `git clone https://github.com/YOUR_USERNAME/harvard-resume-generator.git`
+2. **Clone your fork** - `git clone https://github.com/YOUR_USERNAME/reshume.git`
 3. **Create a branch** - `git checkout -b feature/your-feature-name`
 4. **Make your changes** - Write your code, add tests if applicable
 5. **Commit your changes** - `git commit -m 'Add some amazing feature'`
@@ -88,4 +88,3 @@ Example: `feat: add dark mode support`
 ## 🙏 Thank You!
 
 Your contributions make this project better for everyone. Thank you for taking the time to contribute!
-
