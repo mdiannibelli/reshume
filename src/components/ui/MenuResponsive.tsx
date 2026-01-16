@@ -38,7 +38,10 @@ export function MenuResponsive() {
               <div className="absolute top-8 px-6 z-10 flex justify-between items-center w-full">
                 <Link
                   to="/"
-                  onClick={handleToHome}
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleToHome();
+                  }}
                   className="flex items-center gap-x-2"
                 >
                   <div className="rounded-xl h-10 w-10 border-(--background) border-2">
