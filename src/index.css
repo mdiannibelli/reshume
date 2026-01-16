@@ -165,3 +165,24 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* iOS Safari optimizations for blur and animations */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific optimizations */
+  .backdrop-blur-3xl {
+    -webkit-backdrop-filter: blur(64px);
+    backdrop-filter: blur(64px);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Force hardware acceleration for animated elements */
+  [class*="animate-"] {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
