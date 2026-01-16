@@ -44,10 +44,10 @@ export function useNavHandling() {
     }
   };
 
-  const handleToHome = () => {
+  const handleToTop = (link: string) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate("/");
+    navigate(link);
   };
 
-  return { handleHashNavigation, pendingHash, handleToHome, isScrolled };
+  return { handleHashNavigation, pendingHash, handleToTop, isScrolled };
 }

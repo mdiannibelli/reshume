@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const { t } = useTranslation();
-  const { handleHashNavigation, isScrolled, handleToHome } = useNavHandling();
+  const { handleHashNavigation, isScrolled, handleToTop } = useNavHandling();
 
   return (
     <div className="inset-x-0 z-20 transition-all duration-500 fixed">
@@ -24,7 +24,7 @@ export function Navbar() {
           </div>
           <Link
             to="/"
-            onClick={handleToHome}
+            onClick={() => handleToTop("/")}
             className="hidden lg:flex items-center gap-x-2"
           >
             <div className="rounded-xl h-10 w-10 border-(--background) border-2">
