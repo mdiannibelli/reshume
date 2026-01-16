@@ -56,6 +56,10 @@ export function ResumeGenerator() {
     }
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentStep]);
+
   const renderStep = () => {
     switch (currentStep) {
       case 1:
