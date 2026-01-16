@@ -287,7 +287,7 @@
     "FORM_STEPS": {
       "OPEN_PREVIEW": "Ver preview",
       "PERSONAL_INFO": {
-        "TITLE": "Datos Personales",
+        "TITLE": "Datos",
         "FIELDS": {
           "NAME": "Nombre",
           "NAME_PLACEHOLDER": "Juan",
