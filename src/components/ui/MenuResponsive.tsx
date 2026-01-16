@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { AnimatePresence, motion } from "motion/react";
 import { useNavHandling } from "@/hooks";
+import { Link } from "react-router-dom";
 
 export function MenuResponsive() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const { handleHashNavigation } = useNavHandling();
+  const { handleHashNavigation, handleToHome } = useNavHandling();
   return (
     <>
       <button
@@ -34,16 +35,31 @@ export function MenuResponsive() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="fixed left-0 top-0 w-[80%] md:w-[60%] h-screen z-200 bg-(--background-secondary)/95 backdrop-blur-md"
             >
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-8 right-8 z-10"
-              >
-                <RxCross1 className="text-(--text-primary) m-2 w-6 h-6" />
-              </button>
-              <div className="px-8 py-16 flex flex-col justify-between h-full">
+              <div className="absolute top-8 px-6 z-10 flex justify-between items-center w-full">
+                <Link
+                  to="/"
+                  onClick={handleToHome}
+                  className="flex items-center gap-x-2"
+                >
+                  <div className="rounded-xl h-10 w-10 border-(--background) border-2">
+                    <img
+                      src="/reshume.svg"
+                      alt="Reshume"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-(--text-secondary)">
+                    {t("NAVBAR.TITLE")}
+                  </span>
+                </Link>
+                <button onClick={() => setIsOpen(false)}>
+                  <RxCross1 className="text-(--text-primary) m-2 w-6 h-6" />
+                </button>
+              </div>
+              <div className="px-8 py-32 flex flex-col justify-between h-full">
                 <nav className="flex flex-col gap-y-2 py-8">
-                  <a
-                    href="/#features"
+                  <Link
+                    to="/#features"
                     onClick={() => {
                       setIsOpen(false);
                       handleHashNavigation("features");
@@ -51,9 +67,9 @@ export function MenuResponsive() {
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.FEATURES")}
-                  </a>
-                  <a
-                    href="/#pricing"
+                  </Link>
+                  <Link
+                    to="/#pricing"
                     onClick={() => {
                       setIsOpen(false);
                       handleHashNavigation("pricing");
@@ -61,9 +77,9 @@ export function MenuResponsive() {
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.PRICING")}
-                  </a>
-                  <a
-                    href="/#contribute"
+                  </Link>
+                  <Link
+                    to="/#contribute"
                     onClick={() => {
                       setIsOpen(false);
                       handleHashNavigation("contribute");
@@ -71,9 +87,9 @@ export function MenuResponsive() {
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.CONTRIBUTE")}
-                  </a>
-                  <a
-                    href="/#faq"
+                  </Link>
+                  <Link
+                    to="/#faq"
                     onClick={() => {
                       setIsOpen(false);
                       handleHashNavigation("faq");
@@ -81,29 +97,8 @@ export function MenuResponsive() {
                     className="hover:opacity-[0.9] text-(--text-primary) text-xl hover:bg-(--background-secondary)/10 rounded-full px-4 py-2 transition-all duration-300"
                   >
                     {t("NAVBAR.FAQ")}
-                  </a>
+                  </Link>
                 </nav>
-                {/* 
-                // TODO Login and register will be implemented soon
-                <div className="flex flex-col gap-y-4">
-                  <Link
-                    to="/login"
-                    className="text-(--text-primary) text-lg rounded-full px-4 text-center"
-                  >
-                    {t("NAVBAR.LOGIN_2")}
-                  </Link>
-                  <div className="flex items-center gap-x-2">
-                    <div className="h-px bg-(--text-secondary)/10 w-full my-2"></div>
-                    <span className="text-(--text-secondary)/10">{t("NAVBAR.OR")}</span>
-                    <div className="h-px bg-(--text-secondary)/10 w-full my-2"></div>
-                  </div>
-                  <Link
-                    to="/generate-resume"
-                    className="bg-(--primary) text-lg text-center text-(--text-primary) font-medium rounded-full px-4 py-2"
-                  >
-                    {t("NAVBAR.GENERATE_RESUME")}
-                  </Link>
-                </div> */}
               </div>
             </motion.div>
           </>

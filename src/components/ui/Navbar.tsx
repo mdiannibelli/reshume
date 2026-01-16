@@ -40,34 +40,34 @@ export function Navbar() {
           </Link>
         </div>
         <nav className="hidden lg:flex flex-1 justify-center col-span-2">
-          <a
-            href="/#features"
+          <Link
+            to="/#features"
             onClick={() => handleHashNavigation("features")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.FEATURES")}
-          </a>
-          <a
-            href="/#pricing"
+          </Link>
+          <Link
+            to="/#pricing"
             onClick={() => handleHashNavigation("pricing")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.PRICING")}
-          </a>
-          <a
-            href="/#contribute"
+          </Link>
+          <Link
+            to="/#contribute"
             onClick={() => handleHashNavigation("contribute")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.CONTRIBUTE")}
-          </a>
-          <a
-            href="/#faq"
+          </Link>
+          <Link
+            to="/#faq"
             onClick={() => handleHashNavigation("faq")}
             className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.FAQ")}
-          </a>
+          </Link>
         </nav>
         <div className="flex items-center gap-x-2 xl:gap-x-4 justify-end lg:mx-auto col-span-1">
           <LanguageSelector />
