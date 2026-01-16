@@ -62,13 +62,13 @@ export function Footer() {
               </h3>
               <ul className="space-y-1">
                 <li>
-                  <a
+                  <Link
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
-                    href={t("FOOTER.LINKS.NAVBAR.FEATURES.LINK")}
+                    to={t("FOOTER.LINKS.NAVBAR.FEATURES.LINK")}
                     onClick={() => handleHashNavigation("features")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.FEATURES.LIST.1")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -82,13 +82,13 @@ export function Footer() {
               </h3>
               <ul className="space-y-1">
                 <li>
-                  <a
+                  <Link
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
-                    href={t("FOOTER.LINKS.NAVBAR.PRICING.LINK")}
+                    to={t("FOOTER.LINKS.NAVBAR.PRICING.LINK")}
                     onClick={() => handleHashNavigation("pricing")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.PRICING.LIST.1")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -102,13 +102,13 @@ export function Footer() {
               </h3>
               <ul className="space-y-1">
                 <li>
-                  <a
+                  <Link
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
-                    href={t("FOOTER.LINKS.NAVBAR.CONTRIBUTE.LINK")}
+                    to={t("FOOTER.LINKS.NAVBAR.CONTRIBUTE.LINK")}
                     onClick={() => handleHashNavigation("contribute")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.CONTRIBUTE.LIST.1")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -122,13 +122,13 @@ export function Footer() {
               </h3>
               <ul className="space-y-1">
                 <li>
-                  <a
+                  <Link
                     className="text-(--text-secondary) hover:text-(--text-primary) transition-colors block"
-                    href={t("FOOTER.LINKS.NAVBAR.FAQ.LINK")}
+                    to={t("FOOTER.LINKS.NAVBAR.FAQ.LINK")}
                     onClick={() => handleHashNavigation("faq")}
                   >
                     {t("FOOTER.LINKS.NAVBAR.FAQ.LIST.1")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
