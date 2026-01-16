@@ -5,7 +5,7 @@ import { useNavHandling } from "@/hooks";
 
 export function Footer() {
   const { t } = useTranslation();
-  const { handleToHome, handleHashNavigation } = useNavHandling();
+  const { handleToTop, handleHashNavigation } = useNavHandling();
   const currentYear = new Date().getFullYear();
   return (
     <div className="relative w-full mt-auto container mx-auto px-3 md:px-6 lg:px-8">
@@ -15,7 +15,7 @@ export function Footer() {
             <div className="flex items-center">
               <Link
                 to="/"
-                onClick={handleToHome}
+                onClick={() => handleToTop("/")}
                 className="hidden lg:flex items-center gap-x-2"
               >
                 <div className="rounded-xl h-10 w-10 border-(--background) border-2">

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export function MenuResponsive() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const { handleHashNavigation, handleToHome } = useNavHandling();
+  const { handleHashNavigation, handleToTop } = useNavHandling();
   return (
     <>
       <button
@@ -40,7 +40,7 @@ export function MenuResponsive() {
                   to="/"
                   onClick={() => {
                     setIsOpen(false);
-                    handleToHome();
+                    handleToTop("/");
                   }}
                   className="flex items-center gap-x-2"
                 >

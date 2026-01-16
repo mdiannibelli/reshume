@@ -7,7 +7,7 @@ import showcaseReshumeSvg from "@/assets/images/home/features/showcase-reshume.w
 export function AtsOptimized() {
   const { t } = useTranslation();
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-24 gap-x-6 xl:gap-x-16 px-6 xl:px-0">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 md:gap-y-24 gap-x-6 xl:gap-x-16 px-6 xl:px-0">
       {/* Column 1 */}
       <div className="flex flex-col gap-4 row-span-2 lg:row-span-1 col-span-1 lg:col-span-2">
         <a
@@ -44,7 +44,7 @@ export function AtsOptimized() {
       </div>
 
       {/* Column 3 */}
-      <div className="flex flex-col gap-4 overflow-hidden col-span-1 -translate-y-10">
+      <div className="flex flex-col mt-16 md:mt-0 gap-4 overflow-hidden col-span-1 -translate-y-10">
         <div className="p-4 bg-(--primary-hover)/10 rounded-full w-fit">
           <div className="p-3 bg-(--primary-hover)/25 rounded-full">
             <SlGraph className="text-4xl text-(--primary)" />
