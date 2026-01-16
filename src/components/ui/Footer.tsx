@@ -173,7 +173,7 @@ export function Footer() {
             components={{
               a: (
                 <a
-                  href="https://github.com/mdiannibelli"
+                  href="https://mdiannibelli.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-(--text-primary) hover:underline"

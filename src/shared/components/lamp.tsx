@@ -22,7 +22,7 @@ export const LampContainer = ({
       </div>
 
       {/* Button light */}
-      <div className="relative flex w-full scale-y-125 items-center justify-center isolate z-10 ">
+      <div className="relative flex w-full scale-y-125 items-center justify-center isolate z-10">
         <motion.div
           initial={{ opacity: 0, width: "2rem" }}
           whileInView={{ opacity: 1, width: "16rem" }}
@@ -32,6 +32,7 @@ export const LampContainer = ({
             duration: 1.5,
             ease: "easeInOut",
           }}
+          style={{ willChange: "width, opacity", transform: "translateZ(0)" }}
           className="absolute left-1/2 -translate-x-1/2 z-30 h-8 rounded-full bg-(--primary) blur-2xl"
         ></motion.div>
       </div>
@@ -46,12 +47,21 @@ export const LampContainer = ({
             duration: 1,
             ease: "easeInOut",
           }}
+          style={{ willChange: "opacity", transform: "translateZ(0)" }}
           className="relative inline-flex h-12 overflow-hidden rounded-full p-px focus:outline-none focus:ring-2 focus:ring-(--border) focus:ring-offset-2 focus:ring-offset-(--background-secondary) mt-12 hover:translate-y-[-2px] transition-all duration-300"
         >
-          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FECACA_0%,#DC2626_50%,#FECACA_100%)]" />
+          <span
+            className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FECACA_0%,#DC2626_50%,#FECACA_100%)]"
+            style={{ willChange: "transform", transform: "translateZ(0)" }}
+          />
           <Link
             to="/generate-resume"
-            className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-(--primary) px-8 py-1 text-lg md:text-xl font-medium text-(--text-primary) backdrop-blur-3xl"
+            className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-(--primary) px-8 py-1 text-lg md:text-xl font-medium text-(--text-primary) backdrop-blur-sm md:backdrop-blur-3xl"
+            style={{
+              transform: "translateZ(0)",
+              WebkitBackfaceVisibility: "hidden",
+              backfaceVisibility: "hidden",
+            }}
           >
             {btnName}
           </Link>
