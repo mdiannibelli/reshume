@@ -33,8 +33,27 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    minify: 'esbuild',
+    chunkSizeWarningLimit: 1000,
     commonjsOptions: {
       transformMixedEsModules: true,
+    },
+    rollupOptions: {
+      output: {
+        sourcemapExcludeSources: false,
+        manualChunks(id) {
+          // Separar vendor chunks para reducir el tamaño de los source maps
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('@react-pdf')) {
+              return 'vendor-pdf';
+            }
+            return 'vendor';
+          }
+        },
+      },
     },
   },
 });
