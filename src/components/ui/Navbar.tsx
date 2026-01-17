@@ -43,35 +43,35 @@ export function Navbar() {
           <Link
             to="/#features"
             onClick={() => handleHashNavigation("features")}
-            className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
+            className="hover:opacity-[0.9] text-(--text-primary) hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.FEATURES")}
           </Link>
           <Link
             to="/#pricing"
             onClick={() => handleHashNavigation("pricing")}
-            className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
+            className="hover:opacity-[0.9] text-(--text-primary) hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.PRICING")}
           </Link>
           <Link
             to="/#contribute"
             onClick={() => handleHashNavigation("contribute")}
-            className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
+            className="hover:opacity-[0.9] text-(--text-primary) hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.CONTRIBUTE")}
           </Link>
           <Link
             to="/#faq"
             onClick={() => handleHashNavigation("faq")}
-            className="hover:opacity-[0.9] text-white hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
+            className="hover:opacity-[0.9] text-(--text-primary) hover:bg-(--border-light) rounded-full px-4 py-2 transition-all duration-300"
           >
             {t("NAVBAR.FAQ")}
           </Link>
         </nav>
         <div className="flex items-center gap-x-2 xl:gap-x-4 justify-end lg:mx-auto col-span-1">
           <LanguageSelector />
-          <div className="bg-(--primary) rounded-full text-sm px-4 md:px-3 xl:text-base xl:px-6 py-2 transition-all duration-300 hover:translate-y-[-2px] cursor-pointer">
+          <div className="bg-(--primary-hover) rounded-full text-sm px-4 md:px-3 xl:text-base xl:px-6 py-2 transition-all duration-300 hover:translate-y-[-2px] cursor-pointer">
             <Link
               to="/generate-resume"
               className=" text-(--text-primary) font-medium"

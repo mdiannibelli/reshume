@@ -101,6 +101,7 @@ export function ResumeGenerator() {
             <div className="flex justify-between mt-8">
               <button
                 type="button"
+                aria-label="Previous step"
                 onClick={prevStep}
                 disabled={currentStep === 1}
                 className="px-6 py-3 bg-(--border-light) cursor-pointer text-(--text-primary) rounded-lg hover:bg-(--border-hover) transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium"
@@ -111,6 +112,7 @@ export function ResumeGenerator() {
               {currentStep < totalSteps ? (
                 <button
                   type="button"
+                  aria-label="Next step"
                   onClick={(e) => {
                     e.preventDefault();
                     nextStep();
@@ -122,6 +124,7 @@ export function ResumeGenerator() {
               ) : (
                 <button
                   type="submit"
+                  aria-label="Generate resume"
                   className="px-6 py-3 bg-(--primary) hover:bg-(--primary-hover) duration-300 cursor-pointer transition-all text-(--text-primary) rounded-lg font-medium"
                 >
                   {t("GENERATE_RESUME.GENERATE")}

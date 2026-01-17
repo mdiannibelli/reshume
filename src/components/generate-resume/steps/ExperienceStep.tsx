@@ -26,6 +26,7 @@ export function ExperienceStep() {
         <div className="flex justify-end">
           <button
             type="button"
+            aria-label="Add experience"
             onClick={() =>
               append({
                 id: Date.now().toString(),

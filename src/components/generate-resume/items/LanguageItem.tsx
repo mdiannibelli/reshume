@@ -96,6 +96,7 @@ export function LanguageItem() {
                 )}
               />
               <button
+                aria-label="Add language"
                 onClick={handleAddLanguage}
                 disabled={disabledAddLanguage}
                 className="w-1/2 cursor-pointer px-3 py-3 bg-(--background-secondary) border border-(--primary) text-(--text-primary) rounded-lg hover:bg-(--primary)/25 duration-500 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-(--primary)"
@@ -130,11 +131,9 @@ export function LanguageItem() {
                 <button
                   key={field.id}
                   type="button"
+                  aria-label="Delete language"
                   onClick={() => remove(index)}
                   className="cursor-pointer text-(--primary) hover:text-(--primary-light) transition-colors text-lg font-bold leading-none"
-                  aria-label={t(
-                    "GENERATE_RESUME.FORM_STEPS.LANGUAGES.BUTTONS.DELETE"
-                  )}
                 >
                   <RiCloseLine className="text-base" />
                 </button>

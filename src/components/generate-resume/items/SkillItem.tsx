@@ -72,6 +72,7 @@ export function SkillItem() {
           <div className="flex items-end">
             <button
               type="button"
+              aria-label="Add skill"
               onClick={handleAddSkill}
               disabled={!skillInput.trim() || skillInput.trim().length < 3}
               className="px-4 py-3 cursor-pointer bg-(--background-secondary) border border-(--primary) text-(--text-primary) rounded-lg hover:bg-(--primary)/25 duration-500 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-(--primary)"
@@ -101,9 +102,7 @@ export function SkillItem() {
                   type="button"
                   onClick={() => remove(index)}
                   className="cursor-pointer text-(--primary) hover:text-(--primary-light) transition-colors text-lg font-bold leading-none"
-                  aria-label={t(
-                    "GENERATE_RESUME.FORM_STEPS.SKILLS.BUTTONS.DELETE"
-                  )}
+                  aria-label="Delete skill"
                 >
                   <RiCloseLine className="text-base" />
                 </button>

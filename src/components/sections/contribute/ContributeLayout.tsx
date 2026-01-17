@@ -63,7 +63,7 @@ export function ContributeLayout() {
           </div>
         </div>
       </div>
-      <div className="col-span-2 row-start-3 md:col-span-3 lg:col-span-2 md:row-start-2 relative inline-block bg-(--success) backdrop-blur-md border-(--border-light) border overflow-hidden group mb-6 rounded-4xl">
+      <div className="col-span-2 row-start-3 md:col-span-3 lg:col-span-2 md:row-start-2 relative inline-block bg-(--background-green) backdrop-blur-md border-(--border-light) border overflow-hidden group mb-6 rounded-4xl">
         <div className="absolute inset-0 bg-(--background)/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
         <div className="relative flex flex-col h-full p-8 py-12 items-center">
           <div className="flex flex-col flex-1">

@@ -37,10 +37,10 @@ export function PricingCard(card: PricingCard) {
     },
     [PricingVariants.PREMIUM]: {
       mainColorText: "text-(--primary)",
-      blurBackground: "to-(--primary)/35",
+      blurBackground: "to-(--primary)/60",
       iconGradient:
         "bg-(--primary)/10 bg-linear-to-b from-(--primary)/30 to-transparent",
-      background: "bg-(--primary)/25",
+      background: "bg-(--primary)/15",
       border: "border-(--primary)/25",
       hoverBorder: "border-(--primary-hover)/60",
       gradient:
@@ -103,7 +103,7 @@ export function PricingCard(card: PricingCard) {
               {t(description)}
             </p>
             <div className="mt-6 w-full flex justify-center">
-              <button className="relative inline-flex overflow-hidden rounded-lg p-[2px] w-full">
+              <button aria-label="Generate resume" className="relative inline-flex overflow-hidden rounded-lg p-[2px] w-full">
                 <span
                   className={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] ${gradient}`}
                 />
@@ -139,7 +139,7 @@ export function PricingCard(card: PricingCard) {
           </ul>
         </div>
         {status && (
-          <span className={`${mainColorText} block text-center mt-8`}>
+          <span className={`${mainColorText} block text-center mt-8 text-(--text-primary)`}>
             {t(status)}
           </span>
         )}
