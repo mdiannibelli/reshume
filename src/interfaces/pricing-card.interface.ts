@@ -9,5 +9,7 @@ export interface PricingCard {
   description: string;
   button: string;
   checks: string[];
+  active?: boolean;
+  notAvailable?: string;
   status?: string;
 }

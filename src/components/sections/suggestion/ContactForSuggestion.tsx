@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { MdKeyboardArrowRight } from "react-icons/md";
-
+import { useTranslation } from "react-i18next";
 export function ContactForSuggestion() {
+  const { t } = useTranslation();
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [isBackgroundHovered, setIsBackgroundHovered] = useState(false);
 
@@ -50,11 +51,10 @@ export function ContactForSuggestion() {
       <div className="px-8 py-12 md:py-16 text-center relative z-10">
         <div style={{ opacity: 1, transform: "none" }}>
           <span className="text-transparent bg-clip-text bg-linear-to-r text-3xl md:text-4xl font-bold mb-6 from-white to-(--text-primary)/90">
-            What’s coming next
+            {t("HOME.CONTACT_ME.TITLE")}
           </span>
           <p className="text-xl text-(--text-secondary) max-w-2xl mx-auto mt-6 mb-10">
-            New templates, smarter features, and improvements are already on the
-            roadmap. Your feedback helps decide what comes next.
+            {t("HOME.CONTACT_ME.DESCRIPTION")}
           </p>
           <div className="relative inline-block">
             <motion.div
@@ -90,9 +90,9 @@ export function ContactForSuggestion() {
               }}
               style={{ zIndex: 1, position: "relative" }}
             >
-              <span className="flex gap-2 items-center text-(--text-primary)">
-                <p>Contact me</p>
-                <MdKeyboardArrowRight className="text-[22px] mt-1 text-(--text-primary)" />
+              <span className="flex gap-2 text-lg items-center text-(--text-primary)">
+                <p>{t("HOME.CONTACT_ME.BUTTON")}</p>
+                <MdKeyboardArrowRight className="text-2xl text-(--text-primary)" />
               </span>
             </motion.a>
           </div>
