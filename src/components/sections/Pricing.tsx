@@ -47,13 +47,20 @@ export function Pricing() {
             period="HOME.PRICING.CARDS.PREMIUM.PERIOD"
             description="HOME.PRICING.CARDS.PREMIUM.DESCRIPTION"
             button="HOME.PRICING.CARDS.PREMIUM.BUTTON"
+            notAvailable="HOME.PRICING.CARDS.PREMIUM.PRICE_NOT_AVAILABLE"
             checks={[
               "HOME.PRICING.CARDS.PREMIUM.CHECKS.1",
               "HOME.PRICING.CARDS.PREMIUM.CHECKS.2",
               "HOME.PRICING.CARDS.PREMIUM.CHECKS.3",
               "HOME.PRICING.CARDS.PREMIUM.CHECKS.4",
+              "HOME.PRICING.CARDS.PREMIUM.CHECKS.5",
+              "HOME.PRICING.CARDS.PREMIUM.CHECKS.6",
+              "HOME.PRICING.CARDS.PREMIUM.CHECKS.7",
+              "HOME.PRICING.CARDS.PREMIUM.CHECKS.8",
+              "HOME.PRICING.CARDS.PREMIUM.CHECKS.9",
             ]}
             status="HOME.PRICING.CARDS.PREMIUM.STATUS"
+            active={false}
           />
         </div>
       </div>

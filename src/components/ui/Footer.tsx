@@ -35,7 +35,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://www.instagram.com/reshume/"
+                href="https://www.instagram.com/reshumeapp/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Reshume on Instagram"

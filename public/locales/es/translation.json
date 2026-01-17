@@ -1,12 +1,12 @@
 {
   "HERO": {
-    "SUBTITLE": "Convierte tu experiencia en oportunidad",
+    "SUBTITLE": "Convertí tu experiencia en oportunidades",
     "TITLE": "Reescribí tu historia profesional\ncon Reshume",
     "CTA": "Comenzar",
     "FEATURES": {
-      "1": "No requiere registro",
-      "2": "Compatibilidad con ATS",
-      "3": "Resultados instantáneos"
+      "1": "Compatibilidad con ATS",
+      "2": "Resultados instantáneos",
+      "3": "No requiere registro"
     }
   },
   "NAVBAR": {
@@ -79,205 +79,215 @@
       },
       "STATS": {
         "1": {
-          "TITLE": "80%+",
+          "TITLE": "90%+",
           "DESCRIPTION": "Estructura compatible con ATS"
         },
         "2": {
-          "TITLE": "3x",
+          "TITLE": "5x",
           "DESCRIPTION": "Creación de currículum más rápida"
         },
         "3": {
-          "TITLE": "70%+",
+          "TITLE": "80%",
           "DESCRIPTION": "Enfoque en el impacto"
         }
       }
     },
     "FEATURES": {
       "BADGE": "Características",
-        "ATS_OPTIMIZED": {
-          "HEAD": "Legible por reclutadores y sistemas",
-          "TITLE": "Estructura optimizada para ATS",
-          "DESCRIPTION": "Currículums construidos usando diseños probados, <bold>compatibles con ATS</bold> que pueden ser leídos exactamente como lo esperan los reclutadores sin pérdida de información, sin secciones rotas.",
-          "CHARACTERISTICS": {
-            "1": {
-              "TITLE": "Análisis inteligente de secciones",
-              "DESCRIPTION": "Secciones como Experiencia, Educación y Habilidades siguen una estructura estándar y nomenclatura, ayudando a los sistemas ATS a categorizar y priorizar correctamente el contenido de tu currículum."
-            },
-            "2": {
-              "TITLE": "Jerarquía de contenido clara",
-              "DESCRIPTION": "Encabezados claros, espaciado consistente y flujo lógico de contenido aseguran que ambos sistemas automatizados y reclutadores humanos puedan escanear tu currículum sin esfuerzo."
-            }
-          }
-        },
-        "INSTANT_RESUME_GENERATION": {
-          "HEAD": "Tené tu currículum listo en segundos",
-          "TITLE": "Generación instantánea",
-          "DESCRIPTION": "Crea un currículum profesional en minutos simplemente llenando tu información. Reshume <bold>maneja el diseño, el espaciado y la estructura automáticamente</bold> así puedes enfocarte en tu experiencia, no en el formato o decisiones de diseño.",
-          "CHECKLIST": {
-            "1": "No formateas manualmente",
-            "2": "No luchas con plantillas",
-            "3": "No tomas decisiones de diseño"
-          }
-        },
-        "PROFESSIONAL_TEMPLATES": {
-          "HEAD": "Diseñados para ser serios y profesionales",
-          "TITLE": "Plantillas profesionales",
-          "SUBTITLE": "Elegí una plantilla que se adapte a tu etapa de carrera, no solo a tu estilo.",
-          "RECOMMENDED": "Recomendado para",
-          "DESCRIPTION": "Reshume ofrece plantillas de currículum profesionalmente diseñadas basadas en estándares de contratación reales. <bold>Diseños limpios, tipografía equilibrada y secciones estructuradas</bold> construidas para destacar tu experiencia sin distracciones.",
-          "TEMPLATES": {
-            "CLASSIC": {
-              "NAME": "Clásico",
-              "DESCRIPTION": "Un diseño tradicional, bien estructurado inspirado en currículums académicos y corporativos. Ideal para industrias conservadoras, puestos de entrada y medio nivel, y aplicaciones donde la claridad es lo más importante.",
-              "FOR": {
-                "1": "Roles corporativos",
-                "2": "Puestos de entrada y medio nivel",
-                "3": "Ambientes académicos / formales"
-              },
-              "STATUS": "Disponible",
-              "PRICE": "Gratis"
-            },
-            "MODERN": {
-              "NAME": "Moderno",
-              "DESCRIPTION": "Un diseño moderno con jerarquía visual sutil y mejor legibilidad diseñado para profesionales de tecnología, producto y creatividad que quieren un aspecto moderno pero profesional.",
-              "FOR": {
-                "1": "Roles de tecnología y producto",
-                "2": "Startups",
-                "3": "Diseñadores, desarrolladores, mercadotecnistas"
-              },
-              "STATUS": "Disponible",
-              "PRICE": "Gratis"
-            },
-            "EXECUTIVE": {
-              "NAME": "Ejecutivo",
-              "DESCRIPTION": "Un diseño refinado, de alto impacto diseñado para posiciones de liderazgo, enfocado en logros estratégicos y presencia ejecutiva.",
-              "FOR": {
-                "1": "Roles senior y de liderazgo",
-                "2": "Gestión",
-                "3": "Aplicaciones ejecutivas"
-              },
-              "STATUS": "Próximamente...",
-              "PRICE": "Premium"
-            },
-            "IMPACT": {
-              "NAME": "Impacto",
-              "DESCRIPTION": "Un diseño audaz, orientado a resultados que destaca logros medibles, métricas y impacto empresarial.",
-              "FOR": {
-                "1": "Roles de alto rendimiento",
-                "2": "Ventas, crecimiento, producto",
-                "3": "Currículums orientados a resultados"
-              },
-              "STATUS": "Próximamente...",
-              "PRICE": "Premium"
-            }
-          }
-        }
-      },
-      "PRICING": {
-        "BADGE": "Precios",
-        "TITLE": "No necesitas pagar para construir tu currículum",
-        "DESCRIPTION": "Reshume es completamente gratis. Las futuras características premium siempre permanecerán opcionales.",
-        "CARDS": {
-          "STANDARD": {
-            "PLAN": "Standard",
-            "HEADLINE": "Todo lo que necesitas para generar un currículum profesional.",
-            "PRICE": "$0",
-            "PERIOD": "/mes",
-            "DESCRIPTION": "Perfecto para postulantes y profesionales que buscan un currículum profesional.",
-            "BUTTON": "Comenzar gratis",
-            "CHECKS": {
-              "1": "Generación instantánea de currículum",
-              "2": "Plantilla clásica",
-              "3": "Plantilla moderna",
-              "4": "Estructura optimizada para ATS",
-              "5": "Exportación a PDF",
-              "6": "No requiere cuenta"
-            }
-          },
-          "PREMIUM": {
-            "PLAN": "Premium",
-            "HEADLINE": "Plantillas y características avanzadas para roles especializados.",
-            "PRICE": "$0",
-            "PERIOD": "/mes",
-            "DESCRIPTION": "Diseñado para gerentes, líderes y roles de alto rendimiento profesional.",
-            "BUTTON": "Comenzar gratis",
-            "CHECKS": {
-              "1": "Plantilla ejecutiva",
-              "2": "Plantilla impacto",
-              "3": "Personalización adicional de diseño",
-              "4": "Acceso prioritario a nuevas plantillas"
-            },
-            "STATUS": "Próximamente..."
-          }
-        }
-      },
-      "CONTRIBUTE": {
-        "BADGE": "Contribuir",
-        "TITLE": "Reshume es 100% de código abierto",
-        "DESCRIPTION": "Construyamos algo grande juntos.",
-        "LAYOUT": {
-          "TITLE": "Código abierto. Desarrollado en público",
-          "DESCRIPTION": "Cada plantilla, diseño y decisión es desarrollado en público. Puedes inspeccionar el código, sugerir mejoras o construir sobre él."
-        },
-        "MAIN_BUTTON": "Ver código",
-        "CONTRIBUTIONS": {
-          "TITLE": "Contribuir con código",
-          "DESCRIPTION": "Encontraste un bug, quieres mejorar una plantilla o agregar una característica? <bold>Pull requests son bienvenidos.</bold>",
-          "BUTTON": "Abrir un issue"
-        },
-        "RATING": {
-          "TITLE": "¿Te gusta el proyecto?",
-          "DESCRIPTION": "Danos una estrella en GitHub y ayuda a validar y mantener el proyecto en movimiento.",
-          "BUTTON": "Dar una estrella"
-        }
-      },
-      "FAQ": {
-        "BADGE": "FAQ",
-        "TITLE": "Preguntas frecuentes",
-        "DESCRIPTION": "Encuentra respuestas a preguntas comunes sobre Reshume.",
-        "QUESTIONS": {
+      "ATS_OPTIMIZED": {
+        "HEAD": "Legible por reclutadores y sistemas",
+        "TITLE": "Estructura optimizada para ATS",
+        "DESCRIPTION": "Currículums construidos con diseños probados y <bold>compatibles con ATS</bold> que pueden ser leídos exactamente como lo esperan los sistemas inteligentes usados por recursos humanos y reclutadores sin pérdida de información, sin secciones rotas.",
+        "CHARACTERISTICS": {
           "1": {
-            "QUESTION": "¿Cuál es la diferencia entre Reshume y otros generadores de currículums?",
-            "ANSWER": "Reshume es un generador de currículums gratuito y de código abierto que te ayuda a crear un currículum profesional en minutos. Está diseñado para ser fácil de usar y entender, con un enfoque en simplicidad y claridad."
+            "TITLE": "Análisis inteligente de secciones",
+            "DESCRIPTION": "Secciones como Experiencia, Educación y Habilidades siguen una estructura estándar y nomenclatura, ayudando a los sistemas ATS a categorizar y priorizar correctamente el contenido de tu currículum."
           },
           "2": {
-            "QUESTION": "¿Es Reshume realmente gratuito?",
-            "ANSWER": "Sí. Reshume es completamente gratuito durante el acceso temprano. Puedes generar y descargar currículums profesionales sin pagar o crear una cuenta."
+            "TITLE": "Jerarquía de contenido clara",
+            "DESCRIPTION": "Encabezados claros, espaciado consistente y flujo lógico de contenido aseguran que ambos sistemas automatizados y reclutadores humanos puedan escanear tu currículum sin esfuerzo."
+          }
+        }
+      },
+      "INSTANT_RESUME_GENERATION": {
+        "HEAD": "Tené tu currículum listo en segundos",
+        "TITLE": "Generación instantánea",
+        "DESCRIPTION": "Crea un currículum profesional en cuestión de segundos con solo llenando tu información. Reshume <bold>maneja el diseño, el espaciado y la estructura de manera automática</bold> así puedes enfocarte en tu experiencia, no tenes que pensar en el formato o decisiones de diseño.",
+        "CHECKLIST": {
+          "1": "No formateas manualmente",
+          "2": "No luchas con plantillas",
+          "3": "No tomas decisiones de diseño"
+        }
+      },
+      "PROFESSIONAL_TEMPLATES": {
+        "HEAD": "Diseñados para verse profesionales",
+        "TITLE": "Plantillas profesionales",
+        "SUBTITLE": "Elegí una plantilla que se adapte a tu etapa de carrera, no solo a tu estilo.",
+        "RECOMMENDED": "Recomendado para",
+        "DESCRIPTION": "Reshume ofrece plantillas de currículum profesionalmente diseñadas basadas en estándares de contratación reales. <bold>Diseños limpios, tipografía equilibrada y secciones estructuradas</bold> construidas para destacar tu experiencia sin distracciones.",
+        "TEMPLATES": {
+          "CLASSIC": {
+            "NAME": "Clásico",
+            "DESCRIPTION": "Un diseño tradicional, bien estructurado inspirado en currículums académicos y corporativos. Ideal para industrias conservadoras, puestos de entrada y medio nivel, y aplicaciones donde la claridad es lo más importante.",
+            "FOR": {
+              "1": "Roles corporativos",
+              "2": "Puestos de entrada y medio nivel",
+              "3": "Ambientes académicos / formales"
+            },
+            "STATUS": "Disponible",
+            "PRICE": "Gratis"
           },
-          "3": {
-            "QUESTION": "¿Reshume siempre será gratuito?",
-            "ANSWER": "El generador de currículums principal permanecerá gratuito. En el futuro, se pueden introducir plantillas y características premium opcionales, pero la funcionalidad básica siempre estará disponible."
+          "MODERN": {
+            "NAME": "Moderno",
+            "DESCRIPTION": "Un diseño moderno con jerarquía visual sutil y mejor legibilidad diseñado para profesionales de tecnología, producto y creatividad que quieren un aspecto moderno pero profesional.",
+            "FOR": {
+              "1": "Roles de tecnología y producto",
+              "2": "Startups",
+              "3": "Diseñadores, desarrolladores, mercadotecnistas"
+            },
+            "STATUS": "Disponible",
+            "PRICE": "Gratis"
           },
-          "4": {
-            "QUESTION": "¿Es Reshume de código abierto?",
-            "ANSWER": "Sí. Reshume es 100% de código abierto. Puedes ver el código, contribuir o auto-hospedarlo si quieres tener el control total."
+          "EXECUTIVE": {
+            "NAME": "Ejecutivo",
+            "DESCRIPTION": "Un diseño refinado, de alto impacto diseñado para posiciones de liderazgo, enfocado en logros estratégicos y presencia ejecutiva.",
+            "FOR": {
+              "1": "Roles senior y de liderazgo",
+              "2": "Gestión",
+              "3": "Aplicaciones ejecutivas"
+            },
+            "STATUS": "Próximamente...",
+            "PRICE": "Premium"
           },
-          "5": {
-            "QUESTION": "¿Son currículums Reshume compatibles con ATS?",
-            "ANSWER": "Las plantillas de Reshume se construyen usando diseños y estructuras seguras para ATS para asegurar que tu currículum pueda ser correctamente analizado por sistemas de seguimiento de candidatos."
-          },
-          "6": {
-            "QUESTION": "¿Puede Reshume garantizar que mi currículum pasará por ATS?",
-            "ANSWER": "No herramienta puede garantizar eso. Sin embargo, Reshume sigue las mejores prácticas para maximizar la compatibilidad y la legibilidad."
-          },
-          "7": {
-            "QUESTION": "¿Necesito crear una cuenta para usar Reshume?",
-            "ANSWER": "No. Puedes generar y descargar tu currículum sin registrarte."
-          },
-          "8": {
-            "QUESTION": "¿Qué formatos de currículum puedo exportar?",
-            "ANSWER": "Actualmente, Reshume soporta exportaciones de PDF de alta calidad. Se pueden agregar formatos adicionales en el futuro."
-          },
-          "9": {
-            "QUESTION": "¿Puedo editar o regenerar mi currículum más tarde?",
-            "ANSWER": "Sí. Puedes actualizar tu información y regenerar tu currículum en cualquier momento."
-          },
-          "10": {
-            "QUESTION": "¿Se almacenan o comparten mis datos?",
-            "ANSWER": "No. Reshume no vende o comparte tus datos. La información de tu currículum permanece en tu control."
+          "IMPACT": {
+            "NAME": "Impacto",
+            "DESCRIPTION": "Un diseño audaz, orientado a resultados que destaca logros medibles, métricas y impacto empresarial.",
+            "FOR": {
+              "1": "Roles de alto rendimiento",
+              "2": "Ventas, crecimiento, producto",
+              "3": "Currículums orientados a resultados"
+            },
+            "STATUS": "Próximamente...",
+            "PRICE": "Premium"
           }
         }
       }
+    },
+    "PRICING": {
+      "BADGE": "Precios",
+      "TITLE": "No necesitas pagar para construir tu currículum",
+      "DESCRIPTION": "Reshume es completamente gratis. Futuras características premium serán opcionales para todos.",
+      "CARDS": {
+        "STANDARD": {
+          "PLAN": "Standard",
+          "HEADLINE": "Todo lo que necesitas para generar un currículum profesional.",
+          "PRICE": "$0",
+          "PERIOD": "/mes",
+          "DESCRIPTION": "Perfecto para postulantes y profesionales que buscan un currículum profesional.",
+          "BUTTON": "Comenzar gratis",
+          "CHECKS": {
+            "1": "Generación instantánea de currículum",
+            "2": "Plantilla clásica",
+            "3": "Plantilla moderna",
+            "4": "Estructura optimizada para ATS",
+            "5": "Exportación a PDF",
+            "6": "No requiere cuenta"
+          }
+        },
+        "PREMIUM": {
+          "PLAN": "Premium",
+          "HEADLINE": "Plantillas y características avanzadas para roles especializados.",
+          "PRICE": "$0",
+          "PERIOD": "/mes",
+          "DESCRIPTION": "Diseñado para gerentes, líderes y roles de alto rendimiento profesional.",
+          "BUTTON": "Comenzar gratis",
+          "CHECKS": {
+            "1": "Plantilla ejecutiva",
+            "2": "Plantilla impacto",
+            "3": "Personalización adicional de diseño",
+            "4": "Acceso prioritario a nuevas plantillas",
+            "5": "Almacena tus currículums",
+            "6": "Comparte tus currículums",
+            "7": "Genera un link externo para tu currículum",
+            "8": "Exportación a varios formatos",
+            "9": "Inteligencia artificial para mejorar tu currículum"
+          },
+          "STATUS": "Este plan estará disponible en un futuro..."
+        }
+      }
+    },
+    "CONTRIBUTE": {
+      "BADGE": "Contribuir",
+      "TITLE": "Reshume es 100% de código abierto",
+      "DESCRIPTION": "Construyamos algo grande juntos.",
+      "LAYOUT": {
+        "TITLE": "Código abierto. Desarrollado en público",
+        "DESCRIPTION": "Las nuevas funcionalidades y plantillas son desarrolladas y visibles para todos. Puedes inspeccionar el código, sugerir mejoras o directamente contribuir con el proyecto."
+      },
+      "MAIN_BUTTON": "Ver código",
+      "CONTRIBUTIONS": {
+        "TITLE": "Contribuir con código",
+        "DESCRIPTION": "Si encontraste un bug, o quieres mejorar una plantilla o agregar una característica, <bold>puedes crear una pull request o un issue en GitHub.</bold>",
+        "BUTTON": "Abrir un issue"
+      },
+      "RATING": {
+        "TITLE": "Puntuános!",
+        "DESCRIPTION": "Danos una estrella en GitHub y comparte el proyecto con tus amigos. Te lo agradecemos!",
+        "BUTTON": "Dar una estrella"
+      }
+    },
+    "FAQ": {
+      "BADGE": "FAQ",
+      "TITLE": "Preguntas frecuentes",
+      "DESCRIPTION": "Encuentra respuestas a preguntas comunes sobre Reshume.",
+      "QUESTIONS": {
+        "1": {
+          "QUESTION": "¿Cuál es la diferencia entre Reshume y otros generadores de currículums?",
+          "ANSWER": "Reshume es un generador de currículums gratuito y de código abierto que te ayuda a crear un currículum profesional en minutos. Está diseñado para ser fácil de usar y entender, con un enfoque en simplicidad y claridad."
+        },
+        "2": {
+          "QUESTION": "¿Es Reshume realmente gratuito?",
+          "ANSWER": "Sí. Reshume es completamente gratuito durante el acceso temprano. Puedes generar y descargar currículums profesionales sin pagar o crear una cuenta."
+        },
+        "3": {
+          "QUESTION": "¿Reshume siempre será gratuito?",
+          "ANSWER": "El generador de currículums principal permanecerá gratuito. En el futuro, se pueden introducir plantillas y características premium opcionales, pero la funcionalidad básica siempre estará disponible."
+        },
+        "4": {
+          "QUESTION": "¿Es Reshume de código abierto?",
+          "ANSWER": "Sí. Reshume es 100% de código abierto. Puedes ver el código, contribuir o auto-hospedarlo si quieres tener el control total."
+        },
+        "5": {
+          "QUESTION": "¿Son currículums Reshume compatibles con ATS?",
+          "ANSWER": "Las plantillas de Reshume se construyen usando diseños y estructuras seguras para ATS para asegurar que tu currículum pueda ser correctamente analizado por sistemas de seguimiento de candidatos."
+        },
+        "6": {
+          "QUESTION": "¿Puede Reshume garantizar que mi currículum pasará por ATS?",
+          "ANSWER": "No herramienta puede garantizar eso. Sin embargo, Reshume sigue las mejores prácticas para maximizar la compatibilidad y la legibilidad."
+        },
+        "7": {
+          "QUESTION": "¿Necesito crear una cuenta para usar Reshume?",
+          "ANSWER": "No. Puedes generar y descargar tu currículum sin registrarte."
+        },
+        "8": {
+          "QUESTION": "¿Qué formatos de currículum puedo exportar?",
+          "ANSWER": "Actualmente, Reshume soporta exportaciones de PDF de alta calidad. Se pueden agregar formatos adicionales en el futuro."
+        },
+        "9": {
+          "QUESTION": "¿Puedo editar o regenerar mi currículum más tarde?",
+          "ANSWER": "Sí. Puedes actualizar tu información y regenerar tu currículum en cualquier momento."
+        },
+        "10": {
+          "QUESTION": "¿Se almacenan o comparten mis datos?",
+          "ANSWER": "No. Reshume no vende o comparte tus datos. La información de tu currículum permanece en tu control."
+        }
+      }
+    },
+    "CONTACT_ME": {
+      "TITLE": "¿Tenés una idea?",
+      "DESCRIPTION": "En búsqueda de nuevas ideas y feedback. Si tenés alguna sugerencia, por favor contactame.",
+      "BUTTON": "Contáctame"
+    }
   },
   "GENERATE_RESUME": {
     "LOADING_SCREEN": {

@@ -18,6 +18,8 @@ export function PricingCard(card: PricingCard) {
     button,
     checks,
     status,
+    notAvailable,
+    active = true,
   } = card;
   const colors = {
     [PricingVariants.STANDARD]: {
@@ -57,7 +59,7 @@ export function PricingCard(card: PricingCard) {
     mainColorText,
   } = colors[variant];
   return (
-    <div className="relative group transition-all duration-300 hover:-translate-y-1 h-[760px]">
+    <div className="relative group transition-all duration-300 hover:-translate-y-1 h-full">
       <div
         className={`absolute -inset-1 rounded-xl opacity-0 bg-linear-to-br from-(--text-primary)/5 ${blurBackground} blur-2xl group-hover:opacity-80 transition-all duration-500`}
       ></div>
@@ -83,6 +85,7 @@ export function PricingCard(card: PricingCard) {
             </p>
           </div>
           <div className="mt-6">
+            {active ? (
             <h2 className="flex items-end">
               <span className="text-6xl font-medium text-(--text-primary)">
                 {t(price)}
@@ -90,7 +93,12 @@ export function PricingCard(card: PricingCard) {
               <span className="text-2xl font-medium text-(--text-secondary)">
                 {t(period)}
               </span>
-            </h2>
+              </h2>
+            ) : (
+              <h2 className="text-4xl font-medium text-(--text-primary)">
+                {notAvailable && t(notAvailable)}
+              </h2>
+            )}
             <p className="text-base text-(--text-secondary) mt-6 max-w-md">
               {t(description)}
             </p>
@@ -123,7 +131,7 @@ export function PricingCard(card: PricingCard) {
             {checks.map((check) => (
               <li className="flex items-center gap-4">
                 <CiCircleCheck className={`text-2xl ${mainColorText}`} />
-                <span className="text-base text-(--text-primary) mb-1">
+                <span className="text-base text-(--text-primary)">
                   {t(check)}
                 </span>
               </li>
