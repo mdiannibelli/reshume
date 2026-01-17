@@ -126,6 +126,7 @@ export function Stepper({
       // TODO Preview modal will be implemented late, in another feature, because actually it doesn't work as expected
         <button
           type="button"
+          aria-label="Open preview"
           onClick={handlePDFModalOpen}
           className="flex items-center px-6 py-2 bg-(--primary) hover:bg-(--primary-hover) duration-300 cursor-pointer transition-all text-(--text-primary) rounded-lg font-medium"
         >

@@ -46,21 +46,22 @@
   --primary-light: #f87171;
   --primary-dark: #dc2626;
   --primary-darker: #640000;
-  
+
   --secondary: #ffffff;
   --secondary-hover: #f3f4f6;
-  
+
   --background: #0B0B0F;
   --background-secondary: #111114;
-  
-  --text-primary: rgba(255, 255, 255, 0.87);
+  --background-green: #347a62;
+
+  --text-primary: rgb(255, 255, 255);
   --text-secondary: rgba(255, 255, 255, 0.6);
   --text-tertiary: rgba(255, 255, 255, 0.4);
-  
+
   --border: rgba(255, 255, 255, 0.1);
   --border-hover: rgba(255, 255, 255, 0.2);
   --border-light: rgba(255, 255, 255, 0.07);
-  
+
   --success: #10b981;
   --error: #b91010;
   --warning: #f59e0b;
@@ -108,23 +109,19 @@ body {
 }
 
 .fade-image-gradient-bottom {
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 10%,
-    rgba(0, 0, 0, 0.03) 35%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.03) 35%,
+      rgba(0, 0, 0, 1) 100%);
 }
 
 .fade-image-gradient-right {
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 10%,
-    rgba(0, 0, 0, 0.03) 35%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(to right,
+      transparent 0%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.03) 35%,
+      rgba(0, 0, 0, 1) 100%);
 }
 
 .image-fade-gradient {
@@ -138,13 +135,11 @@ body {
   left: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 10%,
-    rgba(11, 11, 15, 0.85) 80%,
-    rgba(11, 11, 15, 1) 100%
-  );
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      transparent 10%,
+      rgba(11, 11, 15, 0.85) 80%,
+      rgba(11, 11, 15, 1) 100%);
   pointer-events: none;
 }
 
@@ -161,6 +156,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -168,6 +164,7 @@ body {
 
 /* iOS Safari optimizations for blur and animations */
 @supports (-webkit-touch-callout: none) {
+
   /* iOS Safari specific optimizations */
   .backdrop-blur-3xl {
     -webkit-backdrop-filter: blur(64px);
@@ -176,7 +173,7 @@ body {
     -webkit-transform: translateZ(0);
     will-change: transform;
   }
-  
+
   /* Force hardware acceleration for animated elements */
   [class*="animate-"] {
     transform: translateZ(0);

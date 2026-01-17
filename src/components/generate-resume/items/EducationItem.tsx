@@ -66,6 +66,7 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
         {isDropdownOpen && (
           <button
             type="button"
+            aria-label="Delete education"
             onClick={() => onRemove(index)}
             className="text-(--primary) hover:text-(--primary-hover) transition-colors cursor-pointer bg-(--primary) rounded-full p-2"
           >
@@ -322,6 +323,7 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
             <div className="md:col-span-2">
               <button
                 type="button"
+                aria-label="Save education"
                 onClick={handleModal}
                 className="font-medium w-full px-4 py-3 bg-(--primary) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none duration-500 hover:bg-(--primary-hover) cursor-pointer focus:border-transparent transition-all"
               >
@@ -333,6 +335,7 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
           <div className="absolute top-0 right-0 p-4">
             <button
               type="button"
+              aria-label="Open education"
               onClick={handleDropdown}
               className="w-full px-4 text-(--text-primary)"
             >

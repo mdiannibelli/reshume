@@ -12,7 +12,7 @@ export function TemplatePrice({ templateName }: { templateName: string }) {
   return (
     <div className="absolute right-0 top-0 m-4 flex justify-end">
       <div>
-        <button className="relative inline-flex overflow-hidden rounded-full p-[2px]">
+        <button aria-label="View template price" className="relative inline-flex overflow-hidden rounded-full p-[2px]">
           <span
             className={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] ${bgGradient}`}
           />

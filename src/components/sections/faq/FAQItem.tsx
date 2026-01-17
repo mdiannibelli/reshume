@@ -22,6 +22,7 @@ export function FAQItem({
       )}
     >
       <button
+        aria-label="Toggle FAQ item"
         onClick={() => setIsOpen(!isOpen)}
         className="cursor-pointer w-full px-6 py-8 flex items-center justify-between gap-4 text-left focus:outline-none rounded-xl"
         aria-expanded={isOpen}
