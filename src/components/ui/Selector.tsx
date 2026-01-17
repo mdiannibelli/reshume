@@ -55,6 +55,9 @@ export function Selector<T extends SelectorOption>({
     <div className="relative" ref={dropdownRef}>
       <button
         type="button"
+        aria-label="Open selector"
+        aria-expanded="false"
+        aria-controls="selector"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
           "w-full p-6 bg-(--background-secondary) border rounded-lg text-(--text-primary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all flex items-center justify-between",
@@ -102,6 +105,7 @@ export function Selector<T extends SelectorOption>({
             <div className="max-h-64 overflow-y-auto">
               <button
                 type="button"
+                aria-label="Clear selection"
                 onClick={handleClear}
                 className={cn(
                   "w-full p-4 text-left hover:bg-(--background)/50 transition-colors",
@@ -117,6 +121,9 @@ export function Selector<T extends SelectorOption>({
                   <button
                     key={option.id}
                     type="button"
+                    aria-label="Select option"
+                    aria-expanded="true"
+                    aria-controls="selector"
                     onClick={() => handleSelect(option)}
                     disabled={
                       option.decorator?.label === "DECORATORS.UNAVAILABLE"

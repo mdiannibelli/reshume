@@ -12,6 +12,9 @@ export function MenuResponsive() {
   return (
     <>
       <button
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
         onClick={() => setIsOpen(!isOpen)}
         className="block lg:hidden mt-1"
       >
@@ -55,7 +58,7 @@ export function MenuResponsive() {
                     {t("NAVBAR.TITLE")}
                   </span>
                 </Link>
-                <button onClick={() => setIsOpen(false)}>
+                <button aria-label="Close menu" aria-expanded="true" aria-controls="mobile-menu" onClick={() => setIsOpen(false)}>
                   <RxCross1 className="text-(--text-primary) m-2 w-6 h-6" />
                 </button>
               </div>

@@ -228,6 +228,7 @@ export function ConfigurationStep() {
             <div className="flex gap-3 w-full">
               <button
                 type="button"
+                aria-label="Clear fields after generation"
                 onClick={() => handleClearFieldsAfterGeneration(true)}
                 className={cn(
                   "cursor-pointer w-full px-6 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all",
@@ -238,6 +239,7 @@ export function ConfigurationStep() {
               </button>
               <button
                 type="button"
+                aria-label="No clear fields after generation"
                 onClick={() => handleClearFieldsAfterGeneration(false)}
                 className={cn(
                   "cursor-pointer w-full px-6 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-1 focus:ring-(--primary) focus:border-transparent transition-all",

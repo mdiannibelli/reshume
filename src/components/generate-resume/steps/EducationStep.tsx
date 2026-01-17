@@ -26,6 +26,7 @@ export function EducationStep() {
         <div className="flex justify-end">
           <button
             type="button"
+            aria-label="Add education"
             onClick={() =>
               append({
                 id: Date.now().toString(),
