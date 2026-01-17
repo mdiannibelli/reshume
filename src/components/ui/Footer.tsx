@@ -21,7 +21,7 @@ export function Footer() {
                 <div className="rounded-xl h-10 w-10 border-(--background) border-2">
                   <img
                     src="/reshume.svg"
-                    alt="Reshume"
+                    alt="Reshume logo"
                     className="w-full h-full object-cover"
                   />
                 </div>
