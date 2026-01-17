@@ -35,8 +35,8 @@ export function InstantGeneration() {
           <img
             className="w-full h-full object-cover rounded-2xl border-(--border) border-2"
             src={demoGif}
+            loading="lazy"
             alt="Resume generation demo"
-            loading="eager"
           />
         </div>
       </div>
