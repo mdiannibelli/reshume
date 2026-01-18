@@ -8,8 +8,8 @@ export function Footer() {
   const { handleToTop, handleHashNavigation } = useNavHandling();
   const currentYear = new Date().getFullYear();
   return (
-    <div className="relative w-full mt-auto container mx-auto px-3 md:px-6 lg:px-8">
-      <div className="">
+    <div className="w-full mt-auto container mx-auto px-3 md:px-6 lg:px-8">
+      <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4">
           <div className="col-span-1 sm:col-span-2 lg:col-span-3">
             <div className="flex items-center">
@@ -136,7 +136,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="flex lg:absolute right-16 top-4 bottom-0 items-center gap-6 mt-6 lg:col-span-3 justify-end">
+      <div className="flex right-16 top-4 bottom-0 items-center gap-6 mt-6 lg:col-span-3 justify-end">
         <a
           href="https://cafecito.app/marcosdionel"
           target="_blank"

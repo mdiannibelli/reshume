@@ -11,3 +11,4 @@ export * from "./generate-pdf-config.interface";
 export * from "./template-styles.interface";
 export * from "./selector.interface";
 export * from "./pricing-card.interface";
+export * from "./pdf-preview.interface";

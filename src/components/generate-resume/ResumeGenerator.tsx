@@ -8,11 +8,10 @@ import {
 import { FormProvider } from "react-hook-form";
 import { Stepper } from "./Stepper";
 import { FORM_STEPS } from "@/constants";
-import { useFormStore, useSteps, useUI } from "@/hooks";
+import { useFormStore, useSteps } from "@/hooks";
 import { useTranslation } from "react-i18next";
 import { useGeneratePdf } from "@/hooks";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { ToastService } from "@/services";
 import { TOAST_CONFIG } from "@/config";
 
@@ -29,20 +28,12 @@ export function ResumeGenerator() {
   const { t } = useTranslation();
   const { formData, resetForm } = useFormStore();
 
-  const location = useLocation();
-
   const { generatePDF } = useGeneratePdf();
-  const { setIsPDFModalOpen } = useUI();
-
-  useEffect(() => {
-    setIsPDFModalOpen(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]);
 
   const onSubmit = async () => {
     const success = await generatePDF(formData);
     if (success) {
-      setIsPDFModalOpen(true);
+      // Navigate to the preview page
     }
     if (formData.clearFieldsAfterGeneration) {
       resetForm();
@@ -78,15 +69,8 @@ export function ResumeGenerator() {
   };
 
   return (
-    // TODO Preview modal will be implemented late, in another feature, because actually it doesn't work as expected
     <>
-      {/* {isPDFModalOpen && (
-        <PDFModal
-          formData={formData}
-          onClose={() => setIsPDFModalOpen(false)}
-        />
-      )} */}
-      <div className="w-full max-w-4xl mx-auto p-8">
+      <div className="w-full p-4 sm:p-8 md:p-0">
         <FormProvider {...formValues}>
           <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
             <Stepper
@@ -98,7 +82,7 @@ export function ResumeGenerator() {
 
             {renderStep()}
 
-            <div className="flex justify-between mt-8">
+            <div className="flex justify-between mt-6">
               <button
                 type="button"
                 aria-label="Previous step"

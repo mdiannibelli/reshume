@@ -1,6 +1,7 @@
 import type { ResumeDataSchema } from "@/models";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { loadStateFromLocalStorage } from "../storage/form-value.storage";
+import { TEMPLATES } from "@/constants";
 
 const getInitialState = (): ResumeDataSchema => {
   const savedState = loadStateFromLocalStorage();
@@ -10,13 +11,13 @@ const getInitialState = (): ResumeDataSchema => {
 
   return {
     personalInfo: {
-      name: "",
-      lastName: "",
-      professionalTitle: "",
-      email: "",
-      phone: "",
-      country: "",
-      city: "",
+      name: "John",
+      lastName: "Doe",
+      professionalTitle: "Software Engineer",
+      email: "john.doe@example.com",
+      phone: "+1 234 567 8900",
+      country: "United States",
+      city: "New York",
       website: "",
       linkedin: "",
       github: "",
@@ -28,7 +29,7 @@ const getInitialState = (): ResumeDataSchema => {
     skills: [],
     languages: [],
     selectedCvLanguage: "",
-    template: {
+    template: TEMPLATES[0] || {
       id: "",
       name: "",
       description: "",

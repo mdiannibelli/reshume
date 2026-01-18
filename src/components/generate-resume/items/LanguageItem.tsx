@@ -95,11 +95,13 @@ export function LanguageItem() {
                   "GENERATE_RESUME.FORM_STEPS.LANGUAGES.FIELDS.LEVEL_PLACEHOLDER"
                 )}
               />
+            </div>
+            <div className="mt-6">
               <button
                 aria-label="Add language"
                 onClick={handleAddLanguage}
                 disabled={disabledAddLanguage}
-                className="w-1/2 cursor-pointer px-3 py-3 bg-(--background-secondary) border border-(--primary) text-(--text-primary) rounded-lg hover:bg-(--primary)/25 duration-500 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-(--primary)"
+                className="w-full 2xl:w-1/2 cursor-pointer px-3 py-3 bg-(--background-secondary) border border-(--primary) text-(--text-primary) rounded-lg hover:bg-(--primary)/25 duration-500 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-(--primary)"
               >
                 {t("GENERATE_RESUME.FORM_STEPS.LANGUAGES.BUTTONS.ADD")}
               </button>
