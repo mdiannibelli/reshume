@@ -71,14 +71,12 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-x-2 xl:gap-x-4 justify-end lg:mx-auto col-span-1">
           <LanguageSelector />
-          <div className="bg-(--primary-hover) rounded-full text-sm px-4 md:px-3 xl:text-base xl:px-6 py-2 transition-all duration-300 hover:translate-y-[-2px] cursor-pointer">
-            <Link
-              to="/generate-resume"
-              className=" text-(--text-primary) font-medium"
-            >
-              {t("NAVBAR.GENERATE_RESUME")}
-            </Link>
-          </div>
+          <Link
+            to="/generate-resume"
+            className=" text-(--text-primary) font-medium bg-(--primary-hover) rounded-full text-sm px-4 md:px-3 xl:text-base xl:px-6 py-2 transition-all duration-300 hover:translate-y-[-2px] cursor-pointer"
+          >
+            {t("NAVBAR.GENERATE_RESUME")}
+          </Link>
         </div>
       </header>
     </div>
