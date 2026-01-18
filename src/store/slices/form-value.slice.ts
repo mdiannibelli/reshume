@@ -11,13 +11,13 @@ const getInitialState = (): ResumeDataSchema => {
 
   return {
     personalInfo: {
-      name: "",
-      lastName: "",
-      professionalTitle: "",
-      email: "",
-      phone: "",
-      country: "",
-      city: "",
+      name: "John",
+      lastName: "Doe",
+      professionalTitle: "Software Engineer",
+      email: "john.doe@example.com",
+      phone: "+1 234 567 8900",
+      country: "United States",
+      city: "New York",
       website: "",
       linkedin: "",
       github: "",
