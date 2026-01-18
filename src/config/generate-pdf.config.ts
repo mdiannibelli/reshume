@@ -6,4 +6,6 @@ export const GENERATE_PDF_CONFIG: GeneratePdfConfig = {
   fileExtension: "pdf",
   fileContent: "application/pdf",
   delayAfterGeneration: 3000,
+  debounceTimeWeb: 0,
+  debounceTimeMobile: 300,
 } as const;

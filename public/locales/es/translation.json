@@ -296,6 +296,8 @@
     },
     "FORM_STEPS": {
       "OPEN_PREVIEW": "Ver preview",
+      "PREVIEW_PLACEHOLDER": "Selecciona una plantilla en Configuración para ver la preview",
+      "PREVIEW_ERROR": "Ocurrió un error con la preview del currículum, por favor refresca la página para arreglarlo",
       "PERSONAL_INFO": {
         "TITLE": "Datos",
         "FIELDS": {
@@ -423,6 +425,10 @@
         "LEVELS": {
           "NATIVE": "Nativo",
           "NATIVE_DESCRIPTION": "Tu idioma nativo.",
+          "A1": "A1",
+          "A1_DESCRIPTION": "Nivel principiante.",
+          "A2": "A2",
+          "A2_DESCRIPTION": "Nivel básico.",
           "B1": "B1",
           "B1_DESCRIPTION": "Nivel intermedio..",
           "B2": "B2",
