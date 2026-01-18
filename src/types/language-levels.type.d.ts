@@ -1,1 +1,3 @@
-export type LanguageLevel = "native" | "b1" | "b2" | "c1" | "c2";
+import { LanguagesLevelEnum } from "@/enums";
+
+export type LanguageLevel = (typeof LanguagesLevelEnum)[keyof typeof LanguagesLevelEnum];

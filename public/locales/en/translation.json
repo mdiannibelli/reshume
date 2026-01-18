@@ -297,6 +297,8 @@
     },
     "FORM_STEPS": {
       "OPEN_PREVIEW": "Open preview",
+      "PREVIEW_PLACEHOLDER": "Select a template in Configuration to see the preview",
+      "PREVIEW_ERROR": "An error occurred with the resume preview, please refresh the page to fix it",
       "PERSONAL_INFO": {
         "TITLE": "Personal Info",
         "FIELDS": {
@@ -423,6 +425,10 @@
         "LEVELS": {
           "NATIVE": "Native",
           "NATIVE_DESCRIPTION": "Your native language.",
+          "A1": "A1",
+          "A1_DESCRIPTION": "Beginner level.",
+          "A2": "A2",
+          "A2_DESCRIPTION": "Basic level.",
           "B1": "B1",
           "B1_DESCRIPTION": "Intermediate level.",
           "B2": "B2",

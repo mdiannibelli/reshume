@@ -1,8 +1,6 @@
 import type { StepperProps } from "@/interfaces";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-// import { useUI } from "@/hooks";
-// import { FaEye } from "react-icons/fa";
 
 export function Stepper({
   currentStep,
@@ -11,16 +9,11 @@ export function Stepper({
   handleStepClick,
 }: StepperProps) {
   const { t } = useTranslation();
-  // const { setIsPDFModalOpen } = useUI();
-
-  // const handlePDFModalOpen = () => {
-  //   setIsPDFModalOpen(true);
-  // };
 
   return (
     <>
-      <div className="w-full max-w-4xl mx-auto mb-12">
-        <div className="flex items-center flex-wrap lg:flex-nowrap gap-8 mx-4 justify-center md:justify-between relative">
+      <div className="w-full max-w-4xl mx-auto mb-8">
+        <div className="flex items-center flex-wrap xl:flex-nowrap gap-8 mx-4 justify-center xl:justify-between relative">
           <div className="absolute top-6 left-0 right-0 h-0.5 bg-(--text-primary) opacity-5 -z-10">
             <motion.div
               className="h-full bg-linear-to-r from-(--primary) to-(--primary-light)"
@@ -122,18 +115,6 @@ export function Stepper({
           })}
         </div>
       </div>
-      {/* <div className="flex justify-end my-4">
-      // TODO Preview modal will be implemented late, in another feature, because actually it doesn't work as expected
-        <button
-          type="button"
-          aria-label="Open preview"
-          onClick={handlePDFModalOpen}
-          className="flex items-center px-6 py-2 bg-(--primary) hover:bg-(--primary-hover) duration-300 cursor-pointer transition-all text-(--text-primary) rounded-lg font-medium"
-        >
-          <FaEye className="w-4 h-4 mr-2" />
-          <span>{t("GENERATE_RESUME.FORM_STEPS.OPEN_PREVIEW")}</span>
-        </button>
-      </div> */}
     </>
   );
 }
