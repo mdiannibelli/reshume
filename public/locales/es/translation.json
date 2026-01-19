@@ -154,7 +154,9 @@
             "FOR": {
               "1": "Roles senior y de liderazgo",
               "2": "Gestión",
-              "3": "Aplicaciones ejecutivas"
+              "3": "Aplicaciones ejecutivas",
+              "4": "Directores y jefes de perfil",
+              "5": "Carreras orientadas a estrategia"
             },
             "STATUS": "Próximamente...",
             "PRICE": "Premium"
@@ -165,7 +167,9 @@
             "FOR": {
               "1": "Roles de alto rendimiento",
               "2": "Ventas, crecimiento, producto",
-              "3": "Currículums orientados a resultados"
+              "3": "Perfiles orientados a la propiedad",
+              "4": "Profesionales enfocados en KPIs",
+              "5": "Profesionales enfocados en métricas"
             },
             "STATUS": "Próximamente...",
             "PRICE": "Premium"
