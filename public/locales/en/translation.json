@@ -153,8 +153,10 @@
             "DESCRIPTION": "A refined, high-impact layout designed for leadership positions, focusing on strategic achievements and executive presence.",
             "FOR": {
               "1": "Senior & leadership roles",
-              "2": "Managment",
-              "3": "Executive applications"
+              "2": "Management",
+              "3": "Executive applications",
+              "4": "Directors & heads profiles",
+              "5": "Strategy-driven careers"
             },
             "STATUS": "Coming soon...",
             "PRICE": "Premium"
@@ -164,8 +166,10 @@
             "DESCRIPTION": "A bold, results-oriented template that highlights measurable achievements, metrics, and business impact.",
             "FOR": {
               "1": "High-performance roles",
-              "2": "Sales, growth, product",
-              "3": "Results-heavy resumes"
+              "2": "Sales, growth, product positions",
+              "3": "Ownership-driven profiles",
+              "4": "Professionals focused on KPIs",
+              "5": "Metrics-driven professionals"
             },
             "STATUS": "Coming soon...",
             "PRICE": "Premium"
