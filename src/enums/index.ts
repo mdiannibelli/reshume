@@ -4,3 +4,4 @@ export * from "./additional-areas.enum";
 export * from "./step-keys.enum";
 export * from "./toast.enum";
 export * from "./pricing-variants.enum";
+export * from "./templates.enum";

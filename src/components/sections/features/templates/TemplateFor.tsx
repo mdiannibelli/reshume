@@ -1,10 +1,12 @@
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { Templates } from "@/enums";
 
 export function TemplateFor({ templateName }: { templateName: string }) {
   const { t } = useTranslation();
   const template = templateName.toUpperCase();
-  const mappedRoles = Array.from({ length: 3 }).map((_, index) =>
+  const itemsLength = (template === Templates.EXECUTIVE || template === Templates.IMPACT) ? 5 : 3;
+  const mappedRoles = Array.from({ length: itemsLength }).map((_, index) =>
     t(
       `HOME.FEATURES.PROFESSIONAL_TEMPLATES.TEMPLATES.${template}.FOR.${
         index + 1
