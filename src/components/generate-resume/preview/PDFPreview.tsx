@@ -1,6 +1,6 @@
 import { BlobProvider } from "@react-pdf/renderer";
 import { ReshumeDocument } from "@/components/document";
-import { ErrorBoundary } from "@/components/shared";
+import { ErrorBoundary } from "@/shared/components";
 import type { PDFPreviewProps } from "@/interfaces";
 import { hasValidTemplateStyles } from "@/helpers";
 import { useTranslation } from "react-i18next";
