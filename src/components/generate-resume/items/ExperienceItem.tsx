@@ -1,6 +1,6 @@
 import type { Experience, ResumeData } from "@/interfaces";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useFormContext } from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 import { getErrorMessage } from "@/utils";
@@ -10,6 +10,7 @@ import { validateEndDate } from "@/helpers";
 import { useEffect } from "react";
 import { VscClose } from "react-icons/vsc";
 import { useStepperItem } from "@/hooks";
+import { DatePicker } from "@/shared/components";
 
 export function ExperienceItem({
   field,
@@ -31,8 +32,6 @@ export function ExperienceItem({
   const { t } = useTranslation();
   const {
     inProgress,
-    startDate,
-    endDate,
     handleDropdown,
     handleModal,
     isDropdownOpen,
@@ -165,52 +164,31 @@ export function ExperienceItem({
                 {t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE")}{" "}
                 <span className="text-(--primary)">*</span>
               </label>
-              <div className="relative">
-                <input
-                  type="month"
-                  {...register(`experience.${index}.startDate`, {
-                    required: t(
-                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.REQUIRED",
-                      {
-                        field: t(
-                          "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE"
-                        ),
-                      }
-                    ),
-                  })}
-                  className={cn(
-                    "w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer",
-                    !startDate &&
-                      "[&::-webkit-datetime-edit-text]:opacity-0 [&::-webkit-datetime-edit-month-field]:opacity-0 [&::-webkit-datetime-edit-day-field]:opacity-0 [&::-webkit-datetime-edit-year-field]:opacity-0"
-                  )}
-                />
-                {!startDate && (
-                  <>
-                    <div className="absolute inset-0 flex items-center px-4 pointer-events-none z-10">
-                      <span className="text-(--text-secondary) text-sm">
-                        {t(
-                          "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE_PLACEHOLDER"
-                        )}
-                      </span>
-                    </div>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-20">
-                      <svg
-                        className="w-5 h-5 text-(--text-secondary)"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
-                  </>
+              <Controller
+                name={`experience.${index}.startDate`}
+                control={control}
+                rules={{
+                  required: t(
+                    "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.REQUIRED",
+                    {
+                      field: t(
+                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE"
+                      ),
+                    }
+                  ),
+                }}
+                render={({ field }) => (
+                  <DatePicker
+                    value={field.value || ""}
+                    onChange={field.onChange}
+                    onBlur={field.onBlur}
+                    placeholder={t(
+                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE_PLACEHOLDER"
+                    )}
+                    error={!!errors.experience?.[index]?.startDate}
+                  />
                 )}
-              </div>
+              />
               {errors.experience?.[index]?.startDate && (
                 <p className="mt-3 mb-6 ml-1 text-sm text-(--primary)">
                   {getErrorMessage({
@@ -228,52 +206,31 @@ export function ExperienceItem({
                 {t("GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.END_DATE")}{" "}
                 {!inProgress && <span className="text-(--primary)">*</span>}
               </label>
-              <div className="relative">
-                <input
-                  type="month"
-                  {...register(`experience.${index}.endDate`, {
-                    validate: (value: string | undefined) =>
-                      validateEndDate({
-                        value: value as string,
-                        inProgress,
-                        stepKey: StepKeysEnum.EXPERIENCE,
-                        t,
-                      }),
-                  })}
-                  disabled={inProgress}
-                  className={cn(
-                    "w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer",
-                    !endDate &&
-                      "[&::-webkit-datetime-edit-text]:opacity-0 [&::-webkit-datetime-edit-month-field]:opacity-0 [&::-webkit-datetime-edit-day-field]:opacity-0 [&::-webkit-datetime-edit-year-field]:opacity-0"
-                  )}
-                />
-                {!endDate && !inProgress && (
-                  <>
-                    <div className="absolute inset-0 flex items-center px-4 pointer-events-none z-10">
-                      <span className="text-(--text-secondary) text-sm">
-                        {t(
-                          "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.END_DATE_PLACEHOLDER"
-                        )}
-                      </span>
-                    </div>
-                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-20">
-                      <svg
-                        className="w-5 h-5 text-(--text-secondary)"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
-                  </>
+              <Controller
+                name={`experience.${index}.endDate`}
+                control={control}
+                rules={{
+                  validate: (value: string | undefined) =>
+                    validateEndDate({
+                      value: value as string,
+                      inProgress,
+                      stepKey: StepKeysEnum.EXPERIENCE,
+                      t,
+                    }),
+                }}
+                render={({ field }) => (
+                  <DatePicker
+                    value={field.value || ""}
+                    onChange={field.onChange}
+                    onBlur={field.onBlur}
+                    placeholder={t(
+                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.END_DATE_PLACEHOLDER"
+                    )}
+                    disabled={inProgress}
+                    error={!!errors.experience?.[index]?.endDate}
+                  />
                 )}
-              </div>
+              />
               {errors.experience?.[index]?.endDate && (
                 <p className="mt-3 mb-6 ml-1 text-sm text-(--primary)">
                   {getErrorMessage({
