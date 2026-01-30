@@ -18,16 +18,18 @@ export function ContributeLayout() {
               {t("HOME.CONTRIBUTE.LAYOUT.DESCRIPTION")}
             </p>
           </div>
-          <a
-            href="https://github.com/mdiannibelli/reshume"
-            target="_blank"
-            className="flex justify-center items-center gap-3 mt-16 bg-(--background-secondary) hover:text-(--text-secondary) transition-colors duration-300 rounded-xl px-8 py-2 w-fit mx-auto"
-          >
-            <span className="text-(--text-primary) font-medium text-xl">
-              {t("HOME.CONTRIBUTE.MAIN_BUTTON")}
-            </span>
-            <FaExternalLinkAlt className="text-(--text-primary) text-lg" />
-          </a>
+          <div className="relative z-50">
+            <a
+              href="https://github.com/mdiannibelli/reshume"
+              target="_blank"
+              className="flex justify-center items-center gap-3 mt-16 bg-(--background-secondary) hover:text-(--text-secondary) transition-colors duration-300 rounded-xl px-8 py-2 w-fit mx-auto"
+            >
+              <span className="text-(--text-primary) font-medium text-xl">
+                {t("HOME.CONTRIBUTE.MAIN_BUTTON")}
+              </span>
+              <FaExternalLinkAlt className="text-(--text-primary) text-lg" />
+            </a>
+          </div>
         </div>
         <div className="absolute -right-8 bottom-0 top-16">
           <FaGithub className="text-(--text-primary) text-[20rem] opacity-10" />
