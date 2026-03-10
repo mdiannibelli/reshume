@@ -38,7 +38,13 @@ export function useGeneratePdf() {
       const link = document.createElement("a");
       link.href = url;
       link.download = fileName;
+      link.style.display = "none";
+      document.body.appendChild(link);
       link.click();
+
+      setTimeout(() => {
+        document.body.removeChild(link);
+      }, 100);
 
       return true;
     } catch (err) {

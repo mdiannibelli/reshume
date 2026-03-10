@@ -12,9 +12,9 @@ export function GenerateResume() {
   );
   return (
     <SectionWrapper resetStyles noPadding className="py-32">
-      <div className="w-full mx-auto px-4 lg:px-8">
+      <div className="w-full mx-auto lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="w-full px-6">
+          <div className="w-full md:px-6">
             <ResumeGenerator />
           </div>
 

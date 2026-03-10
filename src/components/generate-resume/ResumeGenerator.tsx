@@ -33,12 +33,13 @@ export function ResumeGenerator() {
   const onSubmit = async () => {
     const success = await generatePDF(formData);
     if (success) {
-      // Navigate to the preview page
+      ToastService().success(t("GENERATE_RESUME.TOASTS.SUCCESS"), TOAST_CONFIG);
+    } else {
+      ToastService().error(t("GENERATE_RESUME.TOASTS.ERROR"), TOAST_CONFIG);
     }
     if (formData.clearFieldsAfterGeneration) {
       resetForm();
     }
-    ToastService().success(t("GENERATE_RESUME.TOASTS.SUCCESS"), TOAST_CONFIG);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
