@@ -30,17 +30,13 @@ export function ExperienceItem({
   } = useFormContext<ResumeData>();
 
   const { t } = useTranslation();
-  const {
-    inProgress,
-    handleDropdown,
-    handleModal,
-    isDropdownOpen,
-  } = useStepperItem({
-    control,
-    stepKey: AdditionalAreasEnum.EXPERIENCE,
-    index,
-    trigger,
-  });
+  const { inProgress, handleDropdown, handleModal, isDropdownOpen } =
+    useStepperItem({
+      control,
+      stepKey: AdditionalAreasEnum.EXPERIENCE,
+      index,
+      trigger,
+    });
 
   useEffect(() => {
     if (inProgress) {
@@ -57,10 +53,10 @@ export function ExperienceItem({
       exit={{ opacity: 0, y: -20 }}
       onClick={!isDropdownOpen ? handleDropdown : undefined}
       className={cn(
-        "p-6 flex-col border rounded-lg space-y-4 relative cursor-pointer bg-(--background) border-(--border)",
+        "p-4 lg:p-6 flex-col border rounded-lg space-y-4 relative cursor-pointer bg-(--background) border-(--border)",
         !isDropdownOpen
           ? "hover:bg-(--primary)/25 duration-500 transition-colors"
-          : ""
+          : "",
       )}
     >
       <div
@@ -102,14 +98,14 @@ export function ExperienceItem({
                     "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.REQUIRED",
                     {
                       field: t(
-                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.COMPANY"
+                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.COMPANY",
                       ),
-                    }
+                    },
                   ),
                 })}
                 className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all"
                 placeholder={t(
-                  "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.COMPANY_PLACEHOLDER"
+                  "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.COMPANY_PLACEHOLDER",
                 )}
               />
               {errors.experience?.[index]?.company && (
@@ -136,14 +132,14 @@ export function ExperienceItem({
                     "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.REQUIRED",
                     {
                       field: t(
-                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.POSITION"
+                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.POSITION",
                       ),
-                    }
+                    },
                   ),
                 })}
                 className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all"
                 placeholder={t(
-                  "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.POSITION_PLACEHOLDER"
+                  "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.POSITION_PLACEHOLDER",
                 )}
               />
               {errors.experience?.[index]?.position && (
@@ -172,9 +168,9 @@ export function ExperienceItem({
                     "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.ERRORS.REQUIRED",
                     {
                       field: t(
-                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE"
+                        "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE",
                       ),
-                    }
+                    },
                   ),
                 }}
                 render={({ field }) => (
@@ -183,7 +179,7 @@ export function ExperienceItem({
                     onChange={field.onChange}
                     onBlur={field.onBlur}
                     placeholder={t(
-                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE_PLACEHOLDER"
+                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.START_DATE_PLACEHOLDER",
                     )}
                     error={!!errors.experience?.[index]?.startDate}
                   />
@@ -224,7 +220,7 @@ export function ExperienceItem({
                     onChange={field.onChange}
                     onBlur={field.onBlur}
                     placeholder={t(
-                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.END_DATE_PLACEHOLDER"
+                      "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.END_DATE_PLACEHOLDER",
                     )}
                     disabled={inProgress}
                     error={!!errors.experience?.[index]?.endDate}
@@ -267,7 +263,7 @@ export function ExperienceItem({
                 </div>
                 <span className="ml-3 text-sm font-medium text-(--text-secondary) group-hover:text-(--text-primary) transition-colors">
                   {t(
-                    "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.IN_PROGRESS"
+                    "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.IN_PROGRESS",
                   )}
                 </span>
               </label>
@@ -282,7 +278,7 @@ export function ExperienceItem({
                 rows={4}
                 className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all resize-none"
                 placeholder={t(
-                  "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION_PLACEHOLDER"
+                  "GENERATE_RESUME.FORM_STEPS.EXPERIENCE.FIELDS.DESCRIPTION_PLACEHOLDER",
                 )}
               />
             </div>

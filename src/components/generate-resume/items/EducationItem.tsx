@@ -22,17 +22,13 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
   } = useFormContext<ResumeData>();
 
   const { t } = useTranslation();
-  const {
-    inProgress,
-    handleDropdown,
-    handleModal,
-    isDropdownOpen,
-  } = useStepperItem({
-    control,
-    stepKey: AdditionalAreasEnum.EDUCATION,
-    index,
-    trigger,
-  });
+  const { inProgress, handleDropdown, handleModal, isDropdownOpen } =
+    useStepperItem({
+      control,
+      stepKey: AdditionalAreasEnum.EDUCATION,
+      index,
+      trigger,
+    });
 
   useEffect(() => {
     if (inProgress) {
@@ -49,10 +45,10 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
       exit={{ opacity: 0, y: -20 }}
       onClick={!isDropdownOpen ? handleDropdown : undefined}
       className={cn(
-        "p-6 flex-col border rounded-lg space-y-4 relative cursor-pointer bg-(--background) border-(--border)",
+        "p-4 lg:p-6 flex-col border rounded-lg space-y-4 relative cursor-pointer bg-(--background) border-(--border)",
         !isDropdownOpen
           ? "hover:bg-(--primary)/25 duration-500 transition-colors"
-          : ""
+          : "",
       )}
     >
       <div
@@ -94,14 +90,14 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
                     "GENERATE_RESUME.FORM_STEPS.EDUCATION.ERRORS.REQUIRED",
                     {
                       field: t(
-                        "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.INSTITUTION"
+                        "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.INSTITUTION",
                       ),
-                    }
+                    },
                   ),
                 })}
                 className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all"
                 placeholder={t(
-                  "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.INSTITUTION_PLACEHOLDER"
+                  "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.INSTITUTION_PLACEHOLDER",
                 )}
               />
               {errors.education?.[index]?.institution && (
@@ -128,14 +124,14 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
                     "GENERATE_RESUME.FORM_STEPS.EDUCATION.ERRORS.REQUIRED",
                     {
                       field: t(
-                        "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.TITLE"
+                        "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.TITLE",
                       ),
-                    }
+                    },
                   ),
                 })}
                 className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all"
                 placeholder={t(
-                  "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.TITLE_PLACEHOLDER"
+                  "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.TITLE_PLACEHOLDER",
                 )}
               />
               {errors.education?.[index]?.title && (
@@ -164,9 +160,9 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
                     "GENERATE_RESUME.FORM_STEPS.EDUCATION.ERRORS.REQUIRED",
                     {
                       field: t(
-                        "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.START_DATE"
+                        "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.START_DATE",
                       ),
-                    }
+                    },
                   ),
                 }}
                 render={({ field }) => (
@@ -175,7 +171,7 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
                     onChange={field.onChange}
                     onBlur={field.onBlur}
                     placeholder={t(
-                      "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.START_DATE_PLACEHOLDER"
+                      "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.START_DATE_PLACEHOLDER",
                     )}
                     error={!!errors.education?.[index]?.startDate}
                   />
@@ -216,7 +212,7 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
                     onChange={field.onChange}
                     onBlur={field.onBlur}
                     placeholder={t(
-                      "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.END_DATE_PLACEHOLDER"
+                      "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.END_DATE_PLACEHOLDER",
                     )}
                     disabled={inProgress}
                     error={!!errors.education?.[index]?.endDate}
@@ -272,7 +268,7 @@ export function EducationItem({ field, index, onRemove }: EducationItem) {
                 rows={3}
                 className="w-full px-4 py-3 bg-(--background-secondary) border border-(--border) rounded-lg text-(--text-primary) placeholder-(--text-secondary) focus:outline-none focus:ring-2 focus:ring-(--primary) focus:border-transparent transition-all resize-none"
                 placeholder={t(
-                  "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.DESCRIPTION_PLACEHOLDER"
+                  "GENERATE_RESUME.FORM_STEPS.EDUCATION.FIELDS.DESCRIPTION_PLACEHOLDER",
                 )}
               />
             </div>

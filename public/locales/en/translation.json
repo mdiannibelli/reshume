@@ -502,6 +502,8 @@
         "TITLE": "Languages",
         "LEVELS": {
           "NATIVE": "Native",
+          "A1": "Elementary - A1",
+          "A2": "Elementary - A2",
           "B1": "Intermediate - B1",
           "B2": "Intermediate - B2",
           "C1": "Advanced - C1",
